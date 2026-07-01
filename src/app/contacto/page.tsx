@@ -7,13 +7,15 @@ import { ContactForm } from "@/components/ContactForm";
 import { PageHero } from "@/components/PageHero";
 import { Reveal } from "@/components/Reveal";
 import { siteConfig } from "@/data/site";
+import { createPageMetadata } from "@/data/seo";
 import { getWhatsAppUrl } from "@/lib/utils";
 
-export const metadata: Metadata = {
-  title: "Contacto",
+export const metadata: Metadata = createPageMetadata({
+  title: "Contacto y cotizaciones de climatizacion | InterchileClima",
   description:
-    "Contacta a InterchileClima para proyectos de climatización, instalación, mantención, reparación y repuestos en todo Chile.",
-};
+    "Cotiza proyectos, instalaciones, mantenciones, reparaciones, repuestos o arriendo de equipos de climatizacion. Atencion en todo Chile.",
+  path: "/contacto",
+});
 
 const contactItems = [
   { icon: Mail, label: "Correo", value: siteConfig.email, href: `mailto:${siteConfig.email}`, color: "text-[#4fb7d8]" },
@@ -27,8 +29,8 @@ export default function ContactoPage() {
     <>
       <PageHero
         eyebrow="Contacto"
-        title="Cuéntanos qué necesitas."
-        description="Cuéntanos el espacio, el servicio y la ubicación. Te ayudamos a definir el siguiente paso."
+        title="Cotiza tu requerimiento de climatizacion"
+        description="Solicita una evaluacion tecnica o cotiza tu requerimiento de climatizacion. Atendemos empresas, comercios, industrias y domicilios en todo Chile."
       />
 
       <section className="bg-gray-50 px-6 py-20 sm:py-24">
@@ -65,8 +67,8 @@ export default function ContactoPage() {
             <Reveal delay={2}>
               <div className="rounded-md bg-[#30343a] p-6 text-white">
                 <MapPinned aria-hidden="true" className="h-7 w-7 text-[#56b91f]" />
-                <h2 className="mt-4 text-xl font-semibold">Atención en todo Chile.</h2>
-                <p className="mt-2 text-sm leading-6 text-gray-200">Oficina virtual y coordinación en terreno según requerimiento.</p>
+                <h2 className="mt-4 text-xl font-semibold">Atencion en todo Chile.</h2>
+                <p className="mt-2 text-sm leading-6 text-gray-200">Oficina virtual y coordinacion en terreno segun requerimiento.</p>
               </div>
             </Reveal>
 

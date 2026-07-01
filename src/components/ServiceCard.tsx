@@ -1,6 +1,7 @@
 import {
   ClipboardCheck,
   PackageCheck,
+  PackageOpen,
   Snowflake,
   Thermometer,
   Wrench,
@@ -14,6 +15,7 @@ const icons: Record<ServiceIcon, LucideIcon> = {
   maintenance: Thermometer,
   repair: Wrench,
   parts: PackageCheck,
+  rental: PackageOpen,
 };
 
 type ServiceCardProps = {

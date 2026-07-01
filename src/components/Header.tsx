@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { Building2, BriefcaseBusiness, House, Mail, Menu, UsersRound, Wrench, X, type LucideIcon } from "lucide-react";
+import { Building2, BriefcaseBusiness, House, Mail, Menu, PackageOpen, UsersRound, Wrench, X, type LucideIcon } from "lucide-react";
 import { FaWhatsapp } from "react-icons/fa";
 import { SiInstagram, SiTiktok } from "react-icons/si";
 import { useState } from "react";
@@ -15,6 +15,7 @@ const navIcons: Record<string, LucideIcon> = {
   "/": House,
   "/empresa": Building2,
   "/servicios": Wrench,
+  "/arriendo-equipos": PackageOpen,
   "/proyectos": BriefcaseBusiness,
   "/equipo": UsersRound,
   "/contacto": Mail,
@@ -33,26 +34,24 @@ export function Header() {
         </Link>
 
         <nav className="hidden items-center gap-1 lg:flex" aria-label="Principal">
-          {navLinks.map((link) => (
-            (() => {
-              const Icon = navIcons[link.href];
-              return (
-                <Link
-                  className={cn(
-                    "inline-flex items-center gap-1.5 rounded-md px-3 py-2 text-sm font-medium transition",
-                    pathname === link.href
-                      ? "bg-rose-50 text-[#c30f3f]"
-                      : "text-gray-700 hover:bg-gray-100 hover:text-gray-950",
-                  )}
-                  href={link.href}
-                  key={link.href}
-                >
-                  <Icon aria-hidden="true" className="h-3.5 w-3.5" />
-                  {link.label}
-                </Link>
-              );
-            })()
-          ))}
+          {navLinks.map((link) => {
+            const Icon = navIcons[link.href];
+            return (
+              <Link
+                className={cn(
+                  "inline-flex items-center gap-1.5 rounded-md px-3 py-2 text-sm font-medium transition",
+                  pathname === link.href
+                    ? "bg-rose-50 text-[#c30f3f]"
+                    : "text-gray-700 hover:bg-gray-100 hover:text-gray-950",
+                )}
+                href={link.href}
+                key={link.href}
+              >
+                <Icon aria-hidden="true" className="h-3.5 w-3.5" />
+                {link.label}
+              </Link>
+            );
+          })}
         </nav>
 
         <div className="hidden items-center gap-2 lg:flex">
@@ -79,7 +78,7 @@ export function Header() {
 
         <button
           aria-expanded={isOpen}
-          aria-label={isOpen ? "Cerrar menú" : "Abrir menú"}
+          aria-label={isOpen ? "Cerrar menu" : "Abrir menu"}
           className="inline-flex h-11 w-11 items-center justify-center rounded-md border border-gray-200 text-gray-800 lg:hidden"
           onClick={() => setIsOpen((value) => !value)}
           type="button"
@@ -91,27 +90,25 @@ export function Header() {
       {isOpen ? (
         <div className="border-t border-gray-200 bg-white px-6 py-5 lg:hidden">
           <nav className="mx-auto flex max-w-7xl flex-col gap-2" aria-label="Mobile">
-            {navLinks.map((link) => (
-              (() => {
-                const Icon = navIcons[link.href];
-                return (
-                  <Link
-                    className={cn(
-                      "flex items-center gap-3 rounded-md px-3 py-3 text-base font-medium",
-                      pathname === link.href
-                        ? "bg-rose-50 text-[#c30f3f]"
-                        : "text-gray-700 hover:bg-gray-100",
-                    )}
-                    href={link.href}
-                    key={link.href}
-                    onClick={() => setIsOpen(false)}
-                  >
-                    <Icon aria-hidden="true" className="h-4 w-4" />
-                    {link.label}
-                  </Link>
-                );
-              })()
-            ))}
+            {navLinks.map((link) => {
+              const Icon = navIcons[link.href];
+              return (
+                <Link
+                  className={cn(
+                    "flex items-center gap-3 rounded-md px-3 py-3 text-base font-medium",
+                    pathname === link.href
+                      ? "bg-rose-50 text-[#c30f3f]"
+                      : "text-gray-700 hover:bg-gray-100",
+                  )}
+                  href={link.href}
+                  key={link.href}
+                  onClick={() => setIsOpen(false)}
+                >
+                  <Icon aria-hidden="true" className="h-4 w-4" />
+                  {link.label}
+                </Link>
+              );
+            })}
             <div className="mt-4 grid gap-3 sm:grid-cols-2">
               <ButtonLink href="/contacto" className="w-full">
                 Cotizar

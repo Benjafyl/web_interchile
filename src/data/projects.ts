@@ -7,24 +7,24 @@ export const sectors = [
   "Comercio",
   "Domicilios",
   "Empresas de servicios",
-  "Espacios de atención a público",
+  "Espacios de atencion a publico",
 ];
 
 export const experienceCards = [
   {
     title: "Retail y centros comerciales",
-    text: "Servicios de mantención, reparación y apoyo técnico para sistemas de climatización en espacios comerciales de alta exigencia.",
+    text: "Servicios de mantencion, reparacion y apoyo tecnico para sistemas de climatizacion en espacios comerciales de alta exigencia.",
   },
   {
     title: "Banca y oficinas corporativas",
-    text: "Soluciones de climatización orientadas a continuidad operativa, confort y eficiencia en espacios de trabajo.",
+    text: "Soluciones de climatizacion orientadas a continuidad operativa, confort y eficiencia en espacios de trabajo.",
   },
   {
     title: "Industria y empresas",
-    text: "Apoyo técnico, instalación, reparación y suministro de repuestos para sistemas de distintas capacidades.",
+    text: "Apoyo tecnico, instalacion, reparacion y suministro de repuestos para sistemas de distintas capacidades.",
   },
   {
     title: "Domicilios y proyectos particulares",
-    text: "Instalación, mantención y reparación de equipos para hogares, departamentos y espacios residenciales.",
+    text: "Instalacion, mantencion y reparacion de equipos para hogares, departamentos y espacios residenciales.",
   },
 ];

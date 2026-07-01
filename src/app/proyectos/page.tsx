@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Building2, Factory, Store } from "lucide-react";
+import { Building2, Factory, Home, Store } from "lucide-react";
 import { ClientLogos } from "@/components/ClientLogos";
 import { ImageCard } from "@/components/ImageCard";
 import { PageHero } from "@/components/PageHero";
@@ -7,17 +7,20 @@ import { Reveal } from "@/components/Reveal";
 import { SectionHeader } from "@/components/SectionHeader";
 import { media } from "@/data/media";
 import { sectors } from "@/data/projects";
+import { createPageMetadata } from "@/data/seo";
 
-export const metadata: Metadata = {
-  title: "Proyectos y experiencia",
+export const metadata: Metadata = createPageMetadata({
+  title: "Proyectos y experiencia en climatizacion | InterchileClima",
   description:
-    "Experiencia de InterchileClima en climatización para retail, centros comerciales, banca, industria, oficinas, comercio y domicilios.",
-};
+    "Experiencia en climatizacion para retail, banca, industria, centros comerciales, oficinas, comercios y domicilios.",
+  path: "/proyectos",
+});
 
 const focusAreas = [
-  { icon: Store, title: "Retail y comercio", text: "Operación continua para espacios de atención al público." },
-  { icon: Building2, title: "Oficinas y banca", text: "Confort y eficiencia para equipos de trabajo." },
-  { icon: Factory, title: "Industria", text: "Soluciones técnicas para demandas de mayor escala." },
+  { icon: Store, title: "Retail y centros comerciales", text: "Operacion continua para espacios de atencion al publico." },
+  { icon: Building2, title: "Banca y oficinas", text: "Confort y eficiencia para equipos de trabajo y clientes." },
+  { icon: Factory, title: "Industria", text: "Soluciones tecnicas para demandas de mayor escala." },
+  { icon: Home, title: "Domicilios", text: "Instalacion, mantencion y reparacion para hogares y departamentos." },
 ];
 
 export default function ProyectosPage() {
@@ -25,25 +28,25 @@ export default function ProyectosPage() {
     <>
       <PageHero
         eyebrow="Proyectos"
-        title="Experiencia que se ve en terreno."
-        description="Proyectos, montaje, mantención y reparación para operaciones comerciales, industriales y corporativas."
+        title="Experiencia en climatizacion para empresas, comercio e industria"
+        description="Proyectos, montaje, mantencion, reparacion y apoyo tecnico para retail, banca, industria, oficinas, comercios y domicilios."
       />
 
       <section className="px-6 py-20 sm:py-24">
         <div className="mx-auto max-w-6xl">
           <Reveal>
             <SectionHeader
-              eyebrow="Dónde aportamos"
-              title="Soluciones pensadas para cada operación."
-              description="El mismo estándar técnico, adaptado a cada espacio."
+              eyebrow="Donde aportamos"
+              title="Soluciones pensadas para cada operacion."
+              description="El mismo estandar tecnico, adaptado al tipo de espacio y a la continuidad que requiere cada cliente."
             />
           </Reveal>
-          <div className="mt-10 grid gap-5 md:grid-cols-3">
+          <div className="mt-10 grid gap-5 md:grid-cols-2 lg:grid-cols-4">
             {focusAreas.map((area, index) => {
               const Icon = area.icon;
               return (
-                <Reveal delay={(index + 1) as 1 | 2 | 3} key={area.title}>
-                  <article className="rounded-md border border-gray-200 bg-white p-6 shadow-sm transition hover:-translate-y-1 hover:border-[#4fb7d8] hover:shadow-lg">
+                <Reveal delay={(index % 3) as 0 | 1 | 2 | 3} key={area.title}>
+                  <article className="h-full rounded-md border border-gray-200 bg-white p-6 shadow-sm transition hover:-translate-y-1 hover:border-[#4fb7d8] hover:shadow-lg">
                     <Icon aria-hidden="true" className="h-7 w-7 text-[#c30f3f]" />
                     <h2 className="mt-5 text-xl font-semibold text-gray-950">{area.title}</h2>
                     <p className="mt-2 text-sm leading-6 text-gray-600">{area.text}</p>
@@ -66,9 +69,9 @@ export default function ProyectosPage() {
         <div className="mx-auto max-w-6xl">
           <Reveal>
             <SectionHeader
-              eyebrow="Galería"
-              title="Planificación, montaje y supervisión."
-              description="Registro real de algunos momentos de nuestro trabajo técnico."
+              eyebrow="Galeria"
+              title="Planificacion, montaje y supervision."
+              description="Registro real de momentos de trabajo tecnico en proyectos de climatizacion."
             />
           </Reveal>
           <div className="mt-10 grid gap-5 md:grid-cols-2">
@@ -86,8 +89,8 @@ export default function ProyectosPage() {
           <Reveal>
             <SectionHeader
               eyebrow="Clientes"
-              title="Trayectoria con empresas de alto estándar."
-              description="Experiencia técnica en retail, banca e industria."
+              title="Experiencia con empresas de alto estandar."
+              description="Trayectoria tecnica con Cencosud, Banco de Chile, BCI y CMPC, ademas de comercios, industrias y domicilios."
             />
           </Reveal>
           <Reveal delay={1} className="mt-10"><ClientLogos /></Reveal>

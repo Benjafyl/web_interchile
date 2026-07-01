@@ -7,20 +7,22 @@ import { SectionHeader } from "@/components/SectionHeader";
 import { TeamCard } from "@/components/TeamCard";
 import { media } from "@/data/media";
 import { teamCards } from "@/data/team";
+import { createPageMetadata } from "@/data/seo";
 
-export const metadata: Metadata = {
-  title: "Equipo",
+export const metadata: Metadata = createPageMetadata({
+  title: "Equipo tecnico de climatizacion | InterchileClima",
   description:
-    "Equipo técnico de InterchileClima SpA: gestión, operaciones, administración, equipo técnico y atención comercial.",
-};
+    "Equipo tecnico y comercial comprometido con entregar soluciones de climatizacion eficientes, confiables y adaptadas a cada cliente.",
+  path: "/equipo",
+});
 
 export default function EquipoPage() {
   return (
     <>
       <PageHero
         eyebrow="Equipo"
-        title="Personas que responden en terreno."
-        description="Experiencia técnica, coordinación y trabajo familiar para cada proyecto."
+        title="Equipo tecnico y comercial enfocado en responder bien"
+        description="Experiencia tecnica, coordinacion y trabajo familiar para proyectos, instalaciones, mantenciones, reparaciones y requerimientos de climatizacion."
       />
 
       <section className="bg-gray-50 px-6 py-20 sm:py-24">
@@ -45,9 +47,9 @@ export default function EquipoPage() {
 
           <Reveal className="mt-14">
             <SectionHeader
-              eyebrow="Áreas"
+              eyebrow="Areas"
               title="Un equipo coordinado de inicio a fin."
-              description="Evaluación, ejecución técnica y atención comercial en una misma operación."
+              description="Evaluacion, ejecucion tecnica y atencion comercial en una misma operacion."
             />
           </Reveal>
           <div className="mt-10 grid gap-5 md:grid-cols-2 lg:grid-cols-3">

@@ -10,8 +10,7 @@ type PageHeroProps = {
 export function PageHero({ eyebrow, title, description }: PageHeroProps) {
   return (
     <section className="relative overflow-hidden bg-[#2f3338] px-6 pb-16 pt-32 text-white sm:pb-20">
-      <div className="absolute -right-16 top-10 h-56 w-56 rounded-full bg-[#4fb7d8]/10 blur-3xl" />
-      <div className="absolute bottom-0 left-1/4 h-44 w-44 rounded-full bg-[#c30f3f]/15 blur-3xl" />
+      <div className="absolute inset-0 bg-[linear-gradient(120deg,rgba(195,15,63,0.22),rgba(47,51,56,0)_42%),linear-gradient(300deg,rgba(79,183,216,0.14),rgba(47,51,56,0)_38%),repeating-linear-gradient(90deg,rgba(255,255,255,0.035)_0,rgba(255,255,255,0.035)_1px,transparent_1px,transparent_84px)]" />
       <Reveal className="relative mx-auto max-w-6xl">
         {eyebrow ? (
           <p className="mb-4 inline-flex items-center gap-2 text-sm font-semibold uppercase tracking-[0.14em] text-[#4fb7d8]">

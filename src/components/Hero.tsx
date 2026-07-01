@@ -8,11 +8,7 @@ import { getWhatsAppUrl } from "@/lib/utils";
 export function Hero() {
   return (
     <section className="relative overflow-hidden bg-[#30343a] px-6 pb-12 pt-28 text-white sm:pb-16 lg:pt-32">
-      <div className="absolute inset-0 opacity-75">
-        <div className="absolute left-[18%] top-0 h-80 w-80 rounded-full bg-[#c30f3f]/25 blur-3xl" />
-        <div className="absolute bottom-0 right-[8%] h-96 w-96 rounded-full bg-[#4fb7d8]/20 blur-3xl" />
-        <div className="absolute bottom-8 left-4 h-72 w-72 rounded-full bg-[#56b91f]/10 blur-3xl" />
-      </div>
+      <div className="absolute inset-0 bg-[linear-gradient(135deg,rgba(195,15,63,0.28)_0%,rgba(48,52,58,0)_34%),linear-gradient(45deg,rgba(79,183,216,0.16)_0%,rgba(48,52,58,0)_42%),repeating-linear-gradient(90deg,rgba(255,255,255,0.04)_0,rgba(255,255,255,0.04)_1px,transparent_1px,transparent_72px)]" />
 
       <div className="relative mx-auto grid max-w-6xl gap-10 lg:grid-cols-[1fr_0.92fr] lg:items-center">
         <div className="motion-safe:animate-[rise-in_.7s_ease-out_both]">
@@ -21,15 +17,16 @@ export function Hero() {
             HVAC para operaciones que no pueden detenerse
           </p>
           <h1 className="max-w-3xl text-4xl font-semibold tracking-tight sm:text-5xl lg:text-6xl">
-            Climatización que mantiene tu operación en marcha.
+            Soluciones integrales de climatizacion para empresas, comercios e industrias.
           </h1>
           <p className="mt-6 max-w-2xl text-lg leading-8 text-gray-200">
-            Resolvemos proyectos, fallas y mantenciones para que tus espacios
-            funcionen con seguridad, confort y continuidad.
+            En InterchileClima desarrollamos proyectos, instalaciones, mantenciones,
+            reparaciones y arriendo de equipos de climatizacion, con mas de 23 anos
+            de experiencia y atencion en todo Chile.
           </p>
 
           <div className="mt-6 flex flex-wrap gap-2 text-sm font-medium">
-            {['Proyectos HVAC', 'Mantención', 'Reparación', 'Todo Chile'].map((item) => (
+            {["Proyectos HVAC", "Mantencion", "Reparacion", "Arriendo", "Todo Chile"].map((item) => (
               <span className="rounded-full border border-white/15 bg-[#23272d]/55 px-3 py-2" key={item}>
                 {item}
               </span>
@@ -60,14 +57,14 @@ export function Hero() {
           <div className="absolute inset-0 bg-gradient-to-t from-[#23272d]/90 via-[#23272d]/20 to-transparent" />
           <div className="absolute left-5 top-5 rounded-md border border-white/15 bg-[#23272d]/80 px-4 py-3 backdrop-blur">
             <p className="text-2xl font-semibold text-white">23+</p>
-            <p className="text-xs font-semibold uppercase tracking-[0.13em] text-[#99d9ec]">Años de experiencia</p>
+            <p className="text-xs font-semibold uppercase tracking-[0.13em] text-[#99d9ec]">Anos de experiencia</p>
           </div>
           <div className="absolute bottom-0 left-0 right-0 p-6">
             <p className="text-sm font-semibold uppercase tracking-[0.14em] text-[#99d9ec]">
-              Coordinación en terreno
+              Coordinacion en terreno
             </p>
             <p className="mt-2 max-w-md text-lg font-semibold">
-              Diagnóstico, planificación y ejecución técnica en una misma operación.
+              Diagnostico, planificacion y ejecucion tecnica en una misma operacion.
             </p>
           </div>
         </div>
@@ -77,7 +74,7 @@ export function Hero() {
         className="relative mx-auto mt-10 flex w-fit items-center gap-2 text-sm font-medium text-gray-200 transition hover:text-white"
         href="#problemas"
       >
-        Explorar cómo respondemos
+        Explorar como respondemos
         <ArrowDown aria-hidden="true" className="h-4 w-4" />
       </a>
     </section>

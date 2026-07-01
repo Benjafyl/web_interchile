@@ -2,15 +2,16 @@
 
 import { useState } from "react";
 import {
+  ArrowRight,
   ClipboardCheck,
   PackageCheck,
+  PackageOpen,
   Snowflake,
   Thermometer,
   Wrench,
   X,
   type LucideIcon,
 } from "lucide-react";
-import { ArrowRight } from "lucide-react";
 import { ButtonLink } from "@/components/ButtonLink";
 import { mainServices, type ServiceIcon } from "@/data/services";
 
@@ -20,32 +21,40 @@ const icons: Record<ServiceIcon, LucideIcon> = {
   maintenance: Thermometer,
   repair: Wrench,
   parts: PackageCheck,
+  rental: PackageOpen,
 };
 
-const serviceDetails: Record<string, { context: string; highlights: string[] }> = {
-  "Proyectos de climatización": {
-    context: "Para empresas, comercios e industrias que necesitan una solución diseñada según el espacio, uso y demanda térmica.",
-    highlights: ["Levantamiento en terreno", "Dimensionamiento HVAC", "Coordinación técnica"],
+const serviceDetails: Record<string, { context: string; highlights: string[]; href?: string }> = {
+  "Proyectos de climatizacion": {
+    context:
+      "Para empresas, comercios e industrias que necesitan una solucion disenada segun el espacio, uso y demanda termica.",
+    highlights: ["Levantamiento en terreno", "Dimensionamiento HVAC", "Coordinacion tecnica"],
   },
-  "Instalación de equipos": {
-    context: "Instalamos equipos para domicilios, oficinas y espacios comerciales, cuidando cada etapa de la puesta en marcha.",
+  "Instalacion de equipos": {
+    context:
+      "Instalamos equipos para domicilios, oficinas y espacios comerciales, cuidando cada etapa de la puesta en marcha.",
     highlights: ["Split y multi split", "Equipos comerciales", "Puesta en marcha"],
   },
-  "Mantención preventiva y correctiva": {
-    context: "Planes de revisión y mantención para anticipar fallas, mejorar la eficiencia y extender la vida útil de los equipos.",
-    highlights: ["Limpieza técnica", "Revisión de rendimiento", "Informe y recomendación"],
+  "Mantencion preventiva y correctiva": {
+    context:
+      "Planes de mantencion HVAC para anticipar fallas, corregir problemas, mejorar la eficiencia y extender la vida util.",
+    highlights: ["Limpieza tecnica", "Revision de rendimiento", "Informe y recomendacion"],
   },
-  "Reparación de sistemas de clima": {
-    context: "Diagnosticamos fallas de operación, refrigeración y componentes para recuperar el funcionamiento del sistema.",
-    highlights: ["Diagnóstico en terreno", "Cambio de componentes", "Prueba operacional"],
+  "Reparacion de sistemas de clima": {
+    context:
+      "Diagnosticamos fallas de operacion, refrigeracion y componentes para recuperar el funcionamiento del sistema.",
+    highlights: ["Diagnostico en terreno", "Cambio de componentes", "Prueba operacional"],
   },
   "Suministro de repuestos": {
-    context: "Apoyamos la continuidad operativa con repuestos compatibles para equipos domiciliarios, comerciales y de mayor capacidad.",
-    highlights: ["Evaluación de compatibilidad", "Repuestos HVAC", "Apoyo técnico"],
+    context:
+      "Apoyamos la continuidad operativa con repuestos compatibles para equipos domiciliarios, comerciales y de mayor capacidad.",
+    highlights: ["Evaluacion de compatibilidad", "Repuestos HVAC", "Apoyo tecnico"],
   },
-  "Montaje y puesta en marcha": {
-    context: "Coordinamos el montaje, la revisión final y la entrega de sistemas preparados para operar de forma segura.",
-    highlights: ["Montaje especializado", "Verificación final", "Entrega operativa"],
+  "Arriendo de equipos compactos": {
+    context:
+      "Linea de apoyo temporal para eventos, contingencias, comercios e industrias que requieren capacidad de frio por un periodo acotado.",
+    highlights: ["150.000 BTU", "300.000 BTU", "Apoyo temporal"],
+    href: "/arriendo-equipos",
   },
 };
 
@@ -106,8 +115,8 @@ export function ServicesSelector() {
             ) : null}
           </div>
           <div className="flex flex-wrap gap-3 md:justify-end">
-            <ButtonLink href="/contacto">
-              Cotizar servicio
+            <ButtonLink href={selectedDetail?.href ?? "/contacto"}>
+              {selectedDetail?.href ? "Ver arriendo" : "Cotizar servicio"}
               <ArrowRight aria-hidden="true" className="h-4 w-4" />
             </ButtonLink>
             <button

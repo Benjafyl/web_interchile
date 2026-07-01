@@ -14,14 +14,14 @@ export function Footer() {
         <div>
           <BrandLogo className="rounded-md bg-white/95 p-2" imageClassName="h-16" />
           <p className="mt-5 max-w-md text-sm leading-6 text-gray-300">
-            InterchileClima SpA - Soluciones integrales de climatización para
-            empresas, comercios, industrias y domicilios. Atención en todo Chile.
+            InterchileClima SpA - Soluciones integrales de climatizacion para
+            empresas, comercios, industrias y domicilios. Atencion en todo Chile.
           </p>
         </div>
 
         <div>
           <h2 className="text-sm font-semibold uppercase tracking-[0.14em] text-white">
-            Links rápidos
+            Links rapidos
           </h2>
           <ul className="mt-4 space-y-3 text-sm">
             {navLinks.map((link) => (
@@ -39,7 +39,7 @@ export function Footer() {
             Servicios
           </h2>
           <ul className="mt-4 space-y-3 text-sm">
-            {mainServices.slice(0, 6).map((service) => (
+            {mainServices.map((service) => (
               <li key={service.title}>{service.title}</li>
             ))}
           </ul>
@@ -64,7 +64,7 @@ export function Footer() {
             </li>
             <li className="flex gap-3">
               <MapPinned className="h-5 w-5 shrink-0 text-[#c30f3f]" />
-              <span>{siteConfig.coverage}</span>
+              <span>{siteConfig.coverage}. {siteConfig.office}.</span>
             </li>
           </ul>
           <div className="mt-5 flex flex-wrap gap-4 text-sm">
@@ -91,10 +91,10 @@ export function Footer() {
       </div>
       <div className="mx-auto mt-10 flex max-w-7xl flex-col gap-2 border-t border-white/10 pt-6 text-sm text-gray-400 sm:flex-row sm:items-center sm:justify-between">
         <span>
-          © {new Date().getFullYear()} {siteConfig.name}. Todos los derechos
+          (c) {new Date().getFullYear()} {siteConfig.name}. Todos los derechos
           reservados.
         </span>
-        <span>Desarrollado por Benjamín Gallegos.</span>
+        <span>Desarrollado por Benjamin Gallegos.</span>
       </div>
     </footer>
   );

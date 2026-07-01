@@ -3,6 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
 import { WhatsAppButton } from "@/components/WhatsAppButton";
+import { defaultDescription, defaultTitle, seoKeywords, structuredData } from "@/data/seo";
 import { siteConfig } from "@/data/site";
 import "./globals.css";
 
@@ -17,43 +18,53 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL(siteConfig.url),
   title: {
-    default: "InterchileClima | Soluciones integrales de climatización en Chile",
-    template: "%s | InterchileClima",
+    default: defaultTitle,
+    template: "%s",
   },
-  description:
-    "Empresa familiar con más de 23 años de experiencia en climatización. Proyectos HVAC, instalación, mantención, reparación y suministro de repuestos para empresas, comercios, industrias y domicilios en todo Chile.",
-  keywords: [
-    "climatización industrial",
-    "climatización comercial",
-    "proyectos de climatización",
-    "ingeniería en climatización",
-    "instalación de aire acondicionado",
-    "mantención de aire acondicionado",
-    "mantención HVAC",
-    "reparación de aire acondicionado",
-    "proveedor de climatización",
-    "climatización para empresas",
-    "climatización para centros comerciales",
-    "aire acondicionado industrial",
-    "aire acondicionado comercial",
-    "instalación aire acondicionado domiciliario",
-    "climatización en Chile",
-    "empresa de climatización en Chile",
-  ],
+  description: defaultDescription,
+  keywords: seoKeywords,
+  applicationName: siteConfig.shortName,
+  creator: siteConfig.name,
+  publisher: siteConfig.name,
+  alternates: {
+    canonical: siteConfig.url,
+  },
   openGraph: {
-    title: "InterchileClima | Soluciones integrales de climatización en Chile",
-    description:
-      "Proyectos HVAC, instalación, mantención, reparación y repuestos para empresas, comercios, industrias y domicilios en todo Chile.",
+    title: defaultTitle,
+    description: defaultDescription,
+    url: siteConfig.url,
     type: "website",
     locale: "es_CL",
     siteName: siteConfig.name,
+    images: [
+      {
+        url: "/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "InterchileClima - Soluciones integrales de climatizacion",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: defaultTitle,
+    description: defaultDescription,
+    images: ["/og-image.png"],
   },
   icons: {
-    icon: "/brand/logo-ich-transparent.png",
-    shortcut: "/brand/logo-ich-transparent.png",
-    apple: "/brand/logo-ich-transparent.png",
+    icon: [
+      { url: "/favicon.ico", sizes: "any" },
+      { url: "/icon-16.png", sizes: "16x16", type: "image/png" },
+      { url: "/icon-32.png", sizes: "32x32", type: "image/png" },
+      { url: "/icon-48.png", sizes: "48x48", type: "image/png" },
+      { url: "/icon.png", sizes: "192x192", type: "image/png" },
+    ],
+    shortcut: "/favicon.ico",
+    apple: [{ url: "/apple-touch-icon.png", sizes: "180x180", type: "image/png" }],
   },
+  manifest: "/site.webmanifest",
 };
 
 export default function RootLayout({
@@ -71,6 +82,10 @@ export default function RootLayout({
         <main className="flex-1">{children}</main>
         <Footer />
         <WhatsAppButton />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+        />
       </body>
     </html>
   );

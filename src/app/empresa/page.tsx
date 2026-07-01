@@ -4,17 +4,19 @@ import { CTASection } from "@/components/CTASection";
 import { PageHero } from "@/components/PageHero";
 import { Reveal } from "@/components/Reveal";
 import { SectionHeader } from "@/components/SectionHeader";
+import { createPageMetadata } from "@/data/seo";
 
-export const metadata: Metadata = {
-  title: "Empresa",
+export const metadata: Metadata = createPageMetadata({
+  title: "Empresa de climatizacion con 23+ anos de experiencia | InterchileClima",
   description:
-    "InterchileClima SpA es una empresa familiar chilena con más de 23 años de experiencia en soluciones integrales de climatización.",
-};
+    "Conoce InterchileClima, empresa familiar especializada en soluciones HVAC, instalacion, mantencion, reparacion, repuestos y proyectos de climatizacion en Chile.",
+  path: "/empresa",
+});
 
 const principles = [
-  { icon: ShieldCheck, title: "Responsabilidad", text: "Compromisos técnicos claros." },
-  { icon: Handshake, title: "Cercanía", text: "Atención directa y acompañamiento." },
-  { icon: Target, title: "Calidad técnica", text: "Soluciones pensadas para durar." },
+  { icon: ShieldCheck, title: "Responsabilidad", text: "Compromisos tecnicos claros y seguimiento de cada requerimiento." },
+  { icon: Handshake, title: "Cercania", text: "Atencion directa, trato familiar y coordinacion transparente." },
+  { icon: Target, title: "Calidad tecnica", text: "Soluciones pensadas para operar bien y durar en el tiempo." },
 ];
 
 export default function EmpresaPage() {
@@ -22,8 +24,8 @@ export default function EmpresaPage() {
     <>
       <PageHero
         eyebrow="Empresa"
-        title="Experiencia técnica con trato cercano."
-        description="Somos una empresa familiar de climatización con más de 23 años atendiendo empresas, industrias, comercios y domicilios."
+        title="Empresa familiar de climatizacion con 23+ anos de experiencia"
+        description="InterchileClima SpA entrega soluciones HVAC para empresas, industrias, comercios y domicilios, con atencion en todo Chile y una forma de trabajo cercana."
       />
 
       <section className="px-6 py-20 sm:py-24">
@@ -31,15 +33,15 @@ export default function EmpresaPage() {
           <Reveal>
             <SectionHeader
               eyebrow="Nuestro enfoque"
-              title="Resolver bien, desde el primer diagnóstico."
-              description="Combinamos evaluación en terreno, experiencia HVAC y seguimiento para responder a desafíos de distintas escalas."
+              title="Resolver bien, desde el primer diagnostico."
+              description="Combinamos evaluacion en terreno, experiencia HVAC y seguimiento para responder a desafios comerciales, industriales y domiciliarios."
             />
           </Reveal>
           <div className="grid gap-4 sm:grid-cols-3">
             <Reveal delay={1}>
               <div className="rounded-md border border-gray-200 bg-white p-5 shadow-sm">
                 <p className="text-3xl font-semibold text-[#c30f3f]">23+</p>
-                <p className="mt-2 text-sm text-gray-600">años de experiencia</p>
+                <p className="mt-2 text-sm text-gray-600">anos de experiencia</p>
               </div>
             </Reveal>
             <Reveal delay={2}>
@@ -51,7 +53,7 @@ export default function EmpresaPage() {
             <Reveal delay={3}>
               <div className="rounded-md border border-gray-200 bg-white p-5 shadow-sm">
                 <p className="text-3xl font-semibold text-[#c30f3f]">Chile</p>
-                <p className="mt-2 text-sm text-gray-600">atención en todo el país</p>
+                <p className="mt-2 text-sm text-gray-600">atencion en todo el pais</p>
               </div>
             </Reveal>
           </div>
@@ -62,9 +64,9 @@ export default function EmpresaPage() {
         <div className="mx-auto max-w-6xl">
           <Reveal>
             <SectionHeader
-              eyebrow="Lo que nos guía"
-              title="Técnica, cumplimiento y confianza."
-              description="Principios simples para cada visita, proyecto y entrega."
+              eyebrow="Lo que nos guia"
+              title="Tecnica, cumplimiento y confianza."
+              description="Principios simples para cada visita, proyecto, mantencion, reparacion y entrega."
             />
           </Reveal>
           <div className="mt-10 grid gap-5 md:grid-cols-3">
@@ -87,16 +89,16 @@ export default function EmpresaPage() {
       <section className="px-6 py-20 sm:py-24">
         <Reveal className="mx-auto max-w-6xl rounded-md bg-[#30343a] p-8 text-white sm:p-10">
           <MapPinned aria-hidden="true" className="h-9 w-9 text-[#56b91f]" />
-          <h2 className="mt-5 text-3xl font-semibold">Atención en todo Chile.</h2>
+          <h2 className="mt-5 text-3xl font-semibold">Atencion en todo Chile.</h2>
           <p className="mt-3 max-w-2xl leading-7 text-gray-200">
-            Operamos con oficina virtual y coordinación en terreno según cada requerimiento.
+            Operamos con oficina virtual y coordinacion en terreno segun cada requerimiento.
           </p>
         </Reveal>
       </section>
 
       <CTASection
         title="Conversemos sobre tu requerimiento."
-        text="Proyectos, instalación, mantención, reparación y repuestos para clientes en todo Chile."
+        text="Proyectos, instalacion, mantencion, reparacion, repuestos y arriendo de equipos para clientes en todo Chile."
       />
     </>
   );

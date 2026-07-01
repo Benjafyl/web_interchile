@@ -23,6 +23,7 @@ const serviceTypes = [
   "Mantencion",
   "Reparacion",
   "Repuestos",
+  "Arriendo de equipos",
   "Otro",
 ];
 
