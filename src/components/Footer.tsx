@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { Mail, MapPinned } from "lucide-react";
 import { FaWhatsapp } from "react-icons/fa";
 import { SiInstagram, SiTiktok } from "react-icons/si";
@@ -94,7 +95,26 @@ export function Footer() {
           (c) {new Date().getFullYear()} {siteConfig.name}. Todos los derechos
           reservados.
         </span>
-        <span>Desarrollado por Benjamin Gallegos.</span>
+        <a
+          className="inline-flex w-fit items-center gap-3 rounded-md border border-white/10 bg-white/95 px-4 py-3 text-gray-950 shadow-sm transition hover:-translate-y-0.5 hover:border-[#4fb7d8] hover:shadow-lg"
+          href="https://www.instagram.com/dreamwebchile/?hl=es-la"
+          rel="noreferrer"
+          target="_blank"
+        >
+          <span className="flex h-10 w-10 items-center justify-center rounded-md bg-black">
+            <Image
+              alt="Logo de Dream Web Chile"
+              className="h-7 w-7 object-contain"
+              height={28}
+              src="/brand/dreamweb-logo.png"
+              width={28}
+            />
+          </span>
+          <span className="text-sm font-medium">
+            Desarrollado por{" "}
+            <strong className="font-semibold text-[#087ac7]">Dream Web Chile</strong>
+          </span>
+        </a>
       </div>
     </footer>
   );
