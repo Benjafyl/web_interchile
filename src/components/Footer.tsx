@@ -96,23 +96,23 @@ export function Footer() {
           reservados.
         </span>
         <a
-          className="inline-flex w-fit items-center gap-3 rounded-md border border-white/10 bg-white/95 px-4 py-3 text-gray-950 shadow-sm transition hover:-translate-y-0.5 hover:border-[#4fb7d8] hover:shadow-lg"
+          className="group inline-flex w-fit items-center gap-3 text-gray-300 transition hover:text-white"
           href="https://www.instagram.com/dreamwebchile/?hl=es-la"
           rel="noreferrer"
           target="_blank"
         >
-          <span className="flex h-10 w-10 items-center justify-center rounded-md bg-black">
+          <span className="flex h-12 w-12 items-center justify-center rounded-md bg-black/35 ring-1 ring-white/10 transition group-hover:ring-[#4fb7d8]/70">
             <Image
               alt="Logo de Dream Web Chile"
-              className="h-7 w-7 object-contain"
-              height={28}
+              className="h-9 w-9 object-contain"
+              height={36}
               src="/brand/dreamweb-logo.png"
-              width={28}
+              width={36}
             />
           </span>
           <span className="text-sm font-medium">
             Desarrollado por{" "}
-            <strong className="font-semibold text-[#087ac7]">Dream Web Chile</strong>
+            <strong className="font-semibold text-[#4fb7d8] transition group-hover:text-white">Dream Web Chile</strong>
           </span>
         </a>
       </div>
