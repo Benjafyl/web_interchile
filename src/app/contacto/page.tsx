@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
-import { ArrowUpRight, MapPin } from "lucide-react";
+import { Mail, MapPin } from "lucide-react";
+import { FaWhatsapp } from "react-icons/fa";
 import { ContactForm } from "@/components/ContactForm";
 import { PageHero } from "@/components/PageHero";
 import { siteConfig } from "@/data/site";
@@ -31,12 +32,12 @@ export default function ContactoPage() {
             <a href={getWhatsAppUrl()} target="_blank" rel="noreferrer">
               <span>WhatsApp</span>
               <strong>{siteConfig.phoneDisplay}</strong>
-              <ArrowUpRight aria-hidden="true" />
+              <FaWhatsapp aria-hidden="true" />
             </a>
             <a href={"mailto:" + siteConfig.email}>
               <span>Correo electrónico</span>
               <strong>{siteConfig.email}</strong>
-              <ArrowUpRight aria-hidden="true" />
+              <Mail aria-hidden="true" />
             </a>
             <div className="coverage-note">
               <MapPin aria-hidden="true" />

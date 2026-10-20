@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { ArrowDownRight } from "lucide-react";
+import { ChevronDown } from "lucide-react";
 type PageHeroProps = { eyebrow?: string; title: string; description: string };
 export function PageHero({ eyebrow, title, description }: PageHeroProps) {
   return (
@@ -16,7 +16,7 @@ export function PageHero({ eyebrow, title, description }: PageHeroProps) {
             <p>{description}</p>
             <a className="text-link" href="#detalle">
               Explorar
-              <ArrowDownRight aria-hidden="true" />
+              <ChevronDown aria-hidden="true" />
             </a>
           </div>
         </div>

@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowUpRight, Check, MapPin, Plus } from "lucide-react";
+import { Check, FolderOpen, MapPin, Plus, Snowflake } from "lucide-react";
 import { Hero } from "@/components/Hero";
 import { ButtonLink } from "@/components/ButtonLink";
 import { ClientLogos } from "@/components/ClientLogos";
@@ -87,8 +87,8 @@ export default function Home() {
       <section className="about-feature">
         <div className="about-image">
           <Image
-            src="/projects/equipo-interchileclima-exterior.jpeg"
-            alt="Equipo de Inter Chile Clima en terreno"
+            src="/projects/planos-obra-hvac.jpeg"
+            alt="Técnicos de Inter Chile Clima coordinando una instalación en terreno"
             fill
             sizes="(min-width: 900px) 50vw, 100vw"
           />
@@ -123,7 +123,6 @@ export default function Home() {
           </ul>
           <ButtonLink href="/empresa" variant="light">
             Conoce Inter Chile Clima
-            <ArrowUpRight aria-hidden="true" />
           </ButtonLink>
         </div>
       </section>
@@ -140,7 +139,6 @@ export default function Home() {
             </div>
             <ButtonLink href="/proyectos" variant="ghost">
               Explorar proyectos
-              <ArrowUpRight aria-hidden="true" />
             </ButtonLink>
           </div>
           <div className="project-editorial">
@@ -157,8 +155,9 @@ export default function Home() {
                     fill
                     sizes="(min-width: 900px) 60vw, 100vw"
                   />
-                  <span className="image-arrow">
-                    <ArrowUpRight aria-hidden="true" />
+                  <span className="project-peek">
+                    <FolderOpen aria-hidden="true" />
+                    Ver proyecto
                   </span>
                 </figure>
                 <p>{item.text}</p>
@@ -172,7 +171,7 @@ export default function Home() {
         <div className="shell rental-grid">
           <div>
             <span className="rental-icon">
-              <Plus aria-hidden="true" />
+              <Snowflake aria-hidden="true" />
             </span>
             <p className="section-kicker">Climatización temporal</p>
             <h2>
@@ -186,7 +185,6 @@ export default function Home() {
             </p>
             <ButtonLink href="/arriendo-equipos" variant="secondary">
               Conocer el servicio de arriendo
-              <ArrowUpRight aria-hidden="true" />
             </ButtonLink>
           </div>
           <div className="capacity-list">
@@ -271,7 +269,7 @@ export default function Home() {
         </div>
       </section>
       <CTASection
-        title="TU PRÓXIMO PROYECTO EMPIEZA CON UNA CONVERSACIÓN."
+        title="HABLEMOS DE TU PRÓXIMO PROYECTO."
         text="Cuéntanos qué necesitas. Encontremos la mejor forma de resolverlo."
       />
     </>

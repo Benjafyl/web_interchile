@@ -1,10 +1,12 @@
 "use client";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { ArrowUpRight, Menu, X } from "lucide-react";
+import { MessageSquareText, Menu, X } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
 import { BrandLogo } from "@/components/BrandLogo";
-import { navLinks, siteConfig } from "@/data/site";
+import { SocialLinks } from "@/components/SocialLinks";
+import { navLinks } from "@/data/site";
+
 export function Header() {
   const pathname = usePathname();
   const [isOpen, setIsOpen] = useState(false);
@@ -27,10 +29,7 @@ export function Header() {
       <div className="utility-bar">
         <div className="shell utility-inner">
           <span>Soluciones ambientales. Relaciones de largo plazo.</span>
-          <a href={"tel:+" + siteConfig.whatsappNumber}>
-            {siteConfig.phoneDisplay}
-            <ArrowUpRight aria-hidden="true" />
-          </a>
+          <SocialLinks compact />
         </div>
       </div>
       <div className="shell header-inner">
@@ -55,8 +54,8 @@ export function Header() {
             ))}
         </nav>
         <Link className="button header-cta" href="/contacto">
-          Conversemos
-          <ArrowUpRight aria-hidden="true" />
+          <MessageSquareText aria-hidden="true" />
+          Cotizar proyecto
         </Link>
         <button
           ref={toggle}
@@ -84,15 +83,9 @@ export function Header() {
               onClick={() => setIsOpen(false)}
             >
               {link.label}
-              <ArrowUpRight aria-hidden="true" />
             </Link>
           ))}
-          <a
-            className="mobile-phone"
-            href={"tel:+" + siteConfig.whatsappNumber}
-          >
-            {siteConfig.phoneDisplay}
-          </a>
+          <SocialLinks />
         </nav>
       )}
     </header>

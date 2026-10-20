@@ -1,7 +1,7 @@
 "use client";
 import Image from "next/image";
 import { useState } from "react";
-import { ArrowUpRight, Minus, Plus } from "lucide-react";
+import { Minus, Plus } from "lucide-react";
 import { detailedServices } from "@/data/services";
 import { ButtonLink } from "@/components/ButtonLink";
 const photos = [
@@ -85,7 +85,6 @@ export function ServicesSelector() {
                   {index === 5
                     ? "Conocer capacidades"
                     : "Evaluemos tu requerimiento"}
-                  <ArrowUpRight aria-hidden="true" />
                 </ButtonLink>
               </div>
             </div>

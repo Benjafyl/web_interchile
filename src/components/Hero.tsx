@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { ArrowDown, ArrowUpRight, MoveUpRight } from "lucide-react";
+import { Building2, ChevronDown, MessageSquareText } from "lucide-react";
 import { ButtonLink } from "@/components/ButtonLink";
 export function Hero() {
   return (
@@ -24,12 +24,12 @@ export function Hero() {
           </p>
           <div className="hero-actions">
             <ButtonLink href="/contacto">
+              <MessageSquareText aria-hidden="true" />
               Cotizar mi proyecto
-              <ArrowUpRight aria-hidden="true" />
             </ButtonLink>
             <a className="text-link" href="#soluciones">
               Explorar soluciones
-              <ArrowDown aria-hidden="true" />
+              <ChevronDown aria-hidden="true" />
             </a>
           </div>
           <div className="hero-proof">
@@ -44,7 +44,7 @@ export function Hero() {
               </span>
             </div>
             <div>
-              <MoveUpRight aria-hidden="true" />
+              <Building2 aria-hidden="true" />
               <span>
                 De un equipo split
                 <br />a un proyecto industrial.

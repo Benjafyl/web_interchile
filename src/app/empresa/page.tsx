@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Image from "next/image";
-import { ArrowUpRight, Check } from "lucide-react";
+import { Check } from "lucide-react";
 import { PageHero } from "@/components/PageHero";
 import { CTASection } from "@/components/CTASection";
 import { ButtonLink } from "@/components/ButtonLink";
@@ -49,7 +49,6 @@ export default function EmpresaPage() {
             </p>
             <ButtonLink href="/equipo" variant="ghost">
               Conoce a nuestro equipo
-              <ArrowUpRight aria-hidden="true" />
             </ButtonLink>
           </div>
         </div>

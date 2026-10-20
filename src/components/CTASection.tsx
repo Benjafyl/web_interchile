@@ -1,4 +1,5 @@
-import { ArrowUpRight } from "lucide-react";
+import { MessageSquareText } from "lucide-react";
+import { FaWhatsapp } from "react-icons/fa";
 import { ButtonLink } from "@/components/ButtonLink";
 import { getWhatsAppUrl } from "@/lib/utils";
 type CTASectionProps = {
@@ -16,22 +17,31 @@ export function CTASection({
   whatsappLabel = "Escribir por WhatsApp",
 }: CTASectionProps) {
   return (
-    <section className="contact-band">
-      <div className="shell contact-band-grid">
-        <div>
-          <p className="section-kicker">Demos el siguiente paso</p>
+    <section className="contact-band" id="conversemos">
+      <div className="shell contact-panel">
+        <div className="contact-copy">
+          <p className="section-kicker">
+            <span className="contact-signal" />
+            Demos el siguiente paso
+          </p>
           <h2>{title}</h2>
           <p>{text}</p>
         </div>
-        <div className="contact-band-actions">
+        <div className="contact-options">
           <ButtonLink href={primaryHref} variant="light">
+            <MessageSquareText aria-hidden="true" />
             {primaryLabel}
-            <ArrowUpRight aria-hidden="true" />
           </ButtonLink>
-          <ButtonLink href={getWhatsAppUrl()} variant="ghost" external>
+          <ButtonLink
+            href={getWhatsAppUrl()}
+            variant="secondary"
+            className="contact-whatsapp"
+            external
+          >
+            <FaWhatsapp aria-hidden="true" />
             {whatsappLabel}
-            <ArrowUpRight aria-hidden="true" />
           </ButtonLink>
+          <p>Atención directa, de persona a persona.</p>
         </div>
       </div>
     </section>

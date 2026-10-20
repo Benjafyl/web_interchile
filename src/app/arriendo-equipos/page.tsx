@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Image from "next/image";
-import { Check, ArrowUpRight } from "lucide-react";
+import { Check } from "lucide-react";
 import { PageHero } from "@/components/PageHero";
 import { CTASection } from "@/components/CTASection";
 import { ButtonLink } from "@/components/ButtonLink";
@@ -42,10 +42,7 @@ export default function ArriendoPage() {
                 <span>BTU</span>
               </div>
             </div>
-            <ButtonLink href="/contacto">
-              Consultar disponibilidad
-              <ArrowUpRight aria-hidden="true" />
-            </ButtonLink>
+            <ButtonLink href="/contacto">Consultar disponibilidad</ButtonLink>
           </div>
           <figure className="story-photo">
             <Image
