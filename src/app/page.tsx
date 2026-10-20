@@ -1,163 +1,278 @@
 import type { Metadata } from "next";
-import { ArrowRight, Gauge, Search, ShieldCheck, ThermometerSun, TriangleAlert, Wrench } from "lucide-react";
+import Image from "next/image";
+import Link from "next/link";
+import { ArrowUpRight, Check, MapPin, Plus } from "lucide-react";
+import { Hero } from "@/components/Hero";
 import { ButtonLink } from "@/components/ButtonLink";
 import { ClientLogos } from "@/components/ClientLogos";
-import { CTASection } from "@/components/CTASection";
-import { Hero } from "@/components/Hero";
-import { ImageCard } from "@/components/ImageCard";
-import { Reveal } from "@/components/Reveal";
-import { SectionHeader } from "@/components/SectionHeader";
 import { ServicesSelector } from "@/components/ServicesSelector";
-import { media } from "@/data/media";
+import { CTASection } from "@/components/CTASection";
 import { createPageMetadata } from "@/data/seo";
 
 export const metadata: Metadata = createPageMetadata({
-  title: "InterchileClima | Climatizacion industrial, comercial y domiciliaria",
+  title: "Inter Chile Clima | El clima bajo control",
   description:
-    "Soluciones integrales de climatizacion para empresas, centros comerciales, industrias, comercios y domicilios. Mas de 23 anos de experiencia y atencion en todo Chile.",
+    "Ingeniería, instalación y mantención de climatización para empresas, industrias y hogares. Más de 23 años de experiencia en todo Chile.",
   path: "/",
 });
-
-const problems = [
+const work = [
   {
-    icon: TriangleAlert,
-    title: "Fallas que interrumpen",
-    text: "Respondemos ante equipos que dejan de cumplir su funcion.",
+    src: "/projects/maniobra-grua-alto-las-condes.webp",
+    alt: "Maniobra nocturna con grúa en un centro comercial",
+    title: "Cuando la escala exige experiencia.",
+    text: "Montaje especializado · Climatización comercial",
+    className: "project-wide",
   },
   {
-    icon: ThermometerSun,
-    title: "Espacios sin confort",
-    text: "Recuperamos condiciones adecuadas para personas y operacion.",
-  },
-  {
-    icon: Gauge,
-    title: "Equipos con bajo rendimiento",
-    text: "Detectamos oportunidades antes de que se transformen en una detencion.",
+    src: "/projects/techo-antofagasta-hvac.jpeg",
+    alt: "Equipo técnico en una instalación HVAC en Antofagasta",
+    title: "El detalle también es parte del proyecto.",
+    text: "Supervisión técnica · Antofagasta",
+    className: "project-tall",
   },
 ];
-
-const process = [
-  { icon: Search, number: "01", title: "Evaluamos", text: "Levantamiento y diagnostico." },
-  { icon: Wrench, number: "02", title: "Ejecutamos", text: "Solucion tecnica en terreno." },
-  { icon: ShieldCheck, number: "03", title: "Acompanamos", text: "Continuidad y seguimiento." },
+const faq = [
+  {
+    q: "¿Trabajan con empresas y también con hogares?",
+    a: "Sí. Desarrollamos proyectos para retail, banca, oficinas e industria, y también instalamos, mantenemos y reparamos equipos de aire acondicionado domiciliarios. El alcance se define según cada espacio.",
+  },
+  {
+    q: "¿Cómo puedo solicitar una cotización?",
+    a: "Escríbenos por WhatsApp o completa el formulario de contacto con el servicio, la ubicación y una descripción de lo que necesitas. Con esos antecedentes coordinamos la evaluación y preparamos una propuesta.",
+  },
+  {
+    q: "¿Atienden fuera de Santiago?",
+    a: "Sí, atendemos requerimientos en todo Chile. La visita y la ejecución se coordinan según la ubicación, las condiciones del lugar y el alcance del trabajo.",
+  },
+  {
+    q: "¿Puedo arrendar un equipo para una contingencia?",
+    a: "Contamos con equipos compactos de 150.000 y 300.000 BTU para necesidades temporales. Indícanos las fechas, la ubicación y las condiciones del espacio para evaluar la capacidad y la disponibilidad.",
+  },
 ];
-
 export default function Home() {
   return (
     <>
       <Hero />
-
-      <section className="border-b border-gray-200 bg-white px-6 py-5">
-        <div className="mx-auto flex max-w-6xl flex-wrap items-center justify-between gap-4 text-sm font-medium text-gray-700">
-          <span><strong className="text-[#c30f3f]">23+ anos</strong> de experiencia HVAC</span>
-          <span><strong className="text-[#c30f3f]">Empresas, industria y retail</strong></span>
-          <span><strong className="text-[#c30f3f]">Atencion en todo Chile</strong></span>
+      <section className="trust-strip">
+        <div className="shell trust-inner">
+          <p>
+            Experiencia que nos conecta
+            <br />
+            <strong>con grandes operaciones.</strong>
+          </p>
+          <ClientLogos />
         </div>
       </section>
-
-      <section className="px-6 py-20 sm:py-24" id="problemas">
-        <Reveal className="mx-auto max-w-6xl">
-          <SectionHeader
-            eyebrow="Lo que resolvemos"
-            title="Cuando el clima falla, la operacion lo siente."
-            description="Entramos con una respuesta tecnica clara para recuperar continuidad, eficiencia y confort."
-          />
-          <div className="mt-10 grid gap-5 md:grid-cols-3">
-            {problems.map((problem) => {
-              const Icon = problem.icon;
-              return (
-                <article className="group border-t-2 border-gray-200 pt-6 transition hover:border-[#c30f3f]" key={problem.title}>
-                  <div className="flex h-12 w-12 items-center justify-center rounded-md bg-rose-50 text-[#c30f3f] transition group-hover:bg-[#c30f3f] group-hover:text-white">
-                    <Icon aria-hidden="true" className="h-6 w-6" />
-                  </div>
-                  <h2 className="mt-5 text-xl font-semibold text-gray-950">{problem.title}</h2>
-                  <p className="mt-2 max-w-sm leading-7 text-gray-600">{problem.text}</p>
-                </article>
-              );
-            })}
+      <section className="section-space" id="soluciones">
+        <div className="shell">
+          <div className="section-top">
+            <div>
+              <p className="section-kicker">Lo que hacemos</p>
+              <h2 className="display-heading">
+                UN EQUIPO.
+                <br />
+                TODAS LAS SOLUCIONES.
+              </h2>
+            </div>
+            <p>
+              Del primer diagnóstico a la puesta en marcha.
+              <br />
+              Resolvemos cada etapa de tu climatización con una mirada técnica y
+              cercana.
+            </p>
           </div>
-        </Reveal>
-      </section>
-
-      <section className="bg-gray-50 px-6 py-20 sm:py-24" id="proceso">
-        <Reveal className="mx-auto grid max-w-6xl gap-12 lg:grid-cols-[0.78fr_1.22fr] lg:items-center">
-          <div>
-            <SectionHeader
-              eyebrow="Nuestra forma de trabajar"
-              title="Menos incertidumbre. Mas control tecnico."
-              description="Una ruta simple para resolver desde una mantencion puntual hasta un proyecto completo."
-            />
-            <ButtonLink className="mt-7" href="/servicios" variant="secondary">
-              Ver servicios
-              <ArrowRight aria-hidden="true" className="h-4 w-4" />
-            </ButtonLink>
-          </div>
-          <div className="grid gap-4 sm:grid-cols-3">
-            {process.map((step) => {
-              const Icon = step.icon;
-              return (
-                <article className="relative overflow-hidden rounded-md bg-[#30343a] p-6 text-white" key={step.number}>
-                  <span className="absolute right-4 top-3 text-5xl font-semibold text-white/10">{step.number}</span>
-                  <Icon aria-hidden="true" className="h-7 w-7 text-[#4fb7d8]" />
-                  <h2 className="mt-10 text-xl font-semibold">{step.title}</h2>
-                  <p className="mt-2 text-sm leading-6 text-gray-200">{step.text}</p>
-                </article>
-              );
-            })}
-          </div>
-        </Reveal>
-      </section>
-
-      <section className="px-6 py-20 sm:py-24">
-        <Reveal className="mx-auto max-w-6xl">
-          <SectionHeader
-            eyebrow="Servicios"
-            title="Servicios de climatizacion para cada necesidad."
-            description="Proyectos HVAC, instalacion de aire acondicionado, mantencion, reparacion, repuestos y arriendo de equipos compactos como apoyo temporal."
-          />
-          <div className="mt-10">
-            <ServicesSelector />
-          </div>
-        </Reveal>
-      </section>
-
-      <section className="px-6 py-20 sm:py-24">
-        <div className="mx-auto max-w-6xl">
-          <SectionHeader
-            eyebrow="Experiencia comprobada"
-            title="La confianza se construye en terreno."
-            description="Trayectoria apoyando operaciones de alto estandar en retail, banca, industria y comercio."
-          />
-          <div className="mt-10"><ClientLogos /></div>
+          <ServicesSelector />
         </div>
       </section>
-
-      <section className="bg-gray-50 px-6 py-20 sm:py-24">
-        <div className="mx-auto max-w-6xl">
-          <div className="flex flex-col justify-between gap-5 sm:flex-row sm:items-end">
-            <SectionHeader
-              eyebrow="Trabajo real"
-              title="Seis formas de resolver un desafio HVAC."
-              description="Desde una instalacion domiciliaria hasta una maniobra de alta complejidad."
-            />
-            <ButtonLink href="/proyectos" variant="ghost" className="shrink-0">
-              Ver proyectos
-              <ArrowRight aria-hidden="true" className="h-4 w-4" />
+      <section className="about-feature">
+        <div className="about-image">
+          <Image
+            src="/projects/equipo-interchileclima-exterior.jpeg"
+            alt="Equipo de Inter Chile Clima en terreno"
+            fill
+            sizes="(min-width: 900px) 50vw, 100vw"
+          />
+        </div>
+        <div className="about-copy">
+          <p className="section-kicker">Nuestra forma de hacer las cosas</p>
+          <h2>
+            LA CONFIANZA
+            <br />
+            SE CONSTRUYE
+            <br />
+            EN TERRENO.
+          </h2>
+          <p>
+            Somos una empresa familiar con más de 23 años de experiencia. Nos
+            involucramos en cada desafío: escuchamos, evaluamos y llevamos la
+            solución hasta donde tiene que funcionar.
+          </p>
+          <ul>
+            <li>
+              <Check aria-hidden="true" />
+              Trato directo y coordinación clara.
+            </li>
+            <li>
+              <Check aria-hidden="true" />
+              Experiencia comercial, industrial y domiciliaria.
+            </li>
+            <li>
+              <Check aria-hidden="true" />
+              Seguimiento después de la instalación.
+            </li>
+          </ul>
+          <ButtonLink href="/empresa" variant="light">
+            Conoce Inter Chile Clima
+            <ArrowUpRight aria-hidden="true" />
+          </ButtonLink>
+        </div>
+      </section>
+      <section className="section-space">
+        <div className="shell">
+          <div className="section-top">
+            <div>
+              <p className="section-kicker">Trabajo real</p>
+              <h2 className="display-heading">
+                MÁS QUE EQUIPOS.
+                <br />
+                SOLUCIONES EN ACCIÓN.
+              </h2>
+            </div>
+            <ButtonLink href="/proyectos" variant="ghost">
+              Explorar proyectos
+              <ArrowUpRight aria-hidden="true" />
             </ButtonLink>
           </div>
-          <div className="mt-10 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
-            {media.services.map((item, index) => (
-              <Reveal delay={(index % 3) as 0 | 1 | 2 | 3} key={item.src}>
-                <ImageCard {...item} />
-              </Reveal>
+          <div className="project-editorial">
+            {work.map((item) => (
+              <Link
+                href="/proyectos"
+                key={item.src}
+                className={"project-link " + item.className}
+              >
+                <figure>
+                  <Image
+                    src={item.src}
+                    alt={item.alt}
+                    fill
+                    sizes="(min-width: 900px) 60vw, 100vw"
+                  />
+                  <span className="image-arrow">
+                    <ArrowUpRight aria-hidden="true" />
+                  </span>
+                </figure>
+                <p>{item.text}</p>
+                <h3>{item.title}</h3>
+              </Link>
             ))}
           </div>
         </div>
       </section>
-
+      <section className="rental-band">
+        <div className="shell rental-grid">
+          <div>
+            <span className="rental-icon">
+              <Plus aria-hidden="true" />
+            </span>
+            <p className="section-kicker">Climatización temporal</p>
+            <h2>
+              FRÍO DONDE
+              <br />
+              LO NECESITAS.
+            </h2>
+            <p>
+              Una contingencia, un evento o un refuerzo de capacidad. Equipos
+              compactos por el tiempo que tu operación los requiera.
+            </p>
+            <ButtonLink href="/arriendo-equipos" variant="secondary">
+              Conocer el servicio de arriendo
+              <ArrowUpRight aria-hidden="true" />
+            </ButtonLink>
+          </div>
+          <div className="capacity-list">
+            <div>
+              <span>Capacidad disponible</span>
+              <strong>
+                150.000<small>BTU</small>
+              </strong>
+            </div>
+            <div>
+              <span>Para mayores demandas</span>
+              <strong>
+                300.000<small>BTU</small>
+              </strong>
+            </div>
+            <p>
+              <MapPin aria-hidden="true" />
+              Traslado y montaje coordinados según el proyecto.
+            </p>
+          </div>
+        </div>
+      </section>
+      <section className="section-space">
+        <div className="shell">
+          <div className="section-top">
+            <h2 className="display-heading">
+              DE TU NECESIDAD
+              <br />A UNA SOLUCIÓN.
+            </h2>
+            <p>Un proceso claro, con personas que se hacen cargo.</p>
+          </div>
+          <ol className="process-line">
+            {[
+              {
+                title: "Te escuchamos",
+                text: "Nos cuentas qué necesitas, dónde y cómo funciona tu operación.",
+              },
+              {
+                title: "Lo evaluamos",
+                text: "Revisamos las condiciones técnicas y definimos la solución adecuada.",
+              },
+              {
+                title: "Lo resolvemos",
+                text: "Coordinamos la ejecución, la puesta en marcha y el seguimiento.",
+              },
+            ].map((step, i) => (
+              <li key={step.title}>
+                <span className="process-number">{"0" + (i + 1)}</span>
+                <h3>{step.title}</h3>
+                <p>{step.text}</p>
+              </li>
+            ))}
+          </ol>
+        </div>
+      </section>
+      <section className="faq-section">
+        <div className="shell faq-grid">
+          <div>
+            <p className="section-kicker">Antes de empezar</p>
+            <h2 className="display-heading">
+              HABLEMOS
+              <br />
+              CON CLARIDAD.
+            </h2>
+            <p>
+              Estas son algunas de las preguntas
+              <br />
+              que recibimos con más frecuencia.
+            </p>
+          </div>
+          <div className="faq-list">
+            {faq.map((item) => (
+              <details key={item.q}>
+                <summary>
+                  {item.q}
+                  <Plus aria-hidden="true" />
+                </summary>
+                <p>{item.a}</p>
+              </details>
+            ))}
+          </div>
+        </div>
+      </section>
       <CTASection
-        title="Tu proxima decision HVAC puede empezar hoy."
-        text="Cuentanos el problema, el tipo de espacio y la ubicacion. Nosotros evaluamos la mejor respuesta tecnica."
+        title="TU PRÓXIMO PROYECTO EMPIEZA CON UNA CONVERSACIÓN."
+        text="Cuéntanos qué necesitas. Encontremos la mejor forma de resolverlo."
       />
     </>
   );

@@ -1,82 +1,59 @@
 import type { Metadata } from "next";
-import { CTASection } from "@/components/CTASection";
-import { ImageCard } from "@/components/ImageCard";
 import { PageHero } from "@/components/PageHero";
-import { Reveal } from "@/components/Reveal";
-import { SectionHeader } from "@/components/SectionHeader";
+import { CTASection } from "@/components/CTASection";
 import { ServicesSelector } from "@/components/ServicesSelector";
 import { detailedServices } from "@/data/services";
-import { media } from "@/data/media";
 import { createPageMetadata } from "@/data/seo";
-
 export const metadata: Metadata = createPageMetadata({
-  title: "Servicios de climatizacion HVAC para empresas y domicilios | InterchileClima",
+  title: "Servicios de climatización HVAC | Inter Chile Clima",
   description:
-    "Proyectos de climatizacion, instalacion de aire acondicionado, mantencion preventiva y correctiva, reparacion, repuestos y arriendo de equipos compactos.",
+    "Ingeniería, instalación, mantención, reparación, repuestos y arriendo de climatización para empresas y hogares.",
   path: "/servicios",
 });
-
 export default function ServiciosPage() {
   return (
     <>
       <PageHero
         eyebrow="Servicios"
-        title="Servicios HVAC para empresas, comercios, industrias y domicilios"
-        description="Integramos proyectos de climatizacion, instalacion, mantencion HVAC, reparacion, repuestos y arriendo de equipos compactos segun la necesidad de cada cliente."
+        title="CADA NECESIDAD. UNA RESPUESTA TÉCNICA."
+        description="Un sistema nuevo, un equipo que falla o una operación que debe continuar. Integramos las soluciones que tu espacio necesita."
       />
-
-      <section className="px-6 py-16 sm:py-20">
-        <Reveal className="mx-auto max-w-6xl">
+      <section className="section-space" id="detalle">
+        <div className="shell">
           <ServicesSelector />
-        </Reveal>
+        </div>
       </section>
-
-      <section className="bg-gray-50 px-6 py-16 sm:py-20">
-        <div className="mx-auto max-w-6xl">
-          <Reveal>
-            <SectionHeader
-              eyebrow="Alcance tecnico"
-              title="Lo que puede incluir cada servicio."
-              description="El alcance final depende del espacio, tipo de equipo y condicion de operacion."
-            />
-          </Reveal>
-          <div className="mt-10 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
-            {detailedServices.map((service) => (
-              <article className="rounded-md border border-gray-200 bg-white p-6 shadow-sm" key={service.title}>
-                <h2 className="text-xl font-semibold text-gray-950">{service.title}</h2>
-                <p className="mt-3 text-sm leading-6 text-gray-600">{service.summary}</p>
-                {service.includes ? (
-                  <ul className="mt-5 space-y-2 text-sm text-gray-700">
-                    {service.includes.slice(0, 5).map((item) => (
-                      <li className="flex gap-2" key={item}>
-                        <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-[#56b91f]" />
-                        <span>{item}</span>
-                      </li>
-                    ))}
-                  </ul>
-                ) : null}
+      <section className="scope-section section-space">
+        <div className="shell">
+          <div className="section-top">
+            <h2 className="display-heading">
+              EL ALCANCE
+              <br />
+              HACE LA DIFERENCIA.
+            </h2>
+            <p>
+              Definimos cada intervención según el equipo, el espacio y sus
+              condiciones de operación.
+            </p>
+          </div>
+          <div className="scope-grid">
+            {detailedServices.map((service, i) => (
+              <article key={service.icon}>
+                <span className="scope-number">{"0" + (i + 1)}</span>
+                <h3>{service.title}</h3>
+                <ul>
+                  {service.includes?.map((item) => (
+                    <li key={item}>{item}</li>
+                  ))}
+                </ul>
               </article>
             ))}
           </div>
         </div>
       </section>
-
-      <section className="px-6 py-16 sm:py-20">
-        <div className="mx-auto max-w-6xl">
-          <div className="grid gap-5 md:grid-cols-3">
-            {media.services.slice(0, 3).map((item, index) => (
-              <Reveal delay={(index + 1) as 1 | 2 | 3} key={item.src}>
-                <ImageCard {...item} />
-              </Reveal>
-            ))}
-          </div>
-        </div>
-      </section>
-
       <CTASection
-        title="Necesitas una evaluacion tecnica?"
-        text="Indicanos el tipo de espacio, servicio requerido y ubicacion para revisar la mejor solucion de climatizacion."
-        primaryLabel="Cotizar servicio"
+        title="PARTAMOS POR UN BUEN DIAGNÓSTICO."
+        text="Dinos qué tipo de espacio tienes y qué necesitas resolver. Revisamos juntos el siguiente paso."
       />
     </>
   );

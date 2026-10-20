@@ -6,14 +6,14 @@ export const siteConfig = {
   phoneDisplay: "+56 9 9440 2632",
   whatsappNumber: "56994402632",
   whatsappMessage:
-    "Hola, vengo desde la pagina web de InterchileClima y me gustaria solicitar informacion sobre un servicio de climatizacion.",
+    "Hola, vengo desde la página web de InterchileClima y me gustaría solicitar información sobre un servicio de climatización.",
   instagramHandle: "@interchileclima",
   instagramUrl: "https://www.instagram.com/interchileclima",
   tiktokHandle: "@interchileclima",
   tiktokUrl: "https://www.tiktok.com/@interchileclima",
-  coverage: "Atencion en todo Chile",
+  coverage: "Atención en todo Chile",
   office: "Oficina virtual",
-  years: "23+ anos",
+  years: "23+ años",
 };
 
 export const navLinks = [
@@ -27,9 +27,12 @@ export const navLinks = [
 ];
 
 export const trustStats = [
-  { value: "23+", label: "anos de experiencia" },
-  { value: "Chile", label: "atencion en todo el pais" },
-  { value: "B2B+B2C", label: "soluciones industriales, comerciales y domiciliarias" },
+  { value: "23+", label: "años de experiencia" },
+  { value: "Chile", label: "atención en todo el país" },
+  {
+    value: "B2B+B2C",
+    label: "soluciones industriales, comerciales y domiciliarias",
+  },
   { value: "HVAC", label: "experiencia en retail, banca e industria" },
   { value: "24/7", label: "respuesta coordinada para continuidad operativa" },
 ];

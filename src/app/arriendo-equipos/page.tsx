@@ -1,92 +1,94 @@
 import type { Metadata } from "next";
-import { CheckCircle2, Snowflake, Truck } from "lucide-react";
-import { CTASection } from "@/components/CTASection";
-import { ImageCard } from "@/components/ImageCard";
+import Image from "next/image";
+import { Check, ArrowUpRight } from "lucide-react";
 import { PageHero } from "@/components/PageHero";
-import { Reveal } from "@/components/Reveal";
-import { SectionHeader } from "@/components/SectionHeader";
+import { CTASection } from "@/components/CTASection";
+import { ButtonLink } from "@/components/ButtonLink";
 import { createPageMetadata } from "@/data/seo";
-
 export const metadata: Metadata = createPageMetadata({
-  title: "Arriendo de equipos de climatizacion 150.000 y 300.000 BTU | InterchileClima",
+  title: "Arriendo de equipos 150.000 y 300.000 BTU | Inter Chile Clima",
   description:
-    "Arriendo de equipos compactos de climatizacion para eventos, contingencias, comercios, industrias y apoyo temporal en todo Chile.",
+    "Climatización temporal para contingencias, eventos y refuerzo de operaciones. Equipos compactos de 150.000 y 300.000 BTU.",
   path: "/arriendo-equipos",
 });
-
-const useCases = [
-  "Apoyo temporal para contingencias HVAC",
-  "Eventos y espacios con alta ocupacion",
-  "Comercios, industrias y bodegas",
-  "Refuerzo mientras se repara un sistema existente",
-];
-
-const capabilities = [
-  { icon: Snowflake, title: "150.000 y 300.000 BTU", text: "Capacidades compactas para distintas demandas de climatizacion temporal." },
-  { icon: Truck, title: "Coordinacion en terreno", text: "Planificacion de traslado, montaje, retiro y condiciones operativas." },
-  { icon: CheckCircle2, title: "Linea secundaria", text: "Disponible como complemento a proyectos, mantenciones y contingencias." },
-];
-
-export default function ArriendoEquiposPage() {
+export default function ArriendoPage() {
   return (
     <>
       <PageHero
         eyebrow="Arriendo de equipos"
-        title="Arriendo de equipos compactos de climatizacion"
-        description="Solucion temporal para eventos, contingencias, comercios e industrias que requieren apoyo de climatizacion sin inversion permanente en equipos."
+        title="LA CAPACIDAD QUE NECESITAS. EL TIEMPO QUE NECESITAS."
+        description="Climatización temporal para contingencias, eventos y refuerzo de operaciones. Una solución coordinada para que tu actividad siga."
       />
-
-      <section className="px-6 py-20 sm:py-24">
-        <div className="mx-auto grid max-w-6xl gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
-          <Reveal>
-            <SectionHeader
-              eyebrow="Uso recomendado"
-              title="Apoyo temporal cuando la continuidad no puede esperar."
-              description="El arriendo de equipos compactos no reemplaza un proyecto HVAC definitivo, pero es util para contingencias, refuerzos temporales y necesidades puntuales."
-            />
-            <ul className="mt-6 grid gap-3 text-sm text-gray-700 sm:grid-cols-2">
-              {useCases.map((item) => (
-                <li className="flex gap-3 rounded-md border border-gray-200 bg-white p-4" key={item}>
-                  <CheckCircle2 aria-hidden="true" className="mt-0.5 h-5 w-5 shrink-0 text-[#56b91f]" />
-                  <span>{item}</span>
-                </li>
-              ))}
-            </ul>
-          </Reveal>
-          <Reveal delay={1}>
-            <ImageCard
-              aspect="aspect-[16/10]"
+      <section className="section-space" id="detalle">
+        <div className="shell story-grid">
+          <div>
+            <p className="section-kicker">Equipos compactos</p>
+            <h2 className="display-heading">
+              UNA RESPUESTA
+              <br />A OTRA ESCALA.
+            </h2>
+            <p className="body-copy">
+              Evaluamos la demanda térmica y las condiciones de instalación para
+              proponerte el equipo adecuado. Coordinamos el traslado, montaje y
+              retiro según el alcance acordado.
+            </p>
+            <div className="rental-capacities">
+              <div>
+                <strong>150.000</strong>
+                <span>BTU</span>
+              </div>
+              <div>
+                <strong>300.000</strong>
+                <span>BTU</span>
+              </div>
+            </div>
+            <ButtonLink href="/contacto">
+              Consultar disponibilidad
+              <ArrowUpRight aria-hidden="true" />
+            </ButtonLink>
+          </div>
+          <figure className="story-photo">
+            <Image
               src="/projects/maniobra-nocturna-equipo-hvac.webp"
-              alt="Arriendo de equipo compacto de climatizacion para apoyo temporal"
-              title="Equipos compactos en terreno"
+              alt="Maniobra de equipo compacto de climatización en terreno"
+              fill
+              sizes="(min-width: 900px) 50vw, 100vw"
             />
-          </Reveal>
+          </figure>
         </div>
       </section>
-
-      <section className="bg-gray-50 px-6 py-20 sm:py-24">
-        <div className="mx-auto max-w-6xl">
-          <div className="grid gap-5 md:grid-cols-3">
-            {capabilities.map((item, index) => {
-              const Icon = item.icon;
-              return (
-                <Reveal delay={(index + 1) as 1 | 2 | 3} key={item.title}>
-                  <article className="h-full rounded-md border border-gray-200 bg-white p-6 shadow-sm">
-                    <Icon aria-hidden="true" className="h-7 w-7 text-[#c30f3f]" />
-                    <h2 className="mt-5 text-xl font-semibold text-gray-950">{item.title}</h2>
-                    <p className="mt-2 text-sm leading-6 text-gray-600">{item.text}</p>
-                  </article>
-                </Reveal>
-              );
-            })}
+      <section className="scope-section section-space">
+        <div className="shell">
+          <div className="section-top">
+            <h2 className="display-heading">
+              CUANDO LO TEMPORAL
+              <br />
+              ES LO IMPORTANTE.
+            </h2>
+            <p>
+              La disponibilidad y la capacidad se confirman después de evaluar
+              tu requerimiento.
+            </p>
+          </div>
+          <div className="use-cases">
+            {[
+              "Contingencias mientras se repara un sistema existente",
+              "Eventos y espacios con alta ocupación",
+              "Refuerzo para comercios, industrias y bodegas",
+              "Apoyo durante obras o mantenciones programadas",
+            ].map((item) => (
+              <div key={item}>
+                <Check aria-hidden="true" />
+                <h3>{item}</h3>
+              </div>
+            ))}
           </div>
         </div>
       </section>
-
       <CTASection
-        title="Cotiza arriendo de equipos compactos."
-        text="Indicanos capacidad requerida, fechas, comuna, tipo de espacio y condiciones de instalacion para evaluar disponibilidad."
-        primaryLabel="Solicitar cotizacion"
+        title="PONGAMOS TU PLAN EN MARCHA."
+        text="Indícanos fechas, comuna, tipo de espacio y capacidad requerida. Evaluamos la disponibilidad y las condiciones del montaje."
+        primaryLabel="Cotizar arriendo"
       />
     </>
   );

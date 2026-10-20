@@ -13,7 +13,7 @@ export function BrandLogo({ className, imageClassName }: BrandLogoProps) {
         alt="Interchile Clima SpA - Soluciones Ambientales"
         className={cn("h-16 w-auto", imageClassName)}
         height={229}
-        priority
+        preload
         src="/brand/logo-ich-transparent.png"
         width={438}
       />

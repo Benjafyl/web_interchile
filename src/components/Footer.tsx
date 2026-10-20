@@ -1,119 +1,83 @@
 import Link from "next/link";
-import Image from "next/image";
-import { Mail, MapPinned } from "lucide-react";
-import { FaWhatsapp } from "react-icons/fa";
+import { ArrowUpRight } from "lucide-react";
 import { SiInstagram, SiTiktok } from "react-icons/si";
 import { BrandLogo } from "@/components/BrandLogo";
-import { mainServices } from "@/data/services";
 import { navLinks, siteConfig } from "@/data/site";
-import { getWhatsAppUrl } from "@/lib/utils";
-
 export function Footer() {
   return (
-    <footer className="bg-[#2f3338] px-6 py-12 text-gray-300">
-      <div className="mx-auto grid max-w-7xl gap-10 md:grid-cols-2 lg:grid-cols-[1.2fr_0.8fr_0.9fr_0.9fr]">
-        <div>
-          <BrandLogo className="rounded-md bg-white/95 p-2" imageClassName="h-16" />
-          <p className="mt-5 max-w-md text-sm leading-6 text-gray-300">
-            InterchileClima SpA - Soluciones integrales de climatizacion para
-            empresas, comercios, industrias y domicilios. Atencion en todo Chile.
+    <footer className="site-footer">
+      <div className="shell footer-grid">
+        <div className="footer-brand">
+          <Link href="/" aria-label="Inter Chile Clima — Inicio">
+            <BrandLogo />
+          </Link>
+          <p>
+            El clima adecuado.
+            <br />
+            El equipo correcto.
           </p>
+          <span>Empresa familiar. Experiencia nacional.</span>
         </div>
-
         <div>
-          <h2 className="text-sm font-semibold uppercase tracking-[0.14em] text-white">
-            Links rapidos
-          </h2>
-          <ul className="mt-4 space-y-3 text-sm">
-            {navLinks.map((link) => (
-              <li key={link.href}>
-                <Link className="hover:text-[#4fb7d8]" href={link.href}>
-                  {link.label}
-                </Link>
-              </li>
-            ))}
+          <h2>Explora</h2>
+          <ul>
+            {navLinks
+              .filter((link) => link.href !== "/")
+              .map((link) => (
+                <li key={link.href}>
+                  <Link href={link.href}>{link.label}</Link>
+                </li>
+              ))}
           </ul>
         </div>
-
         <div>
-          <h2 className="text-sm font-semibold uppercase tracking-[0.14em] text-white">
-            Servicios
-          </h2>
-          <ul className="mt-4 space-y-3 text-sm">
-            {mainServices.map((service) => (
-              <li key={service.title}>{service.title}</li>
-            ))}
-          </ul>
-        </div>
-
-        <div>
-          <h2 className="text-sm font-semibold uppercase tracking-[0.14em] text-white">
-            Contacto
-          </h2>
-          <ul className="mt-4 space-y-3 text-sm">
-            <li className="flex gap-3">
-              <Mail className="h-5 w-5 shrink-0 text-[#4fb7d8]" />
-              <a className="hover:text-[#4fb7d8]" href={`mailto:${siteConfig.email}`}>
-                {siteConfig.email}
-              </a>
-            </li>
-            <li className="flex gap-3">
-              <FaWhatsapp className="h-5 w-5 shrink-0 text-[#25D366]" />
-              <a className="hover:text-[#4fb7d8]" href={getWhatsAppUrl()}>
-                {siteConfig.phoneDisplay}
-              </a>
-            </li>
-            <li className="flex gap-3">
-              <MapPinned className="h-5 w-5 shrink-0 text-[#c30f3f]" />
-              <span>{siteConfig.coverage}. {siteConfig.office}.</span>
-            </li>
-          </ul>
-          <div className="mt-5 flex flex-wrap gap-4 text-sm">
+          <h2>Hablemos</h2>
+          <a className="footer-contact" href={"mailto:" + siteConfig.email}>
+            {siteConfig.email}
+            <ArrowUpRight aria-hidden="true" />
+          </a>
+          <a
+            className="footer-contact"
+            href={"tel:+" + siteConfig.whatsappNumber}
+          >
+            {siteConfig.phoneDisplay}
+            <ArrowUpRight aria-hidden="true" />
+          </a>
+          <p>
+            Atención en todo Chile.
+            <br />
+            Oficina virtual y coordinación en terreno.
+          </p>
+          <div className="footer-socials">
             <a
-              className="inline-flex items-center gap-2 hover:text-[#4fb7d8]"
               href={siteConfig.instagramUrl}
-              rel="noreferrer"
               target="_blank"
+              rel="noreferrer"
+              aria-label="Instagram de Inter Chile Clima"
             >
-              <SiInstagram aria-hidden="true" className="h-4 w-4" />
-              {siteConfig.instagramHandle}
+              <SiInstagram />
             </a>
             <a
-              className="inline-flex items-center gap-2 hover:text-[#4fb7d8]"
               href={siteConfig.tiktokUrl}
-              rel="noreferrer"
               target="_blank"
+              rel="noreferrer"
+              aria-label="TikTok de Inter Chile Clima"
             >
-              <SiTiktok aria-hidden="true" className="h-4 w-4" />
-              {siteConfig.tiktokHandle}
+              <SiTiktok />
             </a>
           </div>
         </div>
       </div>
-      <div className="mx-auto mt-10 flex max-w-7xl flex-col gap-2 border-t border-white/10 pt-6 text-sm text-gray-400 sm:flex-row sm:items-center sm:justify-between">
-        <span>
-          (c) {new Date().getFullYear()} {siteConfig.name}. Todos los derechos
-          reservados.
-        </span>
+      <div className="shell footer-bottom">
+        <span>© {new Date().getFullYear()} InterchileClima SpA.</span>
+        <span>Soluciones ambientales</span>
         <a
-          className="group inline-flex w-fit items-center gap-3 text-gray-300 transition hover:text-white"
           href="https://www.instagram.com/dreamwebchile/?hl=es-la"
-          rel="noreferrer"
           target="_blank"
+          rel="noreferrer"
         >
-          <span className="flex h-12 w-12 items-center justify-center rounded-md bg-black/35 ring-1 ring-white/10 transition group-hover:ring-[#4fb7d8]/70">
-            <Image
-              alt="Logo de Dream Web Chile"
-              className="h-9 w-9 object-contain"
-              height={36}
-              src="/brand/dreamweb-logo.png"
-              width={36}
-            />
-          </span>
-          <span className="text-sm font-medium">
-            Desarrollado por{" "}
-            <strong className="font-semibold text-[#4fb7d8] transition group-hover:text-white">Dream Web Chile</strong>
-          </span>
+          Diseño y desarrollo · Dream Web Chile
+          <ArrowUpRight aria-hidden="true" />
         </a>
       </div>
     </footer>

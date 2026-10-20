@@ -1,37 +1,37 @@
 export const teamCards = [
   {
-    area: "Gestion",
+    area: "Gestión",
     name: "Gerencia",
-    role: "Direccion y seguimiento",
+    role: "Dirección y seguimiento",
     description:
-      "Relacion con clientes, planificacion general y control de compromisos tecnicos.",
+      "Relación con clientes, planificación general y control de compromisos técnicos.",
   },
   {
-    area: "Operacion",
+    area: "Operación",
     name: "Operaciones",
-    role: "Coordinacion en terreno",
+    role: "Coordinación en terreno",
     description:
-      "Programacion de visitas, ejecucion de trabajos y continuidad operativa.",
+      "Programación de visitas, ejecución de trabajos y continuidad operativa.",
   },
   {
-    area: "Administracion",
-    name: "Administracion",
+    area: "Administración",
+    name: "Administración",
     role: "Soporte interno",
     description:
-      "Gestion documental, compras, coordinacion administrativa y apoyo a proyectos.",
+      "Gestión documental, compras, coordinación administrativa y apoyo a proyectos.",
   },
   {
-    area: "Tecnica",
-    name: "Equipo tecnico",
-    role: "Instalacion y mantenimiento",
+    area: "Técnica",
+    name: "Equipo técnico",
+    role: "Instalación y mantenimiento",
     description:
-      "Diagnostico, instalacion, mantencion y reparacion de sistemas de climatizacion.",
+      "Diagnóstico, instalación, mantención y reparación de sistemas de climatización.",
   },
   {
     area: "Comercial",
-    name: "Atencion comercial",
+    name: "Atención comercial",
     role: "Cotizaciones y requerimientos",
     description:
-      "Recepcion de solicitudes, orientacion inicial y seguimiento de cotizaciones.",
+      "Recepción de solicitudes, orientación inicial y seguimiento de cotizaciones.",
   },
 ];
