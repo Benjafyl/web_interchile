@@ -30,4 +30,6 @@ At the owner's request, the project film autoplays muted, plays inline and loops
 
 ## Publication checks
 
+The owner identified the nighttime crane photograph maniobra-grua-alto-las-condes.webp as Mall Alto Las Condes, Santiago de Chile. Use this location in homepage and project captions and image descriptions. It is a separate project from the Temuco expansion; no project date was supplied.
+
 Build and type-check before publication. Review desktop at 1440px and mobile at 390px, including overflow, images, keyboard focus, menu, accordion, FAQ, links and contact validation. Repair observed defects as one batch and run one confirming pass. Deployment target is the existing Dokploy application, triggered by a push to main as authorized by the owner.

@@ -19,9 +19,9 @@ export const metadata: Metadata = createPageMetadata({
 const work = [
   {
     src: "/projects/maniobra-grua-alto-las-condes.webp",
-    alt: "Maniobra nocturna con grúa en un centro comercial",
+    alt: "Maniobra nocturna con grúa en Mall Alto Las Condes, Santiago de Chile",
     title: "Cuando la escala exige experiencia.",
-    text: "Montaje especializado · Climatización comercial",
+    text: "Mall Alto Las Condes · Santiago de Chile",
     className: "project-wide",
   },
   {

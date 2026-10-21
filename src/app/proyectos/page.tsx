@@ -14,8 +14,8 @@ export const metadata: Metadata = createPageMetadata({
 const projects = [
   {
     src: "/projects/maniobra-grua-alto-las-condes.webp",
-    title: "Montajes que requieren coordinación.",
-    category: "Retail y espacios comerciales",
+    title: "Montaje en Mall Alto Las Condes.",
+    category: "Santiago de Chile · Montaje especializado",
     text: "Planificación y maniobras especializadas para equipos de mayor capacidad.",
   },
   {

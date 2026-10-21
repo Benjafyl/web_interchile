@@ -48,8 +48,8 @@ export const media = {
     },
     {
       src: "/projects/maniobra-grua-alto-las-condes.webp",
-      alt: "Maniobra tecnica con grua para montaje de climatizacion en edificio comercial",
-      title: "Montaje especializado",
+      alt: "Maniobra nocturna con grúa en Mall Alto Las Condes, Santiago de Chile",
+      title: "Mall Alto Las Condes · Santiago de Chile",
     },
     {
       src: "/projects/montaje-equipo-hvac-grua.jpeg",
