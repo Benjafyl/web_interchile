@@ -61,8 +61,8 @@ export default function TemucoPage() {
               </h2>
             </div>
             <p>
-              Personas, equipos y detalles de la ampliación. Toca una fotografía
-              para verla completa.
+              Registro de la ampliación y, por separado, de la sala de máquinas
+              existente del mall. Toca una fotografía para verla completa.
             </p>
           </div>
           <ProjectGallery />

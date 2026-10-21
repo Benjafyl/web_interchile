@@ -24,7 +24,9 @@ Tokens live in src/app/globals.css. One 800ms entrance in the homepage hero; 200
 
 The owner's Drive folder “Ampleacion mall portal temuco 2026” is the sole source of all media under public/projects/portal-temuco-2026. Reviewed 63 photos and 37 short videos. Twenty visually confirmed near-duplicate photos were moved to Drive's recoverable trash; keep all distinct angles and all original videos. The general Imagenes and Videos folders were empty at the time of review.
 
-Feature the new project with a short, user-controlled, silent film assembled from three original landscape clips. No autoplay or continuous animation. The dedicated project page has 18 photographs, category filters and a native modal gallery with keyboard navigation, Escape, focus return and full uncropped images. Render original photo aspect ratios throughout the gallery and new team section. The homepage field-coordination portrait uses contain to preserve helmets and faces. Older construction photography remains separate from the Temuco case study; do not relabel it as Temuco.
+Feature the new project with a short, user-controlled, silent film assembled only from the mall walkthrough and the ducts and unfinished construction areas (source clips 054, 044 and 045). The owner clarified that the colored pipes belong to the mall's existing machine room, outside the expansion project. Never use that room in the expansion film or its poster. Keep its four photos labeled and filtered as “Sala de máquinas”, after the expansion photographs. Preserve the complete portrait video framing against a soft background derived from the same footage.
+
+No autoplay or continuous animation. The dedicated project page has 18 photographs, category filters and a native modal gallery with keyboard navigation, Escape, focus return and full uncropped images. Render original photo aspect ratios throughout the gallery and new team section. The homepage field-coordination portrait uses contain to preserve helmets and faces. Older construction photography remains separate from the Temuco case study; do not relabel it as Temuco.
 
 ## Publication checks
 
