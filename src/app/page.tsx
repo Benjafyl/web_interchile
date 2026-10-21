@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { Check, FolderOpen, MapPin, Plus, Snowflake } from "lucide-react";
 import { Hero } from "@/components/Hero";
+import { TemucoFeature } from "@/components/TemucoFeature";
 import { ButtonLink } from "@/components/ButtonLink";
 import { ClientLogos } from "@/components/ClientLogos";
 import { ServicesSelector } from "@/components/ServicesSelector";
@@ -85,10 +86,10 @@ export default function Home() {
         </div>
       </section>
       <section className="about-feature">
-        <div className="about-image">
+        <div className="about-image temuco-about-image">
           <Image
-            src="/projects/planos-obra-hvac.jpeg"
-            alt="Técnicos de Inter Chile Clima coordinando una instalación en terreno"
+            src="/projects/portal-temuco-2026/revision-planos.webp"
+            alt="Revisión de planos en terreno durante la ampliación de Mall Portal Temuco 2026"
             fill
             sizes="(min-width: 900px) 50vw, 100vw"
           />
@@ -126,6 +127,7 @@ export default function Home() {
           </ButtonLink>
         </div>
       </section>
+      <TemucoFeature />
       <section className="section-space">
         <div className="shell">
           <div className="section-top">

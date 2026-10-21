@@ -20,14 +20,32 @@ export default function EquipoPage() {
       />
       <section className="section-space" id="detalle">
         <div className="shell">
-          <figure className="team-panorama">
-            <Image
-              src="/projects/equipo-interchileclima-interior.jpeg"
-              alt="Equipo de Inter Chile Clima con su vestimenta corporativa"
-              fill
-              sizes="100vw"
-            />
-          </figure>
+          <div className="team-field-grid">
+            <figure>
+              <Image
+                src="/projects/portal-temuco-2026/equipo-interchile.webp"
+                alt="Tres integrantes de Inter Chile Clima con cascos y vestimenta corporativa durante la visita a Mall Portal Temuco"
+                width={960}
+                height={1280}
+                sizes="(min-width: 900px) 40vw, 90vw"
+              />
+              <figcaption>
+                Una empresa familiar, presente en terreno.
+              </figcaption>
+            </figure>
+            <figure>
+              <Image
+                src="/projects/portal-temuco-2026/reunion-en-terreno.webp"
+                alt="Equipo coordinando los detalles de la ampliación de Mall Portal Temuco"
+                width={960}
+                height={1280}
+                sizes="(min-width: 900px) 40vw, 90vw"
+              />
+              <figcaption>
+                Escuchar, coordinar y resolver juntos. Temuco, 2026.
+              </figcaption>
+            </figure>
+          </div>
           <div className="section-top team-heading">
             <h2 className="display-heading">
               DISTINTAS ÁREAS.

@@ -28,6 +28,7 @@ export const routes = [
   { path: "/empresa", priority: 0.8 },
   { path: "/servicios", priority: 0.9 },
   { path: "/proyectos", priority: 0.8 },
+  { path: "/proyectos/ampliacion-mall-portal-temuco-2026", priority: 0.8 },
   { path: "/arriendo-equipos", priority: 0.8 },
   { path: "/equipo", priority: 0.7 },
   { path: "/contacto", priority: 0.9 },

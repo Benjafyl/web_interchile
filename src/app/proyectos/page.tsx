@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import { PageHero } from "@/components/PageHero";
+import { TemucoFeature } from "@/components/TemucoFeature";
 import { CTASection } from "@/components/CTASection";
 import { ClientLogos } from "@/components/ClientLogos";
 import { createPageMetadata } from "@/data/seo";
@@ -56,7 +57,19 @@ export default function ProyectosPage() {
         title="EL TRABAJO HABLA POR NOSOTROS."
         description="Cada espacio tiene su desafío. Estas son algunas de las formas en que llevamos nuestra experiencia a proyectos comerciales, industriales y domiciliarios."
       />
-      <section className="section-space" id="detalle">
+      <TemucoFeature id="detalle" />
+      <section className="section-space">
+        <div className="shell section-top">
+          <h2 className="display-heading">
+            MÁS EXPERIENCIA
+            <br />
+            EN TERRENO.
+          </h2>
+          <p>
+            Montajes, supervisión y soluciones en otros proyectos de nuestra
+            trayectoria.
+          </p>
+        </div>
         <div className="shell portfolio-grid">
           {projects.map((project) => (
             <article key={project.src}>

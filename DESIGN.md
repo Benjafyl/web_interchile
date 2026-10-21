@@ -20,6 +20,12 @@ The footer is a quiet pale surface with compact navigation and contact channels.
 
 Tokens live in src/app/globals.css. One 800ms entrance in the homepage hero; 200ms response transitions elsewhere. Content remains visible before animation. Reduced-motion preferences disable all animation and smooth scrolling. Controls have visible keyboard focus; the mobile navigation closes on Escape and returns focus to its toggle. Keep the contact form's validation and delivery behavior.
 
-## Verification
+## Mall Portal Temuco media — 2026
+
+The owner's Drive folder “Ampleacion mall portal temuco 2026” is the sole source of all media under public/projects/portal-temuco-2026. Reviewed 63 photos and 37 short videos. Twenty visually confirmed near-duplicate photos were moved to Drive's recoverable trash; keep all distinct angles and all original videos. The general Imagenes and Videos folders were empty at the time of review.
+
+Feature the new project with a short, user-controlled, silent film assembled from three original landscape clips. No autoplay or continuous animation. The dedicated project page has 18 photographs, category filters and a native modal gallery with keyboard navigation, Escape, focus return and full uncropped images. Render original photo aspect ratios throughout the gallery and new team section. The homepage field-coordination portrait uses contain to preserve helmets and faces. Older construction photography remains separate from the Temuco case study; do not relabel it as Temuco.
+
+## Publication checks
 
 Build and type-check before publication. Review desktop at 1440px and mobile at 390px, including overflow, images, keyboard focus, menu, accordion, FAQ, links and contact validation. Repair observed defects as one batch and run one confirming pass. Deployment target is the existing Dokploy application, triggered by a push to main as authorized by the owner.
