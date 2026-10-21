@@ -26,7 +26,7 @@ The owner's Drive folder “Ampleacion mall portal temuco 2026” is the sole so
 
 Feature the new project with a short, user-controlled, silent film assembled only from the mall walkthrough and the ducts and unfinished construction areas (source clips 054, 044 and 045). The owner clarified that the colored pipes belong to the mall's existing machine room, outside the expansion project. Never use that room in the expansion film or its poster. Keep its four photos labeled and filtered as “Sala de máquinas”, after the expansion photographs. Preserve the complete portrait video framing against a soft background derived from the same footage.
 
-No autoplay or continuous animation. The dedicated project page has 18 photographs, category filters and a native modal gallery with keyboard navigation, Escape, focus return and full uncropped images. Render original photo aspect ratios throughout the gallery and new team section. The homepage field-coordination portrait uses contain to preserve helmets and faces. Older construction photography remains separate from the Temuco case study; do not relabel it as Temuco.
+At the owner's request, the project film autoplays muted, plays inline and loops, with native controls available to pause it. The dedicated project page has 18 photographs, category filters and a native modal gallery with keyboard navigation, Escape, focus return and full uncropped images. Render original photo aspect ratios throughout the gallery and new team section. The homepage field-coordination portrait uses contain to preserve helmets and faces. Older construction photography remains separate from the Temuco case study; do not relabel it as Temuco.
 
 ## Publication checks
 

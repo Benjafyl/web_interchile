@@ -5,10 +5,12 @@ export function ProjectVideo() {
   return (
     <figure className="project-film">
       <video
+        autoPlay
+        loop
         controls
         muted
         playsInline
-        preload="none"
+        preload="metadata"
         poster={temucoProject.poster}
         aria-label="Recorrido por la ampliación de Mall Portal Temuco 2026, video sin audio"
         width="1024"
