@@ -3,7 +3,7 @@ export const temucoProject = {
   title: "Ampliación Mall Portal Temuco",
   year: "2026",
   location: "Temuco · Región de La Araucanía",
-  video: "/projects/portal-temuco-2026/recorrido-ampliacion-horizontal.mp4",
+  video: "/projects/portal-temuco-2026/recorrido-ampliacion-obra.mp4",
   poster: "/projects/portal-temuco-2026/ampliacion-poster.webp",
 };
 
