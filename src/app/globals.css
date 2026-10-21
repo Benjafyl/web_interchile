@@ -51,6 +51,30 @@
   --gallery-control: #ffffff18;
   --gallery-max: 1180px;
   --gallery-min-control: 48px;
+  --rental-ink: #13232b;
+  --rental-muted: #e2e9ec;
+  --rental-line: #ffffff40;
+  --rental-photo-width: min(68%, 1280px);
+  --rental-copy-width: 48%;
+  --rental-copy-max: 600px;
+  --rental-capacity-size: clamp(48px, 4.4vw, 72px);
+  --rental-mobile-photo: 430px;
+  --rental-mobile-inset: 380px;
+  --rental-overlay: linear-gradient(
+    90deg,
+    #13232b 0%,
+    #13232bf5 32%,
+    #13232bc9 46%,
+    #13232b33 67%,
+    #13232b12 100%
+  );
+  --rental-mobile-overlay: linear-gradient(
+    180deg,
+    #13232b00 0%,
+    #13232b12 20%,
+    #13232bf5 43%,
+    #13232b 58%
+  );
 }
 @theme inline {
   --color-background: var(--background);
@@ -2976,5 +3000,129 @@ main:focus {
   .team-field-grid {
     grid-template-columns: 1fr;
     gap: var(--s8);
+  }
+}
+
+/* Finished spaces in the hero; real packaged equipment in the rental feature. */
+.hero-photo {
+  object-position: center 54%;
+}
+.hero-photo-top > span:first-child {
+  padding: var(--s2) var(--s3);
+  border-radius: var(--button-radius);
+  background: var(--white);
+  color: var(--ink);
+}
+.hero-photo-top > span + span {
+  padding: var(--s2) var(--s3);
+  border-radius: var(--button-radius);
+  background: var(--rental-ink);
+  color: var(--white);
+}
+.rental-band {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  background: var(--rental-ink);
+  color: var(--white);
+}
+.rental-background {
+  position: absolute;
+  inset: 0 0 0 auto;
+  width: var(--rental-photo-width);
+  z-index: -2;
+}
+.rental-background img {
+  object-fit: cover;
+  object-position: center 40%;
+}
+.rental-band::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: var(--rental-overlay);
+  z-index: -1;
+  pointer-events: none;
+}
+.rental-grid {
+  display: block;
+  position: relative;
+}
+.rental-content {
+  width: var(--rental-copy-width);
+  max-width: var(--rental-copy-max);
+}
+.rental-band .section-kicker {
+  color: var(--white);
+}
+.rental-band .rental-content > p:not(.section-kicker) {
+  color: var(--rental-muted);
+}
+.rental-band .capacity-list {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  border: 0;
+  padding: 0;
+  gap: var(--s6);
+  margin-block: var(--s7);
+}
+.rental-band .capacity-list > div {
+  border-block: 1px solid var(--rental-line);
+  padding-block: var(--s4);
+}
+.rental-band .capacity-list > div > span {
+  color: var(--rental-muted);
+}
+.rental-band .capacity-list strong {
+  font-size: var(--rental-capacity-size);
+  margin-top: var(--s2);
+}
+.rental-band .capacity-list small {
+  display: block;
+  margin: var(--s1) 0 0;
+  color: var(--rental-muted);
+  font-size: var(--xs);
+}
+.rental-logistics {
+  display: flex;
+  gap: var(--s3);
+  align-items: start;
+}
+.rental-logistics svg {
+  width: var(--base);
+  height: var(--base);
+  margin-top: var(--s1);
+}
+.rental-content > .button {
+  text-align: center;
+  line-height: 1.6;
+}
+@media (max-width: 999px) and (min-width: 740px) {
+  .rental-content {
+    width: 53%;
+  }
+}
+@media (max-width: 739px) {
+  .rental-band {
+    padding-top: var(--rental-mobile-inset);
+    padding-bottom: var(--s10);
+  }
+  .rental-background {
+    inset: 0 0 auto;
+    width: 100%;
+    height: var(--rental-mobile-photo);
+  }
+  .rental-band::before {
+    background: var(--rental-mobile-overlay);
+  }
+  .rental-content {
+    width: 100%;
+    max-width: none;
+  }
+  .rental-band .capacity-list {
+    gap: var(--s5);
+  }
+  .rental-content > .button {
+    width: 100%;
   }
 }

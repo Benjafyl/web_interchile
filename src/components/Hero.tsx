@@ -54,16 +54,16 @@ export function Hero() {
         </div>
         <figure className="hero-visual">
           <Image
-            src="/projects/montaje-equipo-hvac-grua.jpeg"
-            alt="Izaje de un equipo industrial de climatización durante un montaje de Inter Chile Clima"
+            src="/images/hero-confort.webp"
+            alt="Imagen ilustrativa de un atrio luminoso y confortable, con vegetación y luz natural"
             fill
             preload
             sizes="(min-width: 900px) 48vw, 100vw"
             className="hero-photo"
           />
           <div className="hero-photo-top">
-            <span>Experiencia en acción</span>
-            <span>HVAC / CHILE</span>
+            <span>Confort en cada espacio</span>
+            <span>BIENESTAR / CHILE</span>
           </div>
           <figcaption>
             <span className="photo-cross" aria-hidden="true">
@@ -71,11 +71,11 @@ export function Hero() {
             </span>
             <div>
               <strong>
-                Donde está el desafío,
+                Confort que se siente.
                 <br />
-                está nuestro equipo.
+                Espacios que se disfrutan.
               </strong>
-              <span>Montaje de climatización industrial</span>
+              <span>Climatización para cada forma de habitar.</span>
             </div>
           </figcaption>
         </figure>

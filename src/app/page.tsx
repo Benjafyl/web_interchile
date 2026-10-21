@@ -169,12 +169,17 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <section className="rental-band">
+      <section className="rental-band" id="climatizacion-temporal">
+        <div className="rental-background" aria-hidden="true">
+          <Image
+            src="/projects/izaje-equipo-hvac.jpeg"
+            alt=""
+            fill
+            sizes="(min-width: 740px) 68vw, 100vw"
+          />
+        </div>
         <div className="shell rental-grid">
-          <div>
-            <span className="rental-icon">
-              <Snowflake aria-hidden="true" />
-            </span>
+          <div className="rental-content">
             <p className="section-kicker">Climatización temporal</p>
             <h2>
               FRÍO DONDE
@@ -185,24 +190,25 @@ export default function Home() {
               Una contingencia, un evento o un refuerzo de capacidad. Equipos
               compactos por el tiempo que tu operación los requiera.
             </p>
-            <ButtonLink href="/arriendo-equipos" variant="secondary">
+            <div className="capacity-list">
+              <div>
+                <span>Capacidad disponible</span>
+                <strong>
+                  150.000<small>BTU</small>
+                </strong>
+              </div>
+              <div>
+                <span>Para mayores demandas</span>
+                <strong>
+                  300.000<small>BTU</small>
+                </strong>
+              </div>
+            </div>
+            <ButtonLink href="/arriendo-equipos" variant="light">
+              <Snowflake aria-hidden="true" />
               Conocer el servicio de arriendo
             </ButtonLink>
-          </div>
-          <div className="capacity-list">
-            <div>
-              <span>Capacidad disponible</span>
-              <strong>
-                150.000<small>BTU</small>
-              </strong>
-            </div>
-            <div>
-              <span>Para mayores demandas</span>
-              <strong>
-                300.000<small>BTU</small>
-              </strong>
-            </div>
-            <p>
+            <p className="rental-logistics">
               <MapPin aria-hidden="true" />
               Traslado y montaje coordinados según el proyecto.
             </p>

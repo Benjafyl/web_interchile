@@ -8,7 +8,7 @@ Barlow Condensed is the display face: industrial, direct and compact. Manrope is
 
 ## Composition
 
-The homepage opens with oversized typography and a real industrial equipment lift. The visual is the signature moment. Services use a single accordion and a supporting field photograph; projects use an asymmetric editorial grid; the rental section presents actual capacities; numbered steps are reserved for the real customer process. FAQ answers use native disclosure controls.
+The homepage opens with oversized typography and an aspirational, light-filled finished atrium. This hero is an illustrative ImageGen asset (public/images/hero-confort.webp), not a documented Inter Chile Clima project. Keep its caption about comfort and wellbeing. The owner's real field and project photography remains elsewhere. The rental section uses the actual large packaged HVAC unit in izaje-equipo-hvac.jpeg as a photographic background, with a deep graphite overlay behind the text and the actual 150,000 / 300,000 BTU capacities together. Keep the equipment visible and the original framing legible on desktop; on mobile show the equipment above the copy. Services use a single accordion and a supporting field photograph; projects use an asymmetric editorial grid; numbered steps are reserved for the real customer process. FAQ answers use native disclosure controls.
 
 Keep all seven existing routes, the established contact API, SEO metadata, company information and channels. Use actual repository photography and client marks, rather than generated illustrations or stock substitutes. Inner pages share a spacious typographic introduction, with layouts tailored to their content.
 
