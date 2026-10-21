@@ -54,16 +54,16 @@ export function Hero() {
         </div>
         <figure className="hero-visual">
           <Image
-            src="/images/hero-confort.webp"
-            alt="Imagen ilustrativa de un atrio luminoso y confortable, con vegetación y luz natural"
+            src="/projects/portal-temuco-2026/espacios-comerciales.webp"
+            alt="Obras de ampliación de Mall Portal Temuco, con ductos de climatización, plataforma elevadora y escaleras mecánicas"
             fill
             preload
             sizes="(min-width: 900px) 48vw, 100vw"
             className="hero-photo"
           />
           <div className="hero-photo-top">
-            <span>Confort en cada espacio</span>
-            <span>BIENESTAR / CHILE</span>
+            <span>Experiencia en terreno</span>
+            <span>TEMUCO / 2026</span>
           </div>
           <figcaption>
             <span className="photo-cross" aria-hidden="true">
@@ -71,11 +71,11 @@ export function Hero() {
             </span>
             <div>
               <strong>
-                Confort que se siente.
+                Cada proyecto,
                 <br />
-                Espacios que se disfrutan.
+                un nuevo desafío.
               </strong>
-              <span>Climatización para cada forma de habitar.</span>
+              <span>Ampliación Mall Portal Temuco · 2026</span>
             </div>
           </figcaption>
         </figure>
