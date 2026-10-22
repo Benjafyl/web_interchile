@@ -72,7 +72,7 @@ export function Footer() {
         </span>
         <a
           className="designer-credit"
-          href="https://byl-software.vercel.app"
+          href="https://bylsoftware.cl/"
           target="_blank"
           rel="noreferrer"
           aria-label="Desarrollado por BYL — visitar su sitio web"
