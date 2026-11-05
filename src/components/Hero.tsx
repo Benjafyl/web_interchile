@@ -66,7 +66,6 @@ export function Hero() {
           />
           <div className="hero-photo-top">
             <span>Experiencia en terreno</span>
-            <span>TEMUCO / CHILE</span>
           </div>
           <figcaption>
             <span className="photo-cross" aria-hidden="true">
