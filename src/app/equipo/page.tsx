@@ -24,14 +24,14 @@ export default function EquipoPage() {
           <div className="team-field-grid">
             <figure>
               <Image
-                src="/projects/portal-temuco-2026/equipo-interchile.webp"
-                alt="Tres integrantes de Interchile Clima con cascos y vestimenta corporativa durante la visita a Mall Portal Temuco"
+                src="/projects/portal-temuco-2026/recorrido-instalaciones.webp"
+                alt="Equipo técnico revisando las instalaciones superiores en la ampliación de Mall Portal Temuco"
                 width={960}
                 height={1280}
                 sizes="(min-width: 900px) 40vw, 90vw"
               />
               <figcaption>
-                Una empresa familiar, presente en terreno.
+                Revisión de instalaciones en obra. Temuco, 2026.
               </figcaption>
             </figure>
             <figure>

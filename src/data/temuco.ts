@@ -42,14 +42,6 @@ export const temucoPhotos = [
     height: 960,
   },
   {
-    name: "equipo-interchile",
-    caption: "Nuestro equipo, en Temuco",
-    alt: "Tres integrantes de Interchile Clima con cascos y vestimenta corporativa durante la visita a Temuco",
-    category: "Equipo",
-    width: 960,
-    height: 1280,
-  },
-  {
     name: "detalle-ductos",
     caption: "El detalle de la distribución",
     alt: "Detalle de ductos metálicos y conexiones instalados bajo la cubierta de la ampliación",

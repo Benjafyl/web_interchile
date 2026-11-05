@@ -3,7 +3,7 @@
   --background: #fff;
   --foreground: #222c31;
   --ink: #222c31;
-  --muted: #58646a;
+  --muted: #3c4a52;
   --brand: #a6083c;
   --brand-deep: #77082e;
   --brand-soft: #f8edf1;
@@ -35,7 +35,7 @@
   --s12: 104px;
   --container: 1328px;
   --gutter: clamp(22px, 4vw, 64px);
-  --xs: 12px;
+  --xs: 13px;
   --sm: 14px;
   --base: 16px;
   --lg: 18px;
@@ -92,6 +92,7 @@ body {
   color: var(--ink);
   font-family: var(--font-body), Arial, sans-serif;
   font-size: var(--base);
+  font-weight: 500;
   -webkit-font-smoothing: antialiased;
 }
 h1,
@@ -2527,11 +2528,11 @@ main:focus {
     display: none;
   }
   .utility-inner .social-links {
-    gap: var(--s3);
+    gap: var(--s2);
   }
   .utility-inner .social-links a {
     min-height: 38px;
-    padding: var(--s2) var(--s3);
+    padding: var(--s2);
     gap: var(--s2);
   }
   .hero-actions .button {
