@@ -20,6 +20,7 @@ const photos = [
   },
   {
     src: "/projects/supervision-equipos-hvac.jpeg",
+    imagePosition: "center 10%",
     alt: "Inspección técnica de equipos de climatización",
   },
   {
@@ -93,6 +94,7 @@ export function ServicesSelector() {
         <Image
           src={photos[active < 0 ? 0 : active].src}
           alt={photos[active < 0 ? 0 : active].alt}
+          style={{ objectPosition: photos[active < 0 ? 0 : active].imagePosition }}
           fill
           sizes="(min-width: 900px) 45vw, 100vw"
         />

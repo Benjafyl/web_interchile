@@ -45,6 +45,7 @@ const projects = [
   },
   {
     src: "/projects/supervision-equipos-hvac.jpeg",
+    imagePosition: "center 10%",
     title: "Conocer el sistema para resolverlo.",
     category: "Mantención y diagnóstico",
     text: "Inspección de unidades y componentes para recuperar su funcionamiento.",
