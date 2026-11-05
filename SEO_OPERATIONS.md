@@ -65,6 +65,11 @@ rechazarlo o cambiarlo en el pie. Google Signals y personalización publicitaria
 están desactivados en la etiqueta. La medición mejorada automática se mantiene
 desactivada para evitar duplicar páginas, formularios y clics.
 
+Cloudflare Web Analytics quedó en instalación manual, sin instalar un segundo
+beacon. Esto evita que el proveedor inyecte automáticamente otro script de
+medición fuera del consentimiento. Mantener esa elección al revisar Cloudflare;
+no ampliar la CSP para cargar rastreadores adicionales solo para ocultar un aviso.
+
 | Evento | Qué significa |
 | --- | --- |
 | `page_view` | Una vista inicial o cambio de página |
@@ -126,10 +131,13 @@ con el administrador del correo. No debilitar TLS para corregir una entrega.
 2. Cada mes: comparar consultas/páginas de Search Console y visitas por servicio
    con solicitudes confirmadas; separar tráfico de marca y de servicios. Revisar
    conversiones por origen, dispositivo y página de entrada.
-3. Recorrido sugerido en Exploraciones de GA4: `session_start` → `service_view` →
-   `quote_click` → `form_start` → `generate_lead`. Crear un embudo abierto para
-   incluir entradas directas a servicios o contacto. Los clics de WhatsApp se
-   analizan aparte hasta disponer de confirmación comercial.
+3. Exploración guardada: **InterChile · De servicio a consulta enviada**. Embudo
+   abierto `service_view` → `quote_click` → `form_start` → `generate_lead`, con
+   desglose por dispositivo y tiempo transcurrido. Permite entradas directas en
+   pasos posteriores. Los datos procesados pueden tardar en aparecer y el periodo
+   inicial de últimos 28 días excluye hoy. WhatsApp se analiza aparte hasta
+   disponer de confirmación comercial. El informe panorámico usa la plantilla de
+   rendimiento de marketing y Search Console está vinculado a la propiedad.
 4. Medir Core Web Vitals con datos de campo cuando haya suficiente tráfico. No
    presentar un test de laboratorio ni una ausencia de datos como rendimiento
    real garantizado. Vigilar LCP, INP y CLS en móvil.
