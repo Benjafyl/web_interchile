@@ -54,8 +54,8 @@ export function Hero() {
         </div>
         <figure className="hero-visual">
           <Image
-            src="/projects/portal-temuco-2026/espacios-comerciales.webp"
-            alt="Obras de ampliación de Mall Portal Temuco, con ductos de climatización, plataforma elevadora y escaleras mecánicas"
+            src="/projects/portal-temuco-2026/sala-de-equipos.webp"
+            alt="Sala de máquinas de Mall Portal Temuco, con tuberías rojas y azules y equipos de climatización"
             fill
             preload
             sizes="(min-width: 900px) 48vw, 100vw"
@@ -63,7 +63,7 @@ export function Hero() {
           />
           <div className="hero-photo-top">
             <span>Experiencia en terreno</span>
-            <span>TEMUCO / 2026</span>
+            <span>TEMUCO / CHILE</span>
           </div>
           <figcaption>
             <span className="photo-cross" aria-hidden="true">
@@ -75,7 +75,7 @@ export function Hero() {
                 <br />
                 un nuevo desafío.
               </strong>
-              <span>Ampliación Mall Portal Temuco · 2026</span>
+              <span>Sala de máquinas · Mall Portal Temuco</span>
             </div>
           </figcaption>
         </figure>
