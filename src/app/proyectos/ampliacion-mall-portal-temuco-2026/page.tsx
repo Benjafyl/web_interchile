@@ -13,8 +13,9 @@ import { absoluteUrl } from "@/data/seo";
 export const metadata: Metadata = createPageMetadata({
   title: "Ampliación Mall Portal Temuco 2026 | Interchile Clima",
   description:
-    "Recorre la ampliación de Mall Portal Temuco junto a Interchile Clima. Fotografías del equipo en terreno, instalaciones y video de la obra en 2026.",
+    "Instalación de ductos y tuberías de climatización en la ampliación de Mall Portal Temuco. Fotografías y video del trabajo de Interchile Clima en 2026.",
   path: temucoProject.href,
+  image: temucoProject.poster,
 });
 
 export default function TemucoPage() {
@@ -46,8 +47,8 @@ export default function TemucoPage() {
               {temucoProject.location}
             </p>
             <p>
-              Una mirada desde adentro: nuestro equipo, la coordinación técnica
-              y las instalaciones que forman parte del proyecto.
+              Ductos y tuberías de climatización: el trabajo de nuestro equipo
+              en la ampliación de Mall Portal Temuco.
             </p>
           </div>
           <ProjectVideo />
@@ -57,13 +58,13 @@ export default function TemucoPage() {
         <div className="shell service-decision-grid">
           <div>
             <p className="section-kicker">Climatización en retail</p>
-            <h2>Coordinación técnica en una ampliación comercial.</h2>
+            <h2>Ductos y tuberías de climatización para la ampliación.</h2>
             <p className="body-copy">
-              El registro de 2026 muestra al equipo de Interchile Clima
-              revisando planos y recorriendo las instalaciones de la ampliación
-              de Mall Portal Temuco, en la Región de La Araucanía. Las
-              fotografías y el video permiten observar la coordinación en
-              terreno, ductos y espacios en obra.
+              Los trabajos de Interchile Clima en esta ampliación se centraron
+              en la instalación de ductos y tuberías de climatización. El
+              registro de 2026 muestra la distribución de las instalaciones, sus
+              detalles y la coordinación de nuestro equipo en terreno en Mall
+              Portal Temuco, en la Región de La Araucanía.
             </p>
             <p className="body-copy">
               En una intervención de este tipo, la evaluación del espacio y la
@@ -76,15 +77,11 @@ export default function TemucoPage() {
             </p>
           </div>
           <div className="quote-requirements">
-            <h2>Qué muestra esta galería</h2>
+            <h2>Trabajos en esta ampliación</h2>
             <ul>
-              <li>Equipo y coordinación en terreno durante 2026</li>
-              <li>Fotografías de la ampliación y su red de ductos</li>
-              <li>Un recorrido horizontal de obra, sin audio</li>
-              <li>
-                Por separado: la sala de máquinas existente del mall, que no
-                corresponde a la ampliación
-              </li>
+              <li>Ductos y distribución de aire</li>
+              <li>Tuberías y conexiones de climatización</li>
+              <li>Revisión de planos y coordinación en terreno</li>
             </ul>
             <Link
               className="text-link"
@@ -110,8 +107,8 @@ export default function TemucoPage() {
               </h2>
             </div>
             <p>
-              Registro de la ampliación y, por separado, de la sala de máquinas
-              existente del mall. Toca una fotografía para verla completa.
+              Ductos, tuberías y trabajo en terreno de la ampliación. Toca una
+              fotografía para verla completa.
             </p>
           </div>
           <ProjectGallery />
@@ -130,13 +127,13 @@ export default function TemucoPage() {
           "@context": "https://schema.org",
           "@type": "VideoObject",
           "@id": absoluteUrl(temucoProject.href) + "#video",
-          name: "Recorrido de obra: ampliación Mall Portal Temuco 2026",
+          name: "Ductos y tuberías: ampliación Mall Portal Temuco 2026",
           description:
-            "Video horizontal sin audio del registro de Interchile Clima en la ampliación de Mall Portal Temuco. Muestra espacios en obra y coordinación en terreno; no incluye la sala de máquinas existente.",
+            "Instalación de ductos y tuberías de climatización y coordinación del equipo de Interchile Clima durante la ampliación de Mall Portal Temuco.",
           thumbnailUrl: absoluteUrl(temucoProject.poster),
           contentUrl: absoluteUrl(temucoProject.video),
-          uploadDate: "2026-10-20T22:56:13-03:00",
-          duration: "PT13.5S",
+          uploadDate: temucoProject.videoUploadDate,
+          duration: temucoProject.videoDuration,
           creator: { "@id": absoluteUrl("/#organization") },
           inLanguage: "es-CL",
         }}

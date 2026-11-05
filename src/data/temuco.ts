@@ -3,19 +3,29 @@ export const temucoProject = {
   title: "Ampliación Mall Portal Temuco",
   year: "2026",
   location: "Temuco · Región de La Araucanía",
-  video: "/projects/portal-temuco-2026/recorrido-ampliacion-obra.mp4",
-  poster: "/projects/portal-temuco-2026/ampliacion-poster.webp",
+  video: "/projects/portal-temuco-2026/ductos-y-tuberias-ampliacion.mp4",
+  poster: "/projects/portal-temuco-2026/ductos-ampliacion-poster.webp",
+  videoDuration: "PT19.5S",
+  videoUploadDate: "2026-11-05T17:37:04+00:00",
 };
 
 const base = "/projects/portal-temuco-2026/";
 export const temucoPhotos = [
   {
-    name: "equipo-climatizacion",
-    caption: "Sala de máquinas del mall · Equipos de climatización",
-    alt: "Equipos y conexiones de la sala de máquinas existente de Mall Portal Temuco, fuera del proyecto de ampliación",
-    category: "Sala de máquinas",
-    width: 1280,
-    height: 960,
+    name: "ductos-y-tuberias-instaladas",
+    caption: "Ductos y tuberías instalados en la ampliación",
+    alt: "Red de ductos metálicos y tuberías bajo la cubierta de la ampliación de Mall Portal Temuco",
+    category: "Instalaciones",
+    width: 960,
+    height: 1280,
+  },
+  {
+    name: "ductos-suspendidos",
+    caption: "Distribución de ductos bajo la estructura",
+    alt: "Ductos metálicos suspendidos y conexiones bajo el cielo de la ampliación de Mall Portal Temuco",
+    category: "Instalaciones",
+    width: 960,
+    height: 1280,
   },
   {
     name: "revision-planos",
@@ -32,14 +42,6 @@ export const temucoPhotos = [
     category: "Equipo",
     width: 960,
     height: 1280,
-  },
-  {
-    name: "sala-de-equipos",
-    caption: "Sala de máquinas del mall · Tuberías y conexiones",
-    alt: "Tuberías rojas y azules de la sala de máquinas existente de Mall Portal Temuco, fuera del proyecto de ampliación",
-    category: "Sala de máquinas",
-    width: 1280,
-    height: 960,
   },
   {
     name: "detalle-ductos",
@@ -66,33 +68,9 @@ export const temucoPhotos = [
     height: 960,
   },
   {
-    name: "sistema-bombeo",
-    caption: "Sala de máquinas del mall · Sistema de bombeo",
-    alt: "Equipos de bombeo de la sala de máquinas existente de Mall Portal Temuco, fuera del proyecto de ampliación",
-    category: "Sala de máquinas",
-    width: 960,
-    height: 1280,
-  },
-  {
-    name: "supervision-sala",
-    caption: "Sala de máquinas del mall · Visita técnica",
-    alt: "Integrantes de Interchile Clima recorriendo la sala de máquinas existente de Mall Portal Temuco, fuera del proyecto de ampliación",
-    category: "Sala de máquinas",
-    width: 960,
-    height: 1280,
-  },
-  {
     name: "red-de-ductos",
     caption: "Distribución de aire en obra",
     alt: "Red de ductos metálicos junto a pilares en construcción dentro de Mall Portal Temuco",
-    category: "Instalaciones",
-    width: 960,
-    height: 1280,
-  },
-  {
-    name: "unidad-exterior",
-    caption: "Equipamiento en el exterior",
-    alt: "Unidad de climatización exterior junto a la estructura de la ampliación",
     category: "Instalaciones",
     width: 960,
     height: 1280,
@@ -148,7 +126,5 @@ export const temucoPhotos = [
 ]
   .map((photo) => ({ ...photo, src: base + photo.name + ".webp" }))
   .sort(
-    (a, b) =>
-      Number(a.category === "Sala de máquinas") -
-      Number(b.category === "Sala de máquinas"),
+    (a, b) => Number(a.category === "Equipo") - Number(b.category === "Equipo"),
   );

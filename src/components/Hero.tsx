@@ -57,8 +57,8 @@ export function Hero() {
         </div>
         <figure className="hero-visual">
           <Image
-            src="/projects/portal-temuco-2026/sala-de-equipos.webp"
-            alt="Sala de máquinas de Mall Portal Temuco, con tuberías rojas y azules y equipos de climatización"
+            src="/projects/portal-temuco-sala-de-maquinas/sala-de-equipos.webp"
+            alt="Trabajo anterior en la sala de máquinas de Mall Portal Temuco, con tuberías rojas y azules y equipos de climatización"
             fill
             preload
             sizes="(min-width: 900px) 48vw, 100vw"
@@ -77,7 +77,9 @@ export function Hero() {
                 <br />
                 un nuevo desafío.
               </strong>
-              <span>Sala de máquinas · Mall Portal Temuco</span>
+              <span>
+                Trabajo anterior · Sala de máquinas, Mall Portal Temuco
+              </span>
             </div>
           </figcaption>
         </figure>

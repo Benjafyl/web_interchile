@@ -44,18 +44,16 @@ export function ProjectGallery() {
           role="group"
           aria-label="Filtrar fotografías"
         >
-          {["Todas", "Equipo", "Instalaciones", "Sala de máquinas"].map(
-            (label) => (
-              <button
-                type="button"
-                key={label}
-                aria-pressed={category === label}
-                onClick={() => setCategory(label)}
-              >
-                {label}
-              </button>
-            ),
-          )}
+          {["Todas", "Instalaciones", "Equipo"].map((label) => (
+            <button
+              type="button"
+              key={label}
+              aria-pressed={category === label}
+              onClick={() => setCategory(label)}
+            >
+              {label}
+            </button>
+          ))}
         </div>
         <p aria-live="polite">{photos.length} fotografías</p>
       </div>

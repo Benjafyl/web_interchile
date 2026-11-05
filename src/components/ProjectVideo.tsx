@@ -11,13 +11,13 @@ export function ProjectVideo() {
         playsInline
         preload="metadata"
         poster={temucoProject.poster}
-        aria-label="Recorrido por la ampliación de Mall Portal Temuco 2026, video sin audio"
+        aria-label="Instalación de ductos y tuberías en la ampliación de Mall Portal Temuco"
         width="1024"
         height="576"
       >
         <source src={temucoProject.video} type="video/mp4" />
         Tu navegador no puede reproducir este video.{" "}
-        <a href={temucoProject.video}>Abrir el recorrido de obra</a>.
+        <a href={temucoProject.video}>Abrir el video del proyecto</a>.
       </video>
     </figure>
   );

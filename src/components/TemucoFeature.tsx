@@ -22,9 +22,8 @@ export function TemucoFeature({ id }: { id?: string }) {
               TEMUCO.
             </h2>
             <p>
-              El proyecto se vive de cerca. Acompaña a nuestro equipo en un
-              recorrido por la ampliación, sus instalaciones y la coordinación
-              en obra.
+              Ductos, tuberías y coordinación en terreno. Así trabajamos en la
+              climatización de la ampliación de Mall Portal Temuco.
             </p>
             <p className="project-location">
               <MapPin aria-hidden="true" />
