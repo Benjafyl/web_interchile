@@ -1,4 +1,3 @@
-import { Film } from "lucide-react";
 import { temucoProject } from "@/data/temuco";
 
 export function ProjectVideo() {
@@ -20,13 +19,6 @@ export function ProjectVideo() {
         Tu navegador no puede reproducir este video.{" "}
         <a href={temucoProject.video}>Abrir el recorrido de obra</a>.
       </video>
-      <figcaption>
-        <Film aria-hidden="true" />
-        <span>
-          Recorrido de obra <span aria-hidden="true">·</span> 14 segundos, sin
-          audio
-        </span>
-      </figcaption>
     </figure>
   );
 }
