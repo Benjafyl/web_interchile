@@ -6,9 +6,9 @@ import { siteConfig } from "@/data/site";
 import { PrivacyControls } from "@/components/Analytics";
 
 export const metadata: Metadata = createPageMetadata({
-  title: "Privacidad y medición del sitio | InterChile Clima",
+  title: "Privacidad y medición del sitio | Interchile Clima",
   description:
-    "Cómo InterChile Clima utiliza los datos de contacto, la protección antispam y la medición opcional del sitio web.",
+    "Cómo Interchile Clima utiliza los datos de contacto, la protección antispam y la medición opcional del sitio web.",
   path: "/privacidad",
 });
 export default function PrivacyPage() {
@@ -25,7 +25,7 @@ export default function PrivacyPage() {
           <p>Actualizada el 5 de noviembre de 2026.</p>
           <h2>Quién recibe tu solicitud</h2>
           <p>
-            InterchileClima SpA recibe los requerimientos enviados desde este
+            Interchile Clima SpA recibe los requerimientos enviados desde este
             sitio. Puedes consultar por el uso de tus datos o solicitar su
             corrección o eliminación escribiendo a{" "}
             <a href={`mailto:${siteConfig.email}`}>{siteConfig.email}</a>.
@@ -35,7 +35,7 @@ export default function PrivacyPage() {
             Para responder una solicitud pedimos nombre, correo electrónico,
             servicio requerido y un mensaje. Puedes añadir empresa, teléfono,
             tipo de cliente y comuna o ciudad para facilitar la evaluación. La
-            solicitud se envía al correo del equipo de InterChile Clima mediante
+            solicitud se envía al correo del equipo de Interchile Clima mediante
             su servicio de correo; no se publica en el sitio.
           </p>
           <p>

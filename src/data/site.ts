@@ -1,12 +1,12 @@
 export const siteConfig = {
-  name: "InterchileClima SpA",
-  shortName: "InterchileClima",
+  name: "Interchile Clima SpA",
+  shortName: "Interchile Clima",
   url: "https://interchileclima.cl",
   email: "benjamin@interchileclima.cl",
   phoneDisplay: "+56 9 9440 2632",
   whatsappNumber: "56994402632",
   whatsappMessage:
-    "Hola, vengo desde la página web de InterchileClima y me gustaría solicitar información sobre un servicio de climatización.",
+    "Hola, vengo desde la página web de Interchile Clima y me gustaría solicitar información sobre un servicio de climatización.",
   instagramHandle: "@interchileclima",
   instagramUrl: "https://www.instagram.com/interchileclima",
   tiktokHandle: "@interchileclima",

@@ -13,9 +13,9 @@ import { JsonLd } from "@/components/JsonLd";
 import { siteConfig } from "@/data/site";
 
 export const metadata: Metadata = createPageMetadata({
-  title: "Climatización industrial y comercial en Chile | InterChile Clima",
+  title: "Climatización industrial y comercial en Chile | Interchile Clima",
   description:
-    "Ingeniería, instalación, mantención HVAC y arriendo de equipos para industrias, retail y centros comerciales en Chile. Evalúa tu proyecto con InterChile Clima.",
+    "Ingeniería, instalación, mantención HVAC y arriendo de equipos para industrias, retail y centros comerciales en Chile. Evalúa tu proyecto con Interchile Clima.",
   path: "/",
 });
 const work = [
@@ -192,7 +192,7 @@ export default function Home() {
             </li>
           </ul>
           <ButtonLink href="/empresa" variant="light">
-            Conoce Inter Chile Clima
+            Conoce Interchile Clima
           </ButtonLink>
         </div>
       </section>

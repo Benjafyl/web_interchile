@@ -21,7 +21,7 @@ export function WhatsAppButton() {
   return (
     <a
       className={"whatsapp-float" + (footerVisible ? " is-hidden" : "")}
-      aria-label="Hablar por WhatsApp con Inter Chile Clima"
+      aria-label="Hablar por WhatsApp con Interchile Clima"
       aria-hidden={footerVisible}
       tabIndex={footerVisible ? -1 : undefined}
       href={getWhatsAppUrl()}

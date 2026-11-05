@@ -146,7 +146,7 @@ export async function POST(request: Request) {
       siteConfig.email;
     const from = process.env.CONTACT_FORM_FROM_EMAIL ??
       process.env.CONTACT_FROM_EMAIL ?? {
-        name: "InterChile Clima Web",
+        name: "Interchile Clima Web",
         address: getRequiredEnv("SMTP_USER"),
       };
     const fields = [

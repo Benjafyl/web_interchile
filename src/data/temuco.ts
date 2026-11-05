@@ -44,7 +44,7 @@ export const temucoPhotos = [
   {
     name: "equipo-interchile",
     caption: "Nuestro equipo, en Temuco",
-    alt: "Tres integrantes de Inter Chile Clima con cascos y vestimenta corporativa durante la visita a Temuco",
+    alt: "Tres integrantes de Interchile Clima con cascos y vestimenta corporativa durante la visita a Temuco",
     category: "Equipo",
     width: 960,
     height: 1280,
@@ -84,7 +84,7 @@ export const temucoPhotos = [
   {
     name: "supervision-sala",
     caption: "Sala de máquinas del mall · Visita técnica",
-    alt: "Integrantes de Inter Chile Clima recorriendo la sala de máquinas existente de Mall Portal Temuco, fuera del proyecto de ampliación",
+    alt: "Integrantes de Interchile Clima recorriendo la sala de máquinas existente de Mall Portal Temuco, fuera del proyecto de ampliación",
     category: "Sala de máquinas",
     width: 960,
     height: 1280,

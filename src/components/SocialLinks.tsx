@@ -17,7 +17,7 @@ export function SocialLinks({ compact = false }: { compact?: boolean }) {
           href={href}
           target="_blank"
           rel="noreferrer"
-          aria-label={name + " de Inter Chile Clima"}
+          aria-label={name + " de Interchile Clima"}
         >
           <Icon aria-hidden="true" />
           <span>{name}</span>

@@ -20,7 +20,7 @@ export function PageHero({ eyebrow, title, description, path }: PageHeroProps) {
           />
         ) : (
           <p className="breadcrumb">
-            <Link href="/">Inter Chile Clima</Link>
+            <Link href="/">Interchile Clima</Link>
             <span>/</span>
             {eyebrow}
           </p>

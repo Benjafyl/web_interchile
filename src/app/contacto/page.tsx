@@ -8,7 +8,7 @@ import { getWhatsAppUrl } from "@/lib/utils";
 import { createPageMetadata } from "@/data/seo";
 import { serviceTypes } from "@/data/contact-options";
 export const metadata: Metadata = createPageMetadata({
-  title: "Contacto y cotizaciones | Inter Chile Clima",
+  title: "Contacto y cotizaciones | Interchile Clima",
   description:
     "Cotiza tu proyecto, instalación, mantención o arriendo de climatización. Atención en todo Chile.",
   path: "/contacto",

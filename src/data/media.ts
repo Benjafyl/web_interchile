@@ -1,7 +1,7 @@
 export const media = {
   hero: {
     src: "/projects/planos-obra-hvac.jpeg",
-    alt: "Equipo tecnico de InterchileClima revisando planos de climatizacion en obra",
+    alt: "Equipo tecnico de Interchile Clima revisando planos de climatizacion en obra",
   },
   services: [
     {
@@ -21,12 +21,12 @@ export const media = {
     },
     {
       src: "/projects/techo-antofagasta-hvac.jpeg",
-      alt: "Tecnico de InterchileClima realizando supervision HVAC en techo",
+      alt: "Tecnico de Interchile Clima realizando supervision HVAC en techo",
       title: "Mantencion correctiva",
     },
     {
       src: "/projects/supervision-equipos-hvac.jpeg",
-      alt: "Tecnico de InterchileClima entre equipos de climatizacion exteriores",
+      alt: "Tecnico de Interchile Clima entre equipos de climatizacion exteriores",
       title: "Reparaciones",
     },
     {
@@ -59,6 +59,6 @@ export const media = {
   ],
   team: {
     src: "/projects/equipo-interchileclima-interior.jpeg",
-    alt: "Equipo de InterchileClima con vestimenta tecnica corporativa",
+    alt: "Equipo de Interchile Clima con vestimenta tecnica corporativa",
   },
 };

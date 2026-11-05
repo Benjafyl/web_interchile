@@ -1,4 +1,4 @@
-# SEO, descubrimiento en IA y medición de InterChile Clima
+# SEO, descubrimiento en IA y medición de Interchile Clima
 
 Implementación: 5 de noviembre de 2026. Prioridad comercial: industria, retail,
 centros comerciales y empresas. El servicio domiciliario sigue disponible, con

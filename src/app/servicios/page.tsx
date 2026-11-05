@@ -7,7 +7,7 @@ import { createPageMetadata, absoluteUrl } from "@/data/seo";
 import { JsonLd } from "@/components/JsonLd";
 
 export const metadata: Metadata = createPageMetadata({
-  title: "Servicios de climatización industrial y comercial | InterChile Clima",
+  title: "Servicios de climatización industrial y comercial | Interchile Clima",
   description:
     "Ingeniería, instalación, mantención, reparación, repuestos y arriendo HVAC para empresas, industria y retail en Chile. Revisa el alcance de cada servicio.",
   path: "/servicios",
@@ -89,7 +89,7 @@ export default function ServiciosPage() {
               Cuéntanos qué necesitas
             </Link>
             <Link className="text-link" href="/proyectos">
-              Revisa proyectos de InterChile Clima
+              Revisa proyectos de Interchile Clima
             </Link>
           </div>
         </div>
@@ -103,7 +103,7 @@ export default function ServiciosPage() {
         data={{
           "@context": "https://schema.org",
           "@type": "ItemList",
-          name: "Servicios de climatización de InterChile Clima",
+          name: "Servicios de climatización de Interchile Clima",
           itemListElement: catalog.map((service, index) => ({
             "@type": "ListItem",
             position: index + 1,

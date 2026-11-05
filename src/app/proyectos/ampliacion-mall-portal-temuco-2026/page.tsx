@@ -11,9 +11,9 @@ import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { absoluteUrl } from "@/data/seo";
 
 export const metadata: Metadata = createPageMetadata({
-  title: "Ampliación Mall Portal Temuco 2026 | Inter Chile Clima",
+  title: "Ampliación Mall Portal Temuco 2026 | Interchile Clima",
   description:
-    "Recorre la ampliación de Mall Portal Temuco junto a Inter Chile Clima. Fotografías del equipo en terreno, instalaciones y video de la obra en 2026.",
+    "Recorre la ampliación de Mall Portal Temuco junto a Interchile Clima. Fotografías del equipo en terreno, instalaciones y video de la obra en 2026.",
   path: temucoProject.href,
 });
 
@@ -59,7 +59,7 @@ export default function TemucoPage() {
             <p className="section-kicker">Climatización en retail</p>
             <h2>Coordinación técnica en una ampliación comercial.</h2>
             <p className="body-copy">
-              El registro de 2026 muestra al equipo de InterChile Clima
+              El registro de 2026 muestra al equipo de Interchile Clima
               revisando planos y recorriendo las instalaciones de la ampliación
               de Mall Portal Temuco, en la Región de La Araucanía. Las
               fotografías y el video permiten observar la coordinación en
@@ -116,7 +116,7 @@ export default function TemucoPage() {
           </div>
           <ProjectGallery />
           <p className="gallery-source">
-            Fotografías y video del registro de Inter Chile Clima · Mall Portal
+            Fotografías y video del registro de Interchile Clima · Mall Portal
             Temuco, 2026.
           </p>
         </div>
@@ -132,7 +132,7 @@ export default function TemucoPage() {
           "@id": absoluteUrl(temucoProject.href) + "#video",
           name: "Recorrido de obra: ampliación Mall Portal Temuco 2026",
           description:
-            "Video horizontal sin audio del registro de InterChile Clima en la ampliación de Mall Portal Temuco. Muestra espacios en obra y coordinación en terreno; no incluye la sala de máquinas existente.",
+            "Video horizontal sin audio del registro de Interchile Clima en la ampliación de Mall Portal Temuco. Muestra espacios en obra y coordinación en terreno; no incluye la sala de máquinas existente.",
           thumbnailUrl: absoluteUrl(temucoProject.poster),
           contentUrl: absoluteUrl(temucoProject.video),
           uploadDate: "2026-10-20T22:56:13-03:00",

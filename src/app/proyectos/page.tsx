@@ -6,9 +6,9 @@ import { CTASection } from "@/components/CTASection";
 import { ClientLogos } from "@/components/ClientLogos";
 import { createPageMetadata } from "@/data/seo";
 export const metadata: Metadata = createPageMetadata({
-  title: "Proyectos y experiencia | Inter Chile Clima",
+  title: "Proyectos y experiencia | Interchile Clima",
   description:
-    "Proyectos reales de climatización: Mall Portal Temuco, Mall Alto Las Condes y supervisión en Antofagasta. Fotografías y video de InterChile Clima en terreno.",
+    "Proyectos reales de climatización: Mall Portal Temuco, Mall Alto Las Condes y supervisión en Antofagasta. Fotografías y video de Interchile Clima en terreno.",
   path: "/proyectos",
 });
 const projects = [

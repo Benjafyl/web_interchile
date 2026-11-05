@@ -404,7 +404,7 @@ export function ContactForm({
             tabIndex={-1}
             className="form-feedback form-feedback-success"
           >
-            Gracias. Tu solicitud fue enviada al equipo de InterChile Clima. Te
+            Gracias. Tu solicitud fue enviada al equipo de Interchile Clima. Te
             contactaremos para revisar el requerimiento.
           </p>
         )}

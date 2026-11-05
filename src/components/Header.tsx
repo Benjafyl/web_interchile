@@ -35,7 +35,7 @@ export function Header() {
       <div className="shell header-inner">
         <Link
           href="/"
-          aria-label="Inter Chile Clima — Inicio"
+          aria-label="Interchile Clima — Inicio"
           onClick={() => setIsOpen(false)}
         >
           <BrandLogo className="header-logo" />

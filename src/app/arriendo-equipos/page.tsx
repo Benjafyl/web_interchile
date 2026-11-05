@@ -9,7 +9,7 @@ import { absoluteUrl } from "@/data/seo";
 import { quoteHref } from "@/data/service-pages";
 import { JsonLd } from "@/components/JsonLd";
 export const metadata: Metadata = createPageMetadata({
-  title: "Arriendo de equipos 150.000 y 300.000 BTU | Inter Chile Clima",
+  title: "Arriendo de equipos 150.000 y 300.000 BTU | Interchile Clima",
   description:
     "Climatización temporal para contingencias, eventos y refuerzo de operaciones. Equipos compactos de 150.000 y 300.000 BTU.",
   path: "/arriendo-equipos",

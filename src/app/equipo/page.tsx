@@ -5,9 +5,9 @@ import { CTASection } from "@/components/CTASection";
 import { teamCards } from "@/data/team";
 import { createPageMetadata } from "@/data/seo";
 export const metadata: Metadata = createPageMetadata({
-  title: "Nuestro equipo | Inter Chile Clima",
+  title: "Nuestro equipo | Interchile Clima",
   description:
-    "Conoce las áreas que coordinan cada proyecto, instalación y mantención de Inter Chile Clima.",
+    "Conoce las áreas que coordinan cada proyecto, instalación y mantención de Interchile Clima.",
   path: "/equipo",
 });
 export default function EquipoPage() {
@@ -25,7 +25,7 @@ export default function EquipoPage() {
             <figure>
               <Image
                 src="/projects/portal-temuco-2026/equipo-interchile.webp"
-                alt="Tres integrantes de Inter Chile Clima con cascos y vestimenta corporativa durante la visita a Mall Portal Temuco"
+                alt="Tres integrantes de Interchile Clima con cascos y vestimenta corporativa durante la visita a Mall Portal Temuco"
                 width={960}
                 height={1280}
                 sizes="(min-width: 900px) 40vw, 90vw"

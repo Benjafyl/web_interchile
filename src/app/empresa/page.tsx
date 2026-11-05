@@ -6,7 +6,7 @@ import { CTASection } from "@/components/CTASection";
 import { ButtonLink } from "@/components/ButtonLink";
 import { createPageMetadata } from "@/data/seo";
 export const metadata: Metadata = createPageMetadata({
-  title: "Nuestra empresa | Inter Chile Clima",
+  title: "Nuestra empresa | Interchile Clima",
   description:
     "Empresa familiar de climatización con más de 23 años de experiencia. Soluciones HVAC y atención en todo Chile.",
   path: "/empresa",
@@ -18,7 +18,7 @@ export default function EmpresaPage() {
         eyebrow="Empresa"
         path="/empresa"
         title="EMPRESA DE CLIMATIZACIÓN CON EXPERIENCIA EN TERRENO."
-        description="Somos InterchileClima SpA. Una empresa familiar que combina experiencia técnica, trato directo y compromiso con cada operación."
+        description="Somos Interchile Clima SpA. Una empresa familiar que combina experiencia técnica, trato directo y compromiso con cada operación."
       />
       <section className="section-space" id="detalle">
         <div className="shell story-grid">

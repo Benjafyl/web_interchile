@@ -24,7 +24,7 @@ export async function generateMetadata({
   const service = servicePages.find((page) => page.slug === slug);
   if (!service) notFound();
   return createPageMetadata({
-    title: `${service.shortTitle} en Chile | InterChile Clima`,
+    title: `${service.shortTitle} en Chile | Interchile Clima`,
     description: service.description,
     path: `/servicios/${slug}`,
     image: service.image,
@@ -86,7 +86,7 @@ export default async function ServiceDetailPage({
               sizes="(min-width: 900px) 42vw, 90vw"
             />
             <figcaption>
-              Registro real de InterChile Clima en terreno.
+              Registro real de Interchile Clima en terreno.
             </figcaption>
           </figure>
         </div>

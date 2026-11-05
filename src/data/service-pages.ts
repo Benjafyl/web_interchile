@@ -29,11 +29,11 @@ export const servicePages: ServicePage[] = [
     quoteService: "Proyecto de climatización",
     image: "/projects/portal-temuco-2026/revision-planos.webp",
     imageAlt:
-      "Revisión de planos por el equipo de InterChile Clima durante la ampliación de Mall Portal Temuco",
+      "Revisión de planos por el equipo de Interchile Clima durante la ampliación de Mall Portal Temuco",
     imageWidth: 960,
     imageHeight: 1280,
     introduction: [
-      "Un proyecto de climatización debe responder al uso del edificio, su ocupación y las condiciones de operación. En InterChile Clima evaluamos esos antecedentes antes de proponer equipos o una intervención. Trabajamos con requerimientos industriales, comerciales, corporativos y de retail, con atención coordinada en todo Chile.",
+      "Un proyecto de climatización debe responder al uso del edificio, su ocupación y las condiciones de operación. En Interchile Clima evaluamos esos antecedentes antes de proponer equipos o una intervención. Trabajamos con requerimientos industriales, comerciales, corporativos y de retail, con atención coordinada en todo Chile.",
       "Integramos evaluación técnica, levantamiento en terreno, dimensionamiento, instalación y puesta en marcha según el alcance acordado. Para ampliaciones o recambios, revisamos cómo se relacionará la solución con las instalaciones existentes y qué restricciones de acceso, montaje u horarios hay que considerar.",
     ],
     scope: [
@@ -215,7 +215,7 @@ export const servicePages: ServicePage[] = [
     quoteService: "Reparación",
     image: "/projects/supervision-equipos-hvac.jpeg",
     imageAlt:
-      "Inspección técnica de equipos de climatización por InterChile Clima",
+      "Inspección técnica de equipos de climatización por Interchile Clima",
     imageWidth: 960,
     imageHeight: 1280,
     introduction: [

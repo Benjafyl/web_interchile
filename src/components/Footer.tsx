@@ -13,7 +13,7 @@ export function Footer() {
     <footer className="site-footer" id="pie-de-pagina">
       <div className="shell footer-content">
         <div className="footer-brand">
-          <Link href="/" aria-label="Inter Chile Clima — Inicio">
+          <Link href="/" aria-label="Interchile Clima — Inicio">
             <BrandLogo />
           </Link>
           <p>
@@ -27,7 +27,7 @@ export function Footer() {
           </span>
         </div>
         <nav className="footer-links" aria-label="Explorar el sitio">
-          <h2>Inter Chile Clima</h2>
+          <h2>Interchile Clima</h2>
           <ul>
             {navLinks
               .filter((link) => link.href !== "/")
@@ -67,7 +67,7 @@ export function Footer() {
         </div>
       </div>
       <div className="shell footer-bar">
-        <span>© {new Date().getFullYear()} InterchileClima SpA.</span>
+        <span>© {new Date().getFullYear()} Interchile Clima SpA.</span>
         <span className="footer-legal">
           Soluciones ambientales · Empresa familiar
         </span>
