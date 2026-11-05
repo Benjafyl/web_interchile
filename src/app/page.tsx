@@ -29,6 +29,7 @@ const work = [
   {
     src: "/projects/techo-antofagasta-hvac.jpeg",
     alt: "Equipo técnico en una instalación HVAC en Antofagasta",
+    imagePosition: "center bottom",
     title: "El detalle también es parte del proyecto.",
     text: "Supervisión técnica · Antofagasta",
     className: "project-tall",
@@ -223,6 +224,7 @@ export default function Home() {
                   <Image
                     src={item.src}
                     alt={item.alt}
+                    style={{ objectPosition: item.imagePosition }}
                     fill
                     sizes="(min-width: 900px) 60vw, 100vw"
                   />

@@ -21,6 +21,7 @@ const projects = [
   {
     src: "/projects/techo-antofagasta-hvac.jpeg",
     title: "Supervisión técnica en Antofagasta.",
+    imagePosition: "center bottom",
     category: "Climatización comercial",
     text: "Revisión de equipos y evaluación de las condiciones de operación en terreno.",
   },
@@ -79,6 +80,7 @@ export default function ProyectosPage() {
                   src={project.src}
                   alt={project.title + " " + project.category}
                   fill
+                  style={{ objectPosition: project.imagePosition }}
                   sizes="(min-width: 900px) 50vw, 100vw"
                 />
               </figure>
