@@ -8,7 +8,7 @@ import { createPageMetadata } from "@/data/seo";
 export const metadata: Metadata = createPageMetadata({
   title: "Proyectos y experiencia | Inter Chile Clima",
   description:
-    "Trabajo real de climatización: montaje industrial, supervisión, ingeniería e instalación domiciliaria en Chile.",
+    "Proyectos reales de climatización: Mall Portal Temuco, Mall Alto Las Condes y supervisión en Antofagasta. Fotografías y video de InterChile Clima en terreno.",
   path: "/proyectos",
 });
 const projects = [
@@ -54,8 +54,9 @@ export default function ProyectosPage() {
     <>
       <PageHero
         eyebrow="Proyectos"
-        title="EL TRABAJO HABLA POR NOSOTROS."
-        description="Cada espacio tiene su desafío. Estas son algunas de las formas en que llevamos nuestra experiencia a proyectos comerciales, industriales y domiciliarios."
+        path="/proyectos"
+        title="PROYECTOS DE CLIMATIZACIÓN EN CHILE."
+        description="Nuestro trabajo en retail, centros comerciales e instalaciones de empresas. Fotografías reales de montaje, coordinación técnica y supervisión en terreno; también atendemos proyectos domiciliarios."
       />
       <TemucoFeature id="detalle" />
       <section className="section-space">
@@ -82,7 +83,7 @@ export default function ProyectosPage() {
                 />
               </figure>
               <p className="section-kicker">{project.category}</p>
-              <h2>{project.title}</h2>
+              <h3>{project.title}</h3>
               <p>{project.text}</p>
             </article>
           ))}

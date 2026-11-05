@@ -9,11 +9,13 @@ import { ClientLogos } from "@/components/ClientLogos";
 import { ServicesSelector } from "@/components/ServicesSelector";
 import { CTASection } from "@/components/CTASection";
 import { createPageMetadata } from "@/data/seo";
+import { JsonLd } from "@/components/JsonLd";
+import { siteConfig } from "@/data/site";
 
 export const metadata: Metadata = createPageMetadata({
-  title: "Inter Chile Clima | El clima bajo control",
+  title: "Climatización industrial y comercial en Chile | InterChile Clima",
   description:
-    "Ingeniería, instalación y mantención de climatización para empresas, industrias y hogares. Más de 23 años de experiencia en todo Chile.",
+    "Ingeniería, instalación, mantención HVAC y arriendo de equipos para industrias, retail y centros comerciales en Chile. Evalúa tu proyecto con InterChile Clima.",
   path: "/",
 });
 const work = [
@@ -34,8 +36,8 @@ const work = [
 ];
 const faq = [
   {
-    q: "¿Trabajan con empresas y también con hogares?",
-    a: "Sí. Desarrollamos proyectos para retail, banca, oficinas e industria, y también instalamos, mantenemos y reparamos equipos de aire acondicionado domiciliarios. El alcance se define según cada espacio.",
+    q: "¿Qué sectores y tipos de instalaciones atienden?",
+    a: "Desarrollamos proyectos de climatización para industrias, retail, centros comerciales, banca y oficinas. Evaluamos el alcance según la operación y los equipos de cada instalación. También atendemos requerimientos domiciliarios.",
   },
   {
     q: "¿Cómo puedo solicitar una cotización?",
@@ -70,9 +72,9 @@ export default function Home() {
             <div>
               <p className="section-kicker">Lo que hacemos</p>
               <h2 className="display-heading">
-                UN EQUIPO.
+                SERVICIOS HVAC
                 <br />
-                TODAS LAS SOLUCIONES.
+                PARA EMPRESAS.
               </h2>
             </div>
             <p>
@@ -83,6 +85,74 @@ export default function Home() {
             </p>
           </div>
           <ServicesSelector />
+        </div>
+      </section>
+      <section
+        className="sector-section section-space"
+        aria-labelledby="sectors-heading"
+      >
+        <div className="shell">
+          <div className="section-top">
+            <div>
+              <p className="section-kicker">Entendemos tu operación</p>
+              <h2 className="display-heading" id="sectors-heading">
+                Climatización para industria, retail y grandes espacios.
+              </h2>
+            </div>
+            <p>
+              Definimos la solución según el uso del lugar, sus equipos y las
+              condiciones de trabajo.
+            </p>
+          </div>
+          <div className="sector-grid">
+            <article>
+              <h3>Industria y empresas</h3>
+              <p>
+                Evaluación de capacidad, instalación y mantención de sistemas de
+                climatización. Coordinación de accesos, montaje y ventanas de
+                intervención según la operación.
+              </p>
+              <Link
+                href="/servicios/ingenieria-proyectos-climatizacion"
+                className="text-link"
+              >
+                Evaluar un proyecto industrial
+              </Link>
+            </article>
+            <article>
+              <h3>Retail y centros comerciales</h3>
+              <p>
+                Climatización para espacios de atención a público,
+                remodelaciones y ampliaciones. Experiencia en terreno en Mall
+                Portal Temuco y Mall Alto Las Condes.
+              </p>
+              <Link href="/proyectos" className="text-link">
+                Ver nuestra experiencia en retail
+              </Link>
+            </article>
+            <article>
+              <h3>Oficinas y banca</h3>
+              <p>
+                Mantención preventiva, diagnóstico y reparación para espacios de
+                trabajo. Revisamos las necesidades del sistema y coordinamos
+                cada intervención.
+              </p>
+              <Link href="/servicios/mantencion-hvac" className="text-link">
+                Conocer el servicio de mantención
+              </Link>
+            </article>
+          </div>
+          <p className="residential-note">
+            ¿Necesitas aire acondicionado para tu hogar? También realizamos{" "}
+            <Link href="/servicios/instalacion-aire-acondicionado">
+              instalación
+            </Link>
+            , <Link href="/servicios/mantencion-hvac">mantención</Link> y{" "}
+            <Link href="/servicios/reparacion-climatizacion">
+              reparación domiciliaria
+            </Link>
+            .
+          </p>
         </div>
       </section>
       <section className="about-feature">
@@ -97,11 +167,10 @@ export default function Home() {
         <div className="about-copy">
           <p className="section-kicker">Nuestra forma de hacer las cosas</p>
           <h2>
-            LA CONFIANZA
+            EXPERIENCIA HVAC
             <br />
-            SE CONSTRUYE
-            <br />
-            EN TERRENO.
+            QUE SE LLEVA
+            <br />A TERRENO.
           </h2>
           <p>
             Somos una empresa familiar con más de 23 años de experiencia. Nos
@@ -134,9 +203,9 @@ export default function Home() {
             <div>
               <p className="section-kicker">Trabajo real</p>
               <h2 className="display-heading">
-                MÁS QUE EQUIPOS.
+                PROYECTOS REALES.
                 <br />
-                SOLUCIONES EN ACCIÓN.
+                CLIMATIZACIÓN EN TERRENO.
               </h2>
             </div>
             <ButtonLink href="/proyectos" variant="ghost">
@@ -182,9 +251,9 @@ export default function Home() {
           <div className="rental-content">
             <p className="section-kicker">Climatización temporal</p>
             <h2>
-              FRÍO DONDE
+              ARRIENDO DE
               <br />
-              LO NECESITAS.
+              CLIMATIZACIÓN.
             </h2>
             <p>
               Una contingencia, un evento o un refuerzo de capacidad. Equipos
@@ -253,9 +322,9 @@ export default function Home() {
           <div>
             <p className="section-kicker">Antes de empezar</p>
             <h2 className="display-heading">
-              HABLEMOS
+              PREGUNTAS SOBRE
               <br />
-              CON CLARIDAD.
+              CLIMATIZACIÓN HVAC.
             </h2>
             <p>
               Estas son algunas de las preguntas
@@ -279,6 +348,18 @@ export default function Home() {
       <CTASection
         title="HABLEMOS DE TU PRÓXIMO PROYECTO."
         text="Cuéntanos qué necesitas. Encontremos la mejor forma de resolverlo."
+      />
+      <JsonLd
+        data={{
+          "@context": "https://schema.org",
+          "@type": "WebPage",
+          "@id": `${siteConfig.url}/#webpage`,
+          name: "Climatización industrial y comercial en Chile",
+          url: siteConfig.url + "/",
+          about: { "@id": `${siteConfig.url}/#organization` },
+          isPartOf: { "@id": `${siteConfig.url}/#website` },
+          inLanguage: "es-CL",
+        }}
       />
     </>
   );

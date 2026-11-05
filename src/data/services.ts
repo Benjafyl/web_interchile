@@ -1,5 +1,10 @@
 export type ServiceIcon =
-  "project" | "install" | "maintenance" | "repair" | "parts" | "rental";
+  | "project"
+  | "install"
+  | "maintenance"
+  | "repair"
+  | "parts"
+  | "rental";
 
 export type Service = {
   title: string;
@@ -18,7 +23,7 @@ export const mainServices: Service[] = [
   {
     title: "Instalación de equipos",
     summary:
-      "Instalación de aire acondicionado para domicilios, oficinas, locales comerciales y empresas.",
+      "Instalación y montaje de climatización para industrias, empresas, retail y oficinas. También atendemos domicilios.",
     icon: "install",
   },
   {
@@ -36,7 +41,7 @@ export const mainServices: Service[] = [
   {
     title: "Suministro de repuestos",
     summary:
-      "Repuestos para sistemas domiciliarios, comerciales e industriales, con apoyo técnico de compatibilidad.",
+      "Repuestos para sistemas industriales y comerciales, con apoyo técnico de compatibilidad. También para equipos domiciliarios.",
     icon: "parts",
   },
   {
@@ -65,7 +70,7 @@ export const detailedServices: Service[] = [
   {
     title: "Instalación de equipos de aire acondicionado",
     summary:
-      "Realizamos instalación de equipos de climatización para domicilios, oficinas, locales comerciales, empresas y espacios de atención a público.",
+      "Realizamos instalación de equipos de climatización para industrias, retail, oficinas, empresas y espacios de atención a público. También instalamos equipos domiciliarios.",
     icon: "install",
     includes: [
       "Equipos split",
@@ -111,9 +116,9 @@ export const detailedServices: Service[] = [
       "Apoyamos la continuidad operativa con suministro de repuestos para equipos de distintas capacidades y marcas.",
     icon: "parts",
     includes: [
-      "Repuestos para equipos domiciliarios",
       "Repuestos para equipos comerciales",
       "Repuestos para sistemas de mayor capacidad",
+      "Repuestos para equipos domiciliarios",
       "Evaluación de compatibilidad",
       "Apoyo técnico para selección de componentes",
     ],

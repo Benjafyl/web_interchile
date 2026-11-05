@@ -6,6 +6,7 @@ import { BrandLogo } from "@/components/BrandLogo";
 import { SocialLinks } from "@/components/SocialLinks";
 import { navLinks, siteConfig } from "@/data/site";
 import { getWhatsAppUrl } from "@/lib/utils";
+import { PrivacyControls } from "@/components/Analytics";
 
 export function Footer() {
   return (
@@ -82,6 +83,9 @@ export function Footer() {
             Desarrollado por <strong>BYL</strong>
           </span>
         </a>
+      </div>
+      <div className="shell">
+        <PrivacyControls />
       </div>
     </footer>
   );

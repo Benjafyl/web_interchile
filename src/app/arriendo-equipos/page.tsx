@@ -5,6 +5,9 @@ import { PageHero } from "@/components/PageHero";
 import { CTASection } from "@/components/CTASection";
 import { ButtonLink } from "@/components/ButtonLink";
 import { createPageMetadata } from "@/data/seo";
+import { absoluteUrl } from "@/data/seo";
+import { quoteHref } from "@/data/service-pages";
+import { JsonLd } from "@/components/JsonLd";
 export const metadata: Metadata = createPageMetadata({
   title: "Arriendo de equipos 150.000 y 300.000 BTU | Inter Chile Clima",
   description:
@@ -16,7 +19,8 @@ export default function ArriendoPage() {
     <>
       <PageHero
         eyebrow="Arriendo de equipos"
-        title="LA CAPACIDAD QUE NECESITAS. EL TIEMPO QUE NECESITAS."
+        path="/arriendo-equipos"
+        title="ARRIENDO DE EQUIPOS DE CLIMATIZACIÓN."
         description="Climatización temporal para contingencias, eventos y refuerzo de operaciones. Una solución coordinada para que tu actividad siga."
       />
       <section className="section-space" id="detalle">
@@ -42,7 +46,9 @@ export default function ArriendoPage() {
                 <span>BTU</span>
               </div>
             </div>
-            <ButtonLink href="/contacto">Consultar disponibilidad</ButtonLink>
+            <ButtonLink href={quoteHref("Arriendo de equipos")}>
+              Consultar disponibilidad
+            </ButtonLink>
           </div>
           <figure className="story-photo">
             <Image
@@ -86,6 +92,20 @@ export default function ArriendoPage() {
         title="PONGAMOS TU PLAN EN MARCHA."
         text="Indícanos fechas, comuna, tipo de espacio y capacidad requerida. Evaluamos la disponibilidad y las condiciones del montaje."
         primaryLabel="Cotizar arriendo"
+        primaryHref={quoteHref("Arriendo de equipos")}
+      />
+      <JsonLd
+        data={{
+          "@context": "https://schema.org",
+          "@type": "Service",
+          name: "Arriendo de equipos de climatización de 150.000 y 300.000 BTU",
+          serviceType: "Arriendo de climatización",
+          description:
+            "Climatización temporal para contingencias, eventos y apoyo a operaciones comerciales e industriales.",
+          url: absoluteUrl("/arriendo-equipos"),
+          provider: { "@id": absoluteUrl("/#organization") },
+          areaServed: { "@type": "Country", name: "Chile" },
+        }}
       />
     </>
   );

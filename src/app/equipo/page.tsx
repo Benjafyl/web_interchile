@@ -15,7 +15,8 @@ export default function EquipoPage() {
     <>
       <PageHero
         eyebrow="Equipo"
-        title="PERSONAS QUE SE HACEN CARGO."
+        path="/equipo"
+        title="EL EQUIPO DETRÁS DE CADA PROYECTO HVAC."
         description="La climatización funciona cuando hay un equipo coordinado detrás. Experiencia técnica y atención cercana, de la primera conversación al último ajuste."
       />
       <section className="section-space" id="detalle">

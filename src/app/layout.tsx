@@ -3,14 +3,12 @@ import { Barlow_Condensed, Manrope } from "next/font/google";
 import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
 import { WhatsAppButton } from "@/components/WhatsAppButton";
-import {
-  defaultDescription,
-  defaultTitle,
-  seoKeywords,
-  structuredData,
-} from "@/data/seo";
+import { defaultDescription, defaultTitle, structuredData } from "@/data/seo";
 import { siteConfig } from "@/data/site";
+import { Analytics } from "@/components/Analytics";
+import { JsonLd } from "@/components/JsonLd";
 import "./globals.css";
+import "./marketing.css";
 
 const bodyFont = Manrope({
   variable: "--font-body",
@@ -30,7 +28,6 @@ export const metadata: Metadata = {
     template: "%s",
   },
   description: defaultDescription,
-  keywords: seoKeywords,
   applicationName: siteConfig.shortName,
   creator: siteConfig.name,
   publisher: siteConfig.name,
@@ -83,6 +80,7 @@ export default function RootLayout({
   return (
     <html
       lang="es-CL"
+      data-scroll-behavior="smooth"
       className={`${bodyFont.variable} ${displayFont.variable} h-full antialiased`}
     >
       <body className="flex min-h-full flex-col">
@@ -92,10 +90,8 @@ export default function RootLayout({
         </main>
         <Footer />
         <WhatsAppButton />
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
-        />
+        <JsonLd data={structuredData} />
+        <Analytics />
       </body>
     </html>
   );

@@ -1547,7 +1547,8 @@ main:focus {
   margin-bottom: var(--s3);
   font-size: var(--xs);
 }
-.portfolio-grid h2 {
+.portfolio-grid h2,
+.portfolio-grid h3 {
   font-size: var(--xl);
   font-weight: 600;
   line-height: 1.4;
@@ -2266,7 +2267,8 @@ main:focus {
   .portfolio-grid article:first-child figure {
     height: 250px;
   }
-  .portfolio-grid h2 {
+  .portfolio-grid h2,
+  .portfolio-grid h3 {
     font-size: 20px;
   }
   .team-panorama {

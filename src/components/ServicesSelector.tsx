@@ -4,14 +4,15 @@ import { useState } from "react";
 import { Minus, Plus } from "lucide-react";
 import { detailedServices } from "@/data/services";
 import { ButtonLink } from "@/components/ButtonLink";
+import { serviceHref } from "@/data/service-links";
 const photos = [
   {
     src: "/projects/coordinacion-planos-hvac.jpeg",
     alt: "Coordinación de planos y proyecto de climatización",
   },
   {
-    src: "/projects/instalacion-split-domiciliario.jpg",
-    alt: "Instalación de aire acondicionado domiciliario",
+    src: "/projects/izaje-equipo-hvac.jpeg",
+    alt: "Montaje de equipo compacto de climatización de gran capacidad",
   },
   {
     src: "/projects/techo-antofagasta-hvac.jpeg",
@@ -78,13 +79,10 @@ export function ServicesSelector() {
                     <span key={item}>{item}</span>
                   ))}
                 </div>
-                <ButtonLink
-                  href={index === 5 ? "/arriendo-equipos" : "/contacto"}
-                  variant="ghost"
-                >
+                <ButtonLink href={serviceHref(service.icon)} variant="ghost">
                   {index === 5
                     ? "Conocer capacidades"
-                    : "Evaluemos tu requerimiento"}
+                    : "Ver alcance del servicio"}
                 </ButtonLink>
               </div>
             </div>

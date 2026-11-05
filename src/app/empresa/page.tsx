@@ -16,7 +16,8 @@ export default function EmpresaPage() {
     <>
       <PageHero
         eyebrow="Empresa"
-        title="EXPERIENCIA QUE SE LLEVA A TERRENO."
+        path="/empresa"
+        title="EMPRESA DE CLIMATIZACIÓN CON EXPERIENCIA EN TERRENO."
         description="Somos InterchileClima SpA. Una empresa familiar que combina experiencia técnica, trato directo y compromiso con cada operación."
       />
       <section className="section-space" id="detalle">
@@ -44,8 +45,9 @@ export default function EmpresaPage() {
             </p>
             <p className="body-copy">
               Integramos ingeniería, instalación, mantención, reparación,
-              repuestos y apoyo temporal. Desde una solución domiciliaria hasta
-              una intervención de alta complejidad.
+              repuestos y apoyo temporal para industria, retail, centros
+              comerciales y empresas. También atendemos instalaciones
+              domiciliarias, con el alcance que cada requerimiento necesita.
             </p>
             <ButtonLink href="/equipo" variant="ghost">
               Conoce a nuestro equipo

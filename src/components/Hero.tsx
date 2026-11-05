@@ -8,24 +8,27 @@ export function Hero() {
         <div className="hero-copy">
           <p className="hero-intro">
             <span className="status-dot" />
-            Climatización para todo Chile
+            HVAC para industria, retail y empresas
           </p>
           <h1>
-            EL CLIMA
+            CLIMATIZACIÓN
             <br />
-            BAJO CONTROL<span className="headline-period">.</span>
+            INDUSTRIAL Y
+            <br />
+            COMERCIAL<span className="headline-period">.</span>
           </h1>
           <p className="hero-description">
             Tu operación sigue. Nosotros nos encargamos del clima.
           </p>
           <p className="hero-detail">
-            Proyectamos, instalamos y mantenemos sistemas de climatización para
-            empresas, industrias y hogares.
+            Ingeniería, instalación y mantención de climatización para
+            industrias, centros comerciales, retail y oficinas. Atención
+            coordinada en todo Chile.
           </p>
           <div className="hero-actions">
             <ButtonLink href="/contacto">
               <MessageSquareText aria-hidden="true" />
-              Cotizar mi proyecto
+              Evaluar mi proyecto
             </ButtonLink>
             <a className="text-link" href="#soluciones">
               Explorar soluciones
@@ -46,8 +49,8 @@ export function Hero() {
             <div>
               <Building2 aria-hidden="true" />
               <span>
-                De un equipo split
-                <br />a un proyecto industrial.
+                Del proyecto y montaje
+                <br />a la mantención HVAC.
               </span>
             </div>
           </div>
