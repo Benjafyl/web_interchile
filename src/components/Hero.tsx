@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import { Building2, ChevronDown, MessageSquareText } from "lucide-react";
 import { ButtonLink } from "@/components/ButtonLink";
 export function Hero() {
@@ -58,7 +59,7 @@ export function Hero() {
         <figure className="hero-visual">
           <Image
             src="/projects/portal-temuco-sala-de-maquinas/sala-de-equipos.webp"
-            alt="Trabajo anterior en la sala de máquinas de Mall Portal Temuco, con tuberías rojas y azules y equipos de climatización"
+            alt="Sala de máquinas de Mall Portal Temuco ejecutada por Interchile Clima en 2004, fotografiada en 2026"
             fill
             preload
             sizes="(min-width: 900px) 48vw, 100vw"
@@ -77,9 +78,12 @@ export function Hero() {
                 <br />
                 un nuevo desafío.
               </strong>
-              <span>
-                Trabajo anterior · Sala de máquinas, Mall Portal Temuco
-              </span>
+              <Link
+                className="hero-project-link"
+                href="/proyectos/sala-maquinas-mall-portal-temuco-2004"
+              >
+                Sala de máquinas · Mall Portal Temuco, 2004
+              </Link>
             </div>
           </figcaption>
         </figure>

@@ -92,6 +92,25 @@ export default function TemucoPage() {
           </div>
         </div>
       </section>
+      <section className="case-continuity">
+        <div className="shell">
+          <p className="section-kicker">Nuestra historia en el mismo mall</p>
+          <h2 className="display-heading">
+            De la sala de máquinas de 2004 a la ampliación de 2026.
+          </h2>
+          <p>
+            En 2004 ejecutamos la sala de máquinas de Mall Portal Temuco. Hoy
+            volvemos al recinto para trabajar en su ampliación, un proyecto
+            distinto centrado en ductos y tuberías.
+          </p>
+          <Link
+            className="text-link"
+            href="/proyectos/sala-maquinas-mall-portal-temuco-2004"
+          >
+            Conocer el proyecto de 2004
+          </Link>
+        </div>
+      </section>
       <section
         className="section-space project-gallery-section"
         aria-labelledby="gallery-heading"

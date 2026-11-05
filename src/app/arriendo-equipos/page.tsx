@@ -8,6 +8,8 @@ import { createPageMetadata } from "@/data/seo";
 import { absoluteUrl } from "@/data/seo";
 import { quoteHref } from "@/data/service-pages";
 import { JsonLd } from "@/components/JsonLd";
+import { ProjectGallery } from "@/components/ProjectGallery";
+import { rentalPhotos } from "@/data/projects";
 export const metadata: Metadata = createPageMetadata({
   title: "Arriendo de equipos 150.000 y 300.000 BTU | Interchile Clima",
   description:
@@ -86,6 +88,30 @@ export default function ArriendoPage() {
               </div>
             ))}
           </div>
+        </div>
+      </section>
+      <section
+        className="section-space"
+        aria-labelledby="rental-gallery-heading"
+      >
+        <div className="shell">
+          <div className="section-top">
+            <div>
+              <p className="section-kicker">Equipos propios</p>
+              <h2 className="display-heading" id="rental-gallery-heading">
+                Nuestros equipos, en terreno.
+              </h2>
+            </div>
+            <p>
+              Fotografías reales de nuestros equipos compactos de arriendo
+              durante traslados y maniobras. Toca una imagen para verla
+              completa.
+            </p>
+          </div>
+          <ProjectGallery
+            items={rentalPhotos}
+            title="Arriendo de equipos de Interchile Clima"
+          />
         </div>
       </section>
       <CTASection

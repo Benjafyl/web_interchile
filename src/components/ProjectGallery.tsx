@@ -4,16 +4,24 @@ import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
 import { ChevronLeft, ChevronRight, Expand, X } from "lucide-react";
 import { temucoPhotos } from "@/data/temuco";
+import type { ProjectPhoto } from "@/data/projects";
 
-export function ProjectGallery() {
+export function ProjectGallery({
+  items = temucoPhotos,
+  title = "Ampliación Mall Portal Temuco",
+}: {
+  items?: ProjectPhoto[];
+  title?: string;
+}) {
   const [category, setCategory] = useState("Todas");
   const [selected, setSelected] = useState<number | null>(null);
   const dialog = useRef<HTMLDialogElement>(null);
   const photos =
     category === "Todas"
-      ? temucoPhotos
-      : temucoPhotos.filter((photo) => photo.category === category);
+      ? items
+      : items.filter((photo) => photo.category === category);
   const photo = photos[selected ?? 0];
+  const categories = [...new Set(items.map((item) => item.category))];
 
   useEffect(() => {
     const modal = dialog.current;
@@ -36,25 +44,29 @@ export function ProjectGallery() {
     setSelected(null);
   }
 
+  if (!photo) return null;
+
   return (
     <>
       <div className="gallery-toolbar">
-        <div
-          className="gallery-filters"
-          role="group"
-          aria-label="Filtrar fotografías"
-        >
-          {["Todas", "Instalaciones", "Equipo"].map((label) => (
-            <button
-              type="button"
-              key={label}
-              aria-pressed={category === label}
-              onClick={() => setCategory(label)}
-            >
-              {label}
-            </button>
-          ))}
-        </div>
+        {categories.length > 1 && (
+          <div
+            className="gallery-filters"
+            role="group"
+            aria-label="Filtrar fotografías"
+          >
+            {["Todas", ...categories].map((label) => (
+              <button
+                type="button"
+                key={label}
+                aria-pressed={category === label}
+                onClick={() => setCategory(label)}
+              >
+                {label}
+              </button>
+            ))}
+          </div>
+        )}
         <p aria-live="polite">{photos.length} fotografías</p>
       </div>
       <div className="project-gallery">
@@ -86,7 +98,7 @@ export function ProjectGallery() {
       <dialog
         ref={dialog}
         className="gallery-dialog"
-        aria-label="Galería de Ampliación Mall Portal Temuco"
+        aria-label={"Galería de " + title}
         onClose={() => setSelected(null)}
         onClick={(event) => {
           if (event.target === event.currentTarget) close();

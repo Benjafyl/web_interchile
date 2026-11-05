@@ -13,7 +13,7 @@ export function TemucoFeature({ id }: { id?: string }) {
       <div className="shell">
         <div className="temuco-feature-grid">
           <div className="temuco-feature-copy">
-            <p className="section-kicker">En terreno · 2026</p>
+            <p className="section-kicker">Proyecto en curso · 2026</p>
             <h2 className="display-heading" id="temuco-heading">
               AMPLIACIÓN
               <br />

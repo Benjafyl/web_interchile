@@ -1,9 +1,10 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
-import { Check, FolderOpen, MapPin, Plus, Snowflake } from "lucide-react";
+import { Check, MapPin, Plus, Snowflake } from "lucide-react";
 import { Hero } from "@/components/Hero";
 import { TemucoFeature } from "@/components/TemucoFeature";
+import { ProjectCases } from "@/components/ProjectCases";
 import { ButtonLink } from "@/components/ButtonLink";
 import { ClientLogos } from "@/components/ClientLogos";
 import { ServicesSelector } from "@/components/ServicesSelector";
@@ -18,23 +19,6 @@ export const metadata: Metadata = createPageMetadata({
     "Ingeniería, instalación, mantención HVAC y arriendo de equipos para industrias, retail y centros comerciales en Chile. Evalúa tu proyecto con Interchile Clima.",
   path: "/",
 });
-const work = [
-  {
-    src: "/projects/maniobra-grua-alto-las-condes.webp",
-    alt: "Maniobra nocturna con grúa en Mall Alto Las Condes, Santiago de Chile",
-    title: "Cuando la escala exige experiencia.",
-    text: "Mall Alto Las Condes · Santiago de Chile",
-    className: "project-wide",
-  },
-  {
-    src: "/projects/techo-antofagasta-hvac.jpeg",
-    alt: "Equipo técnico en una instalación HVAC en Antofagasta",
-    imagePosition: "center bottom",
-    title: "El detalle también es parte del proyecto.",
-    text: "Supervisión técnica · Antofagasta",
-    className: "project-tall",
-  },
-];
 const faq = [
   {
     q: "¿Qué sectores y tipos de instalaciones atienden?",
@@ -213,31 +197,7 @@ export default function Home() {
               Explorar proyectos
             </ButtonLink>
           </div>
-          <div className="project-editorial">
-            {work.map((item) => (
-              <Link
-                href="/proyectos"
-                key={item.src}
-                className={"project-link " + item.className}
-              >
-                <figure>
-                  <Image
-                    src={item.src}
-                    alt={item.alt}
-                    style={{ objectPosition: item.imagePosition }}
-                    fill
-                    sizes="(min-width: 900px) 60vw, 100vw"
-                  />
-                  <span className="project-peek">
-                    <FolderOpen aria-hidden="true" />
-                    Ver proyecto
-                  </span>
-                </figure>
-                <p>{item.text}</p>
-                <h3>{item.title}</h3>
-              </Link>
-            ))}
-          </div>
+          <ProjectCases />
         </div>
       </section>
       <section className="rental-band" id="climatizacion-temporal">

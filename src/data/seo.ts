@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { siteConfig } from "@/data/site";
 import { servicePages } from "@/data/service-pages";
+import { projectCases } from "@/data/projects";
 
 export const seoKeywords = [
   "climatizacion en Chile",
@@ -30,6 +31,10 @@ export const routes = [
   { path: "/servicios", priority: 0.9 },
   { path: "/proyectos", priority: 0.8 },
   { path: "/proyectos/ampliacion-mall-portal-temuco-2026", priority: 0.8 },
+  ...projectCases.map((project) => ({
+    path: `/proyectos/${project.slug}`,
+    priority: 0.8,
+  })),
   { path: "/arriendo-equipos", priority: 0.8 },
   { path: "/equipo", priority: 0.7 },
   { path: "/contacto", priority: 0.9 },
