@@ -12,6 +12,22 @@ export const temucoProject = {
 const base = "/projects/portal-temuco-2026/";
 export const temucoPhotos = [
   {
+    name: "tuberias-bombeo-cubierta-2026-11-07",
+    caption: "Tuberías y bombeo en la cubierta",
+    alt: "Tuberías, bombas y equipos exteriores sobre la cubierta de la ampliación de Mall Portal Temuco, en noviembre de 2026",
+    category: "Instalaciones",
+    width: 960,
+    height: 1280,
+  },
+  {
+    name: "revision-instalaciones-cubierta-2026-11-07",
+    caption: "Revisión de las instalaciones exteriores",
+    alt: "Profesionales con casco y arnés revisando las tuberías y equipos exteriores de la ampliación de Mall Portal Temuco",
+    category: "Instalaciones",
+    width: 960,
+    height: 1280,
+  },
+  {
     name: "ductos-y-tuberias-instaladas",
     caption: "Ductos y tuberías instalados en la ampliación",
     alt: "Red de ductos metálicos y tuberías bajo la cubierta de la ampliación de Mall Portal Temuco",
