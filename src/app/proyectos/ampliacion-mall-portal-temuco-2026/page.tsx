@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { MapPin } from "lucide-react";
 import { CTASection } from "@/components/CTASection";
-import { ProjectVideo } from "@/components/ProjectVideo";
+import { ProjectMediaCarousel } from "@/components/ProjectMediaCarousel";
 import { ProjectGallery } from "@/components/ProjectGallery";
 import { createPageMetadata } from "@/data/seo";
 import { temucoProject } from "@/data/temuco";
@@ -51,7 +51,7 @@ export default function TemucoPage() {
               en la ampliación de Mall Portal Temuco.
             </p>
           </div>
-          <ProjectVideo />
+          <ProjectMediaCarousel />
         </div>
       </section>
       <section className="section-space">
@@ -146,9 +146,9 @@ export default function TemucoPage() {
           "@context": "https://schema.org",
           "@type": "VideoObject",
           "@id": absoluteUrl(temucoProject.href) + "#video",
-          name: "Ductos y tuberías: ampliación Mall Portal Temuco 2026",
+          name: "Coordinación en terreno: ampliación Mall Portal Temuco 2026",
           description:
-            "Instalación de ductos y tuberías de climatización y coordinación del equipo de Interchile Clima durante la ampliación de Mall Portal Temuco.",
+            "Equipo de Interchile Clima coordinando los trabajos en el interior de la ampliación de Mall Portal Temuco.",
           thumbnailUrl: absoluteUrl(temucoProject.poster),
           contentUrl: absoluteUrl(temucoProject.video),
           uploadDate: temucoProject.videoUploadDate,

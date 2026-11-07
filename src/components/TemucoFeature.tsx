@@ -1,6 +1,6 @@
 import { Images, MapPin } from "lucide-react";
 import { ButtonLink } from "@/components/ButtonLink";
-import { ProjectVideo } from "@/components/ProjectVideo";
+import { ProjectMediaCarousel } from "@/components/ProjectMediaCarousel";
 import { temucoProject } from "@/data/temuco";
 
 export function TemucoFeature({ id }: { id?: string }) {
@@ -34,7 +34,7 @@ export function TemucoFeature({ id }: { id?: string }) {
               Conocer el proyecto y su galería
             </ButtonLink>
           </div>
-          <ProjectVideo />
+          <ProjectMediaCarousel />
         </div>
       </div>
     </section>

@@ -3,10 +3,10 @@ export const temucoProject = {
   title: "Ampliación Mall Portal Temuco",
   year: "2026",
   location: "Temuco · Región de La Araucanía",
-  video: "/projects/portal-temuco-2026/ductos-y-tuberias-ampliacion.mp4",
-  poster: "/projects/portal-temuco-2026/ductos-ampliacion-poster.webp",
-  videoDuration: "PT19.5S",
-  videoUploadDate: "2026-11-05T17:37:04+00:00",
+  video: "/projects/portal-temuco-2026/coordinacion-en-ampliacion.mp4",
+  poster: "/projects/portal-temuco-2026/coordinacion-en-ampliacion-poster.webp",
+  videoDuration: "PT5.53S",
+  videoUploadDate: "2026-11-07T21:23:17+00:00",
 };
 
 const base = "/projects/portal-temuco-2026/";
@@ -144,3 +144,51 @@ export const temucoPhotos = [
   .sort(
     (a, b) => Number(a.category === "Equipo") - Number(b.category === "Equipo"),
   );
+
+export type TemucoMedia = {
+  type: "image" | "video";
+  src: string;
+  title: string;
+  alt: string;
+  width: number;
+  height: number;
+  poster?: string;
+};
+
+function carouselPhoto(name: string): TemucoMedia {
+  const photo = temucoPhotos.find((item) => item.name === name);
+  if (!photo) throw new Error(`Missing project photograph: ${name}`);
+  return {
+    type: "image",
+    src: photo.src,
+    title: photo.caption,
+    alt: photo.alt,
+    width: photo.width,
+    height: photo.height,
+  };
+}
+
+export const temucoMedia: TemucoMedia[] = [
+  carouselPhoto("ductos-y-tuberias-instaladas"),
+  {
+    type: "video",
+    src: temucoProject.video,
+    poster: temucoProject.poster,
+    title: "Coordinación en terreno",
+    alt: "Equipo de Interchile Clima coordinando los trabajos en el interior de la ampliación de Mall Portal Temuco",
+    width: 1024,
+    height: 576,
+  },
+  carouselPhoto("revision-instalaciones-cubierta-2026-11-07"),
+  carouselPhoto("detalle-ductos"),
+  {
+    type: "video",
+    src: base + "equipo-en-ampliacion.mp4",
+    poster: base + "equipo-en-ampliacion-poster.webp",
+    title: "Equipo en la ampliación",
+    alt: "Profesionales con casco recorriendo la ampliación de Mall Portal Temuco",
+    width: 1024,
+    height: 576,
+  },
+  carouselPhoto("ductos-suspendidos"),
+];

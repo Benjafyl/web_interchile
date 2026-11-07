@@ -2875,31 +2875,88 @@ main:focus {
 .temuco-feature-copy .button {
   margin-top: var(--s7);
 }
-.project-film {
+.project-media-carousel {
   min-width: 0;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: var(--button-radius);
+  background: var(--white);
+  touch-action: pan-y;
 }
-.project-film video {
+.project-media-frame {
+  position: relative;
+  aspect-ratio: 4 / 3;
+  background: var(--rental-ink);
+}
+.project-media-frame img,
+.project-media-frame video {
+  position: absolute;
+  inset: 0;
   display: block;
   width: 100%;
-  height: auto;
-  aspect-ratio: 16 / 9;
+  height: 100%;
   object-fit: contain;
-  background: var(--ink);
-  border-radius: var(--button-radius);
+  transform: none;
+  scale: none;
+  animation: none;
+  transition: none;
 }
-.project-film figcaption {
-  display: flex;
+.project-media-frame video {
+  touch-action: auto;
+}
+.project-media-toolbar {
+  display: grid;
+  grid-template-columns: 1fr auto;
   align-items: center;
-  gap: var(--s2);
-  font-size: var(--xs);
-  color: var(--muted);
-  line-height: 1.7;
-  margin-top: var(--s4);
+  gap: var(--s4);
+  padding: var(--s4);
 }
-.project-film figcaption svg {
-  width: var(--base);
-  height: var(--base);
+.project-media-caption p {
+  color: var(--ink);
+  font-size: var(--sm);
+  font-weight: 600;
+  line-height: 1.5;
+}
+.project-media-caption span {
+  display: block;
+  color: var(--muted);
+  font-size: var(--xs);
+  margin-top: var(--s1);
+}
+.project-media-controls {
+  display: flex;
+  gap: var(--s2);
+}
+.project-media-controls button {
+  display: grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  border: 1px solid var(--line);
+  border-radius: var(--button-radius);
+  background: var(--white);
   color: var(--brand);
+}
+.project-media-controls button:hover {
+  background: var(--brand-soft);
+  border-color: var(--brand);
+}
+.project-media-controls svg {
+  width: 20px;
+  height: 20px;
+}
+@media (max-width: 739px) {
+  .project-media-frame {
+    aspect-ratio: 3 / 4;
+  }
+  .project-media-toolbar {
+    gap: var(--s3);
+    padding: var(--s3);
+  }
+  .project-media-controls {
+    gap: var(--s1);
+  }
 }
 .project-intro {
   padding-top: var(--s9);
@@ -2943,7 +3000,7 @@ main:focus {
   line-height: 1.8;
   font-size: var(--sm);
 }
-.project-intro .project-film {
+.project-intro .project-media-carousel {
   max-width: var(--gallery-max);
   margin-inline: auto;
 }
