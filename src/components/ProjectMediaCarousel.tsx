@@ -1,8 +1,14 @@
 "use client";
 
 import Image from "next/image";
-import { useEffect, useRef, useState, useSyncExternalStore } from "react";
-import { ChevronLeft, ChevronRight, Pause, Play } from "lucide-react";
+import {
+  useEffect,
+  useId,
+  useRef,
+  useState,
+  useSyncExternalStore,
+} from "react";
+import { ChevronLeft, ChevronRight } from "lucide-react";
 import { temucoMedia } from "@/data/temuco";
 
 function subscribeMotion(callback: () => void) {
@@ -26,6 +32,8 @@ export function ProjectMediaCarousel() {
   const [index, setIndex] = useState(0);
   const [autoAdvance, setAutoAdvance] = useState<boolean | null>(null);
   const [inView, setInView] = useState(false);
+  const [unavailableVideo, setUnavailableVideo] = useState<string | null>(null);
+  const instructionsId = useId();
   const container = useRef<HTMLDivElement>(null);
   const video = useRef<HTMLVideoElement>(null);
   const touch = useRef<{ x: number; y: number } | null>(null);
@@ -57,28 +65,38 @@ export function ProjectMediaCarousel() {
   }, []);
 
   useEffect(() => {
-    if (!shouldPlay || item.type !== "image") return;
+    if (!shouldPlay || (item.type !== "image" && unavailableVideo !== item.src))
+      return;
     const timer = window.setTimeout(
       () => setIndex((current) => (current + 1) % temucoMedia.length),
       5500,
     );
     return () => window.clearTimeout(timer);
-  }, [index, item.type, shouldPlay]);
+  }, [index, item.type, item.src, shouldPlay, unavailableVideo]);
 
   useEffect(() => {
     const player = video.current;
     if (!player) return;
+    let cancelled = false;
     if (shouldPlay) {
-      void player.play().catch(() => {
-        if (video.current === player) setAutoAdvance(false);
+      void player.play().catch((error: DOMException) => {
+        if (
+          !cancelled &&
+          video.current === player &&
+          error.name !== "AbortError"
+        )
+          setUnavailableVideo(item.src);
       });
     } else {
       player.pause();
     }
-  }, [index, shouldPlay]);
+    return () => {
+      cancelled = true;
+    };
+  }, [index, item.src, shouldPlay]);
 
   function move(direction: number) {
-    setAutoAdvance(false);
+    setAutoAdvance(true);
     setIndex(
       (current) =>
         (current + direction + temucoMedia.length) % temucoMedia.length,
@@ -92,10 +110,8 @@ export function ProjectMediaCarousel() {
       role="region"
       aria-roledescription="carrusel"
       aria-label="Fotos y videos de la ampliación de Mall Portal Temuco"
-      onFocusCapture={(event) => {
-        if (!(event.target as HTMLElement).closest(".project-media-toggle"))
-          setAutoAdvance(false);
-      }}
+      aria-describedby={instructionsId}
+      tabIndex={0}
       onKeyDown={(event) => {
         if (
           event.altKey ||
@@ -107,10 +123,12 @@ export function ProjectMediaCarousel() {
         if (event.key === "ArrowLeft" || event.key === "ArrowRight") {
           event.preventDefault();
           move(event.key === "ArrowRight" ? 1 : -1);
+        } else if (event.key === " " && event.target === event.currentTarget) {
+          event.preventDefault();
+          setAutoAdvance(!wantsPlay);
         }
       }}
       onTouchStart={(event) => {
-        if ((event.target as HTMLElement).closest("video")) return;
         const point = event.touches[0];
         touch.current = { x: point.clientX, y: point.clientY };
       }}
@@ -151,17 +169,12 @@ export function ProjectMediaCarousel() {
             poster={item.poster}
             width={item.width}
             height={item.height}
-            controls
+            autoPlay={shouldPlay}
             muted
             playsInline
             preload="metadata"
             aria-label={item.alt}
-            onPlay={() => {
-              if (!wantsPlay) setAutoAdvance(true);
-            }}
-            onPause={() => {
-              if (shouldPlay && !video.current?.ended) setAutoAdvance(false);
-            }}
+            onError={() => setUnavailableVideo(item.src)}
             onEnded={() => {
               if (shouldPlay)
                 setIndex((current) => (current + 1) % temucoMedia.length);
@@ -171,49 +184,28 @@ export function ProjectMediaCarousel() {
           </video>
         )}
       </div>
-      <div className="project-media-toolbar">
-        <div className="project-media-caption">
-          <p>{item.title}</p>
-          <span aria-live={wantsPlay ? "off" : "polite"} aria-atomic="true">
-            {index + 1} / {temucoMedia.length}
-          </span>
-        </div>
-        <div
-          className="project-media-controls"
-          role="group"
-          aria-label="Controles del carrusel"
-        >
-          <button
-            type="button"
-            onClick={() => move(-1)}
-            aria-label="Recurso anterior"
-            title="Anterior"
-          >
-            <ChevronLeft aria-hidden="true" />
-          </button>
-          <button
-            className="project-media-toggle"
-            type="button"
-            onClick={() => setAutoAdvance(!wantsPlay)}
-            aria-label={wantsPlay ? "Pausar carrusel" : "Reproducir carrusel"}
-            title={wantsPlay ? "Pausar" : "Reproducir"}
-          >
-            {wantsPlay ? (
-              <Pause aria-hidden="true" />
-            ) : (
-              <Play aria-hidden="true" />
-            )}
-          </button>
-          <button
-            type="button"
-            onClick={() => move(1)}
-            aria-label="Recurso siguiente"
-            title="Siguiente"
-          >
-            <ChevronRight aria-hidden="true" />
-          </button>
-        </div>
-      </div>
+      <p className="project-media-keyboard-help" id={instructionsId}>
+        Usa las flechas para cambiar de recurso y la barra espaciadora sobre el
+        carrusel para pausar o continuar.
+      </p>
+      <button
+        className="project-media-arrow project-media-previous"
+        type="button"
+        onClick={() => move(-1)}
+        aria-label="Recurso anterior"
+        title="Anterior"
+      >
+        <ChevronLeft aria-hidden="true" />
+      </button>
+      <button
+        className="project-media-arrow project-media-next"
+        type="button"
+        onClick={() => move(1)}
+        aria-label="Recurso siguiente"
+        title="Siguiente"
+      >
+        <ChevronRight aria-hidden="true" />
+      </button>
     </div>
   );
 }
