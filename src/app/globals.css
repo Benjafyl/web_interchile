@@ -500,7 +500,7 @@ main:focus {
 }
 .hero-backdrop img {
   object-fit: cover;
-  object-position: center 62%;
+  object-position: center bottom;
 }
 .hero-backdrop::after {
   content: "";

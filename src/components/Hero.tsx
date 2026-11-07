@@ -17,7 +17,7 @@ export function Hero() {
             srcSet="/projects/portal-temuco-2026/revision-instalaciones-cubierta-2026-11-07.webp"
           />
           <Image
-            src="/projects/portal-temuco-2026/hero-cubierta-horizontal.webp"
+            src="/projects/portal-temuco-2026/hero-cubierta-panoramica.webp"
             alt="Equipo de Interchile Clima revisando tuberías y equipos en la cubierta de la ampliación de Mall Portal Temuco, 2026"
             fill
             loading="eager"
