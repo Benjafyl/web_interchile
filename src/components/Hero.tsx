@@ -1,96 +1,67 @@
 import Image from "next/image";
 import Link from "next/link";
-import { Building2, ChevronDown, MessageSquareText } from "lucide-react";
+import { MessageSquareText } from "lucide-react";
 import { ButtonLink } from "@/components/ButtonLink";
+import { temucoProject } from "@/data/temuco";
+
 export function Hero() {
   return (
-    <section className="home-hero">
-      <div className="shell hero-grid">
-        <div className="hero-copy">
-          <p className="hero-intro">
-            <span className="status-dot" />
-            HVAC para industria, retail y empresas
-          </p>
-          <h1>
-            CLIMATIZACIÓN
-            <br />
-            INDUSTRIAL Y
-            <br />
-            COMERCIAL<span className="headline-period">.</span>
-          </h1>
-          <p className="hero-description">
-            Tu operación sigue. Nosotros nos encargamos del clima.
-          </p>
-          <p className="hero-detail">
-            Ingeniería, instalación y mantención de climatización para
-            industrias, centros comerciales, retail y oficinas. Atención
-            coordinada en todo Chile.
-          </p>
-          <div className="hero-actions">
+    <section
+      className="home-hero hero-immersive"
+      aria-labelledby="home-hero-heading"
+    >
+      <div className="hero-backdrop">
+        <picture>
+          <source
+            media="(max-width: 739px)"
+            srcSet="/projects/portal-temuco-2026/revision-instalaciones-cubierta-2026-11-07.webp"
+          />
+          <Image
+            src="/projects/portal-temuco-2026/hero-cubierta-horizontal.webp"
+            alt="Equipo de Interchile Clima revisando tuberías y equipos en la cubierta de la ampliación de Mall Portal Temuco, 2026"
+            fill
+            loading="eager"
+            fetchPriority="high"
+            sizes="100vw"
+          />
+        </picture>
+      </div>
+      <div className="shell hero-overlay-shell">
+        <div className="hero-overlay-copy">
+          <div className="hero-overlay-main">
+            <p className="hero-overlay-intro">
+              HVAC para industria, retail y empresas
+            </p>
+            <h1 id="home-hero-heading">
+              CLIMATIZACIÓN
+              <br />
+              INDUSTRIAL Y<br />
+              COMERCIAL.
+            </h1>
+            <p className="hero-overlay-description">
+              Tu operación sigue. Nosotros nos encargamos del clima.
+            </p>
+            <p className="hero-overlay-detail">
+              Ingeniería, instalación y mantención de climatización para
+              industrias, centros comerciales, retail y oficinas.
+            </p>
+          </div>
+          <div className="hero-overlay-actions">
             <ButtonLink href="/contacto">
               <MessageSquareText aria-hidden="true" />
               Evaluar mi proyecto
             </ButtonLink>
-            <a className="text-link" href="#soluciones">
-              Explorar soluciones
-              <ChevronDown aria-hidden="true" />
-            </a>
+            <ButtonLink href="/proyectos" variant="secondary">
+              Conocer proyectos
+            </ButtonLink>
           </div>
-          <div className="hero-proof">
-            <div>
-              <strong>
-                23<span>+</span>
-              </strong>
-              <span>
-                Años de experiencia
-                <br />
-                que se llevan a terreno.
-              </span>
-            </div>
-            <div>
-              <Building2 aria-hidden="true" />
-              <span>
-                Del proyecto y montaje
-                <br />a la mantención HVAC.
-              </span>
-            </div>
-          </div>
+          <p className="hero-overlay-proof">
+            23+ años de experiencia · Atención en todo Chile
+          </p>
+          <Link className="hero-scene-link" href={temucoProject.href}>
+            Ampliación Mall Portal Temuco · 2026
+          </Link>
         </div>
-        <figure className="hero-visual">
-          <Image
-            src="/projects/portal-temuco-sala-de-maquinas/sala-de-equipos.webp"
-            alt="Sala de máquinas de Mall Portal Temuco ejecutada por Interchile Clima en 2004, fotografiada en 2026"
-            fill
-            preload
-            sizes="(min-width: 900px) 48vw, 100vw"
-            className="hero-photo"
-          />
-          <div className="hero-photo-top">
-            <span>Experiencia en terreno</span>
-          </div>
-          <figcaption>
-            <span className="photo-cross" aria-hidden="true">
-              +
-            </span>
-            <div>
-              <strong>
-                Cada proyecto,
-                <br />
-                un nuevo desafío.
-              </strong>
-              <Link
-                className="hero-project-link"
-                href="/proyectos/sala-maquinas-mall-portal-temuco-2004"
-              >
-                Sala de máquinas · Mall Portal Temuco, 2004
-              </Link>
-            </div>
-          </figcaption>
-        </figure>
-      </div>
-      <div className="hero-baseline shell">
-        <span>Ingeniería / Instalación / Mantención</span>
-        <span>Confort para las personas. Continuidad para tu operación.</span>
       </div>
     </section>
   );
