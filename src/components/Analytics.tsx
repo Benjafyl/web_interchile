@@ -204,22 +204,22 @@ export function Analytics() {
       {(consent === "pending" || preferencesOpen) && (
         <section
           className="privacy-banner"
-          aria-label="Preferencias de privacidad"
+          aria-label="Preferencias de cookies"
         >
           <div>
             <p>
-              <strong>¿Nos ayudas a mejorar el sitio?</strong>
+              <strong>Usamos cookies</strong>
             </p>
             <p>
-              Con tu permiso usamos Google Analytics para medir visitas y
-              solicitudes. La medición es opcional y puedes cambiar tu elección
-              en el pie de página.{" "}
-              <Link href="/privacidad">Ver privacidad</Link>.
+              Usamos cookies de Google Analytics para conocer las visitas y
+              mejorar el sitio. Puedes aceptarlas o rechazarlas y cambiar tu
+              elección en el pie de página.{" "}
+              <Link href="/privacidad">Cookies y privacidad</Link>.
             </p>
           </div>
           <div className="privacy-actions">
             <button type="button" onClick={() => choose("granted")}>
-              Aceptar medición
+              Aceptar cookies
             </button>
             <button type="button" onClick={() => choose("denied")}>
               Rechazar
@@ -241,7 +241,7 @@ export function PrivacyControls() {
           window.dispatchEvent(new Event("interchile:manage-consent"))
         }
       >
-        Preferencias de medición
+        Preferencias de cookies
       </button>
     </div>
   );

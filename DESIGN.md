@@ -6,6 +6,8 @@ The existing logo remains the source of identity. Use burgundy (#a6083c), deep b
 
 Display client logos in their original SVG brand colors at full opacity throughout the site. The owner explicitly rejected grayscale and faded client marks; do not apply color filters or reduced opacity to them.
 
+Use familiar cookie wording in the consent notice: “Usamos cookies”, “Aceptar cookies”, “Rechazar” and “Preferencias de cookies”. Keep the short explanation that the optional cookies belong to Google Analytics and help understand visits. Preserve existing accept/reject behavior and saved choices.
+
 Barlow Condensed is the display face: industrial, direct and compact. Manrope is the reading and interface face. The voice is technically confident, approachable and specific; never invent certifications, project outcomes or client testimonials.
 
 ## Composition

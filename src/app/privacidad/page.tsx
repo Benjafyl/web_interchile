@@ -6,7 +6,7 @@ import { siteConfig } from "@/data/site";
 import { PrivacyControls } from "@/components/Analytics";
 
 export const metadata: Metadata = createPageMetadata({
-  title: "Privacidad y medición del sitio | Interchile Clima",
+  title: "Cookies y privacidad | Interchile Clima",
   description:
     "Cómo Interchile Clima utiliza los datos de contacto, la protección antispam y la medición opcional del sitio web.",
   path: "/privacidad",
@@ -18,11 +18,11 @@ export default function PrivacyPage() {
         eyebrow="Privacidad"
         path="/privacidad"
         title="PRIVACIDAD Y USO DE TUS DATOS."
-        description="Información sobre las solicitudes de contacto, la protección del formulario y tus preferencias de medición en interchileclima.cl."
+        description="Información sobre las solicitudes de contacto, la protección del formulario y tus preferencias de cookies en interchileclima.cl."
       />
       <section className="section-space" id="detalle">
         <article className="shell privacy-copy">
-          <p>Actualizada el 5 de noviembre de 2026.</p>
+          <p>Actualizada el 7 de noviembre de 2026.</p>
           <h2>Quién recibe tu solicitud</h2>
           <p>
             Interchile Clima SpA recibe los requerimientos enviados desde este
@@ -69,12 +69,12 @@ export default function PrivacyPage() {
             . Esta función de seguridad es independiente de la medición opcional
             de visitas.
           </p>
-          <h2>Google Analytics y medición opcional</h2>
+          <h2>Cookies de Google Analytics</h2>
           <p>
-            Solo si aceptas la medición cargamos Google Analytics. Nos ayuda a
-            conocer las páginas visitadas, el origen general de las visitas y
-            acciones como acceder a cotizar, pulsar WhatsApp o enviar una
-            solicitud correctamente. Un clic en WhatsApp indica intención de
+            Solo si aceptas las cookies de Analytics cargamos Google Analytics.
+            Nos ayuda a conocer las páginas visitadas, el origen general de las
+            visitas y acciones como acceder a cotizar, pulsar WhatsApp o enviar
+            una solicitud correctamente. Un clic en WhatsApp indica intención de
             contacto; no nos permite saber si la conversación ocurrió ni si hubo
             una venta.
           </p>
@@ -91,11 +91,11 @@ export default function PrivacyPage() {
           <p>
             Guardamos tu preferencia en el almacenamiento local del navegador
             con la clave <code>interchile:analytics-consent:v1</code>. Puedes
-            rechazar la medición y seguir usando el sitio y el formulario. Si
-            retiras un consentimiento previo, dejamos de enviar eventos y
-            eliminamos las cookies de Analytics accesibles desde este sitio. El
-            cambio afecta a este navegador; no elimina los datos ya recibidos
-            por Google.
+            rechazar las cookies de Analytics y seguir usando el sitio y el
+            formulario. Si retiras un consentimiento previo, dejamos de enviar
+            eventos y eliminamos las cookies de Analytics accesibles desde este
+            sitio. El cambio afecta a este navegador; no elimina los datos ya
+            recibidos por Google.
           </p>
           <PrivacyControls />
           <h2>Canales externos y conservación</h2>
