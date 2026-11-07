@@ -3455,9 +3455,14 @@ main:focus {
   width: var(--rental-photo-width);
   z-index: -2;
 }
+.rental-background picture {
+  position: absolute;
+  inset: 0;
+  display: block;
+}
 .rental-background img {
   object-fit: cover;
-  object-position: center 40%;
+  object-position: center 45%;
 }
 .rental-band::before {
   content: "";
@@ -3534,6 +3539,9 @@ main:focus {
     inset: 0 0 auto;
     width: 100%;
     height: var(--rental-mobile-photo);
+  }
+  .rental-background img {
+    object-position: center 55%;
   }
   .rental-band::before {
     background: var(--rental-mobile-overlay);

@@ -201,13 +201,19 @@ export default function Home() {
         </div>
       </section>
       <section className="rental-band" id="climatizacion-temporal">
-        <div className="rental-background" aria-hidden="true">
-          <Image
-            src="/projects/izaje-equipo-hvac.jpeg"
-            alt=""
-            fill
-            sizes="(min-width: 740px) 68vw, 100vw"
-          />
+        <div className="rental-background">
+          <picture>
+            <source
+              media="(max-width: 739px)"
+              srcSet="/projects/arriendo-equipos/equipo-suspendido-vertical.webp"
+            />
+            <Image
+              src="/projects/arriendo-equipos/equipo-suspendido-horizontal.webp"
+              alt="Equipo compacto de arriendo suspendido de una grúa al atardecer"
+              fill
+              sizes="(min-width: 740px) 68vw, 100vw"
+            />
+          </picture>
         </div>
         <div className="shell rental-grid">
           <div className="rental-content">
