@@ -4,6 +4,8 @@
 
 The existing logo remains the source of identity. Use burgundy (#a6083c), deep burgundy (#77082e), cold white (#ffffff), ice gray (#edf3f5), graphite (#222c31) and muted slate (#58646a). Reserve the logo's green and cyan for the existing brand mark and focused utility accents.
 
+Display client logos in their original SVG brand colors at full opacity throughout the site. The owner explicitly rejected grayscale and faded client marks; do not apply color filters or reduced opacity to them.
+
 Barlow Condensed is the display face: industrial, direct and compact. Manrope is the reading and interface face. The voice is technically confident, approachable and specific; never invent certifications, project outcomes or client testimonials.
 
 ## Composition
