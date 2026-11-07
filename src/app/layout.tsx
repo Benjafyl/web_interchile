@@ -40,7 +40,7 @@ export const metadata: Metadata = {
     url: siteConfig.url,
     type: "website",
     locale: "es_CL",
-    siteName: siteConfig.name,
+    siteName: siteConfig.shortName,
     images: [
       {
         url: "/og-image.png",

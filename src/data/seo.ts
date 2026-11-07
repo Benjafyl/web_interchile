@@ -49,7 +49,7 @@ export const defaultDescription =
   "Climatización industrial y comercial en Chile. Ingeniería, instalación, mantención HVAC y arriendo de equipos para industria, retail y empresas. Más de 23 años de experiencia.";
 
 export const defaultTitle =
-  "Climatización industrial y comercial en Chile | Interchile Clima";
+  "Interchile Clima | Climatización industrial y comercial";
 
 export function absoluteUrl(path = "/") {
   return new URL(path, siteConfig.url).toString();
@@ -89,7 +89,7 @@ export function createPageMetadata({
       title,
       description,
       url,
-      siteName: siteConfig.name,
+      siteName: siteConfig.shortName,
       type: "website",
       locale: "es_CL",
       images: [
@@ -115,7 +115,7 @@ export const structuredData = {
     {
       "@type": "Organization",
       "@id": `${siteConfig.url}/#organization`,
-      name: "Interchile Clima",
+      name: siteConfig.shortName,
       legalName: siteConfig.name,
       url: siteConfig.url,
       logo: absoluteUrl("/icon-512.png"),

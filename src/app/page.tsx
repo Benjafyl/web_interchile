@@ -9,12 +9,12 @@ import { ButtonLink } from "@/components/ButtonLink";
 import { ClientLogos } from "@/components/ClientLogos";
 import { ServicesSelector } from "@/components/ServicesSelector";
 import { CTASection } from "@/components/CTASection";
-import { createPageMetadata } from "@/data/seo";
+import { createPageMetadata, defaultTitle } from "@/data/seo";
 import { JsonLd } from "@/components/JsonLd";
 import { siteConfig } from "@/data/site";
 
 export const metadata: Metadata = createPageMetadata({
-  title: "Climatización industrial y comercial en Chile | Interchile Clima",
+  title: defaultTitle,
   description:
     "Ingeniería, instalación, mantención HVAC y arriendo de equipos para industrias, retail y centros comerciales en Chile. Evalúa tu proyecto con Interchile Clima.",
   path: "/",

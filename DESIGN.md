@@ -48,6 +48,8 @@ Costanera originals are IMG_3055, IMG_3060, IMG_3087, IMG_3089, IMG_3101 and IMG
 
 ## Publication checks
 
+The public brand name is exactly “Interchile Clima”; never separate Interchile into two words. Keep the homepage title brand-first (“Interchile Clima | Climatización industrial y comercial”), WebSite/Organization names and Open Graph site name aligned to siteConfig.shortName. The legal name remains Interchile Clima SpA. Search snippets can retain earlier titles until Google recrawls; do not claim immediate control over Google results.
+
 Anchor the Antofagasta rooftop photograph to center bottom in the homepage and project cards, keeping the HVAC units and technicians visible instead of the large expanse of sky.
 
 Frame supervision-equipos-hvac.jpeg at center 10% in the project card and service selector, keeping the worker's full helmet and face visible at every screen size.
