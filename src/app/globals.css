@@ -500,7 +500,7 @@ main:focus {
 }
 .hero-backdrop img {
   object-fit: cover;
-  object-position: center bottom;
+  object-position: center;
 }
 .hero-backdrop::after {
   content: "";
@@ -508,8 +508,8 @@ main:focus {
     90deg,
     #07151f18 0%,
     #07151f40 32%,
-    #07151fc9 58%,
-    #07151ff2 100%
+    #07151fb3 58%,
+    #07151fc9 100%
   );
   pointer-events: none;
 }
@@ -517,7 +517,7 @@ main:focus {
   display: grid;
   grid-template-columns: 1fr 1fr;
   align-items: center;
-  min-height: calc(100svh - 136px);
+  min-height: max(calc(100svh - 136px), 50vw);
   gap: var(--s9);
   padding-block: clamp(36px, 5vh, 64px);
 }
